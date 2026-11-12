@@ -90,3 +90,9 @@ The original training launch uses commit `ad813ef33ed15201044b8d8c0bf0c808628ae6
 The evaluation evidence commit does not change that launch identity.
 
 [W&B run](https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/ga216ipt) · [Training PR](https://github.com/minervahumanoids/supermimic/pull/1)
+
+## Standing drift audit
+
+The checkpoint has poor standing control in the approved standalone recording and the native simulation diagnostic.
+The [standing audit](standing-diagnostic/README.md) verifies the reference samples, observation layout, action mapping, and position observability.
+The completion count does not establish standing stability.
