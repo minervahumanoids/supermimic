@@ -1,0 +1,10 @@
+{
+  "status": "hold",
+  "new_training_started": false,
+  "checkpoint_selection_corrected": true,
+  "selected_artifact": "minervahumanoids/Supermimic/model-ga216ipt:v25",
+  "unresolved": "The exact training choice that caused learned-policy regression remains unproven. Checkpoint selection does not fix learning regression in a new run.",
+  "official_source_modified": false,
+  "architecture_modified": false,
+  "automatic_training_stop_added": false
+}

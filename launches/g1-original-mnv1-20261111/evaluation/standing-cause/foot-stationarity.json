@@ -1,0 +1,56 @@
+{
+  "diagnostic_only": true,
+  "clock_hz": 50,
+  "hands": "Left and right values remain separate.",
+  "definition": "Ankle-frame movement and exact minimum foot-geometry distance to the plane. These are not contact-slip estimates.",
+  "checkpoints": {
+    "100000": {
+      "max_sole_clearance_cm": [
+        -0.012200265806661809,
+        -0.009782249211106285
+      ],
+      "ankle_xy_range_after_2s_cm": [
+        [
+          1.9639655064650319,
+          0.3383798913223275
+        ],
+        [
+          2.0834254674902937,
+          0.3461151932602477
+        ]
+      ],
+      "ankle_xy_speed_rms_after_2s_cm_s": [
+        0.12346656135504963,
+        0.13174380607065053
+      ],
+      "ankle_xy_path_after_2s_cm": [
+        2.0709700488530056,
+        2.2667322058325037
+      ]
+    },
+    "403000": {
+      "max_sole_clearance_cm": [
+        0.5159502208213752,
+        0.6287817400728692
+      ],
+      "ankle_xy_range_after_2s_cm": [
+        [
+          12.868667657852608,
+          36.15025248063388
+        ],
+        [
+          14.238980128711026,
+          50.55400593882281
+        ]
+      ],
+      "ankle_xy_speed_rms_after_2s_cm_s": [
+        11.40269782382338,
+        18.78915097680432
+      ],
+      "ankle_xy_path_after_2s_cm": [
+        66.69442539028464,
+        89.14202781350417
+      ]
+    }
+  }
+}

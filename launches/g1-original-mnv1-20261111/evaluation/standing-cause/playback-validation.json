@@ -1,0 +1,35 @@
+{
+  "viewer_url": "http://127.0.0.1:8972/",
+  "canonical_viewer_unchanged": true,
+  "standalone_recordings": true,
+  "selected_iteration": 25000,
+  "comparison_iteration": 403000,
+  "verified_motion_playback": [
+    "BONES standing",
+    "BONES walk forward",
+    "BONES squat",
+    "PICO Ali 1"
+  ],
+  "verified_controls": [
+    "Playback",
+    "Motion cohort",
+    "Motion clip",
+    "Frame boundary",
+    "Drift tab",
+    "Palm orientation tab"
+  ],
+  "standing_endpoint_cm": {
+    "25000": 3.758600505415822,
+    "403000": 40.485476
+  },
+  "source_frames": {
+    "standing": 1001,
+    "walk_forward": 481,
+    "squat": 493,
+    "pico_ali_1": 5634
+  },
+  "screenshot": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/g1-standing-cause-20261112/selected-standing-comparison.jpg",
+  "screenshot_sha256": "cef9de77082f6092024f7727721a3bb343173622154061af03281a6036d56d03",
+  "no_video_substitution": true,
+  "no_new_training": true
+}

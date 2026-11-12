@@ -1,0 +1,457 @@
+{
+  "diagnostic_only": true,
+  "reports": [
+    {
+      "iteration": 100000,
+      "source_frame": 0,
+      "state_difference_epsilon": 0.0001,
+      "control_dt": 0.02,
+      "largest_modes": [
+        {
+          "magnitude": 1.029904412934992,
+          "frequency_hz": 0.0,
+          "real": 1.029904412934992,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 1.0000000000046434,
+          "frequency_hz": 2.156244561673766e-11,
+          "real": 1.0000000000046434,
+          "imaginary": 2.709616829731481e-12
+        },
+        {
+          "magnitude": 1.0000000000046434,
+          "frequency_hz": 2.156244561673766e-11,
+          "real": 1.0000000000046434,
+          "imaginary": -2.709616829731481e-12
+        },
+        {
+          "magnitude": 0.9984655449889228,
+          "frequency_hz": 0.01198796568208431,
+          "real": 0.9984644120311713,
+          "imaginary": 0.0015041400446950725
+        },
+        {
+          "magnitude": 0.9984655449889228,
+          "frequency_hz": 0.01198796568208431,
+          "real": 0.9984644120311713,
+          "imaginary": -0.0015041400446950725
+        },
+        {
+          "magnitude": 0.9706022759299129,
+          "frequency_hz": 0.0,
+          "real": 0.9706022759299129,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9375555448726773,
+          "frequency_hz": 0.0,
+          "real": 0.9375555448726773,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9191609635825078,
+          "frequency_hz": 0.17200000198106366,
+          "real": 0.9189462688939316,
+          "imaginary": 0.019865343184704978
+        }
+      ]
+    },
+    {
+      "iteration": 100000,
+      "source_frame": 0,
+      "state_difference_epsilon": 0.0003,
+      "control_dt": 0.02,
+      "largest_modes": [
+        {
+          "magnitude": 1.0298258831107108,
+          "frequency_hz": 0.0,
+          "real": 1.0298258831107108,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 1.0000000000046367,
+          "frequency_hz": 2.1558893744836807e-11,
+          "real": 1.0000000000046367,
+          "imaginary": 2.709170488344652e-12
+        },
+        {
+          "magnitude": 1.0000000000046367,
+          "frequency_hz": 2.1558893744836807e-11,
+          "real": 1.0000000000046367,
+          "imaginary": -2.709170488344652e-12
+        },
+        {
+          "magnitude": 0.9984714824427402,
+          "frequency_hz": 0.011984864890518037,
+          "real": 0.9984703500642778,
+          "imaginary": 0.0015037599282606972
+        },
+        {
+          "magnitude": 0.9984714824427402,
+          "frequency_hz": 0.011984864890518037,
+          "real": 0.9984703500642778,
+          "imaginary": -0.0015037599282606972
+        },
+        {
+          "magnitude": 0.9703749473056559,
+          "frequency_hz": 0.0,
+          "real": 0.9703749473056559,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9370302405955026,
+          "frequency_hz": 0.0,
+          "real": 0.9370302405955026,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9181707486472576,
+          "frequency_hz": 0.1753559604568723,
+          "real": 0.9179478349905472,
+          "imaginary": 0.02023106293876922
+        }
+      ]
+    },
+    {
+      "iteration": 100000,
+      "source_frame": 500,
+      "state_difference_epsilon": 0.0001,
+      "control_dt": 0.02,
+      "largest_modes": [
+        {
+          "magnitude": 1.0009563737696598,
+          "frequency_hz": 0.0,
+          "real": 1.0009563737696598,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 1.0000000000038842,
+          "frequency_hz": 0.0,
+          "real": 1.0000000000038842,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9999999998965419,
+          "frequency_hz": 0.0,
+          "real": 0.9999999998965419,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9934372917176326,
+          "frequency_hz": 0.0,
+          "real": 0.9934372917176326,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9910907194612745,
+          "frequency_hz": 0.0,
+          "real": 0.9910907194612745,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9639240196722382,
+          "frequency_hz": 0.22330813691847806,
+          "real": 0.9635445184911018,
+          "imaginary": 0.02704582383356585
+        },
+        {
+          "magnitude": 0.9639240196722382,
+          "frequency_hz": 0.22330813691847806,
+          "real": 0.9635445184911018,
+          "imaginary": -0.02704582383356585
+        },
+        {
+          "magnitude": 0.9552867742735194,
+          "frequency_hz": 0.0,
+          "real": 0.9552867742735194,
+          "imaginary": 0.0
+        }
+      ]
+    },
+    {
+      "iteration": 100000,
+      "source_frame": 500,
+      "state_difference_epsilon": 0.0003,
+      "control_dt": 0.02,
+      "largest_modes": [
+        {
+          "magnitude": 1.0009789461334895,
+          "frequency_hz": 0.0,
+          "real": 1.0009789461334895,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 1.0000000000039,
+          "frequency_hz": 0.0,
+          "real": 1.0000000000039,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.999999999898784,
+          "frequency_hz": 0.0,
+          "real": 0.999999999898784,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9933262355739864,
+          "frequency_hz": 0.0,
+          "real": 0.9933262355739864,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9912950963392788,
+          "frequency_hz": 0.0,
+          "real": 0.9912950963392788,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9634927881280674,
+          "frequency_hz": 0.22027286149915482,
+          "real": 0.9631236979756883,
+          "imaginary": 0.026666367814758615
+        },
+        {
+          "magnitude": 0.9634927881280674,
+          "frequency_hz": 0.22027286149915482,
+          "real": 0.9631236979756883,
+          "imaginary": -0.026666367814758615
+        },
+        {
+          "magnitude": 0.9557736115119625,
+          "frequency_hz": 0.0,
+          "real": 0.9557736115119625,
+          "imaginary": 0.0
+        }
+      ]
+    },
+    {
+      "iteration": 403000,
+      "source_frame": 0,
+      "state_difference_epsilon": 0.0001,
+      "control_dt": 0.02,
+      "largest_modes": [
+        {
+          "magnitude": 1.048515473958579,
+          "frequency_hz": 0.0,
+          "real": 1.048515473958579,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 1.000000000008149,
+          "frequency_hz": 0.0,
+          "real": 1.000000000008149,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9999999998232443,
+          "frequency_hz": 0.0,
+          "real": 0.9999999998232443,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.99999029410002,
+          "frequency_hz": 0.0,
+          "real": 0.99999029410002,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9959809106078534,
+          "frequency_hz": 0.0,
+          "real": 0.9959809106078534,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9318365040508086,
+          "frequency_hz": 0.1293648535022148,
+          "real": 0.9317133772799595,
+          "imaginary": 0.015147702109713215
+        },
+        {
+          "magnitude": 0.9318365040508086,
+          "frequency_hz": 0.1293648535022148,
+          "real": 0.9317133772799595,
+          "imaginary": -0.015147702109713215
+        },
+        {
+          "magnitude": 0.9049655831669009,
+          "frequency_hz": 0.07703925097563585,
+          "real": 0.9049231756829329,
+          "imaginary": 0.008760869164918238
+        }
+      ]
+    },
+    {
+      "iteration": 403000,
+      "source_frame": 0,
+      "state_difference_epsilon": 0.0003,
+      "control_dt": 0.02,
+      "largest_modes": [
+        {
+          "magnitude": 1.0485470672528527,
+          "frequency_hz": 0.0,
+          "real": 1.0485470672528527,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 1.0000000000080698,
+          "frequency_hz": 0.0,
+          "real": 1.0000000000080698,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.999999999907089,
+          "frequency_hz": 0.0,
+          "real": 0.999999999907089,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9999812933062535,
+          "frequency_hz": 0.0,
+          "real": 0.9999812933062535,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9959882246435214,
+          "frequency_hz": 0.0,
+          "real": 0.9959882246435214,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9322099434606999,
+          "frequency_hz": 0.13085936113886965,
+          "real": 0.9320839049484251,
+          "imaginary": 0.015328823278271066
+        },
+        {
+          "magnitude": 0.9322099434606999,
+          "frequency_hz": 0.13085936113886965,
+          "real": 0.9320839049484251,
+          "imaginary": -0.015328823278271066
+        },
+        {
+          "magnitude": 0.9053032104445967,
+          "frequency_hz": 0.06967874059343099,
+          "real": 0.9052685062793199,
+          "imaginary": 0.00792681399445791
+        }
+      ]
+    },
+    {
+      "iteration": 403000,
+      "source_frame": 500,
+      "state_difference_epsilon": 0.0001,
+      "control_dt": 0.02,
+      "largest_modes": [
+        {
+          "magnitude": 1.0241128917669233,
+          "frequency_hz": 0.0,
+          "real": 1.0241128917669233,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 1.00000000000413,
+          "frequency_hz": 0.0,
+          "real": 1.00000000000413,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9999999999957692,
+          "frequency_hz": 0.0,
+          "real": 0.9999999999957692,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9989855200894528,
+          "frequency_hz": 0.0,
+          "real": 0.9989855200894528,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9967961477617272,
+          "frequency_hz": 0.0,
+          "real": 0.9967961477617272,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9411073395639722,
+          "frequency_hz": 0.09343310279296485,
+          "real": 0.9410424723199682,
+          "imaginary": 0.011049428541763738
+        },
+        {
+          "magnitude": 0.9411073395639722,
+          "frequency_hz": 0.09343310279296485,
+          "real": 0.9410424723199682,
+          "imaginary": -0.011049428541763738
+        },
+        {
+          "magnitude": 0.909251662128307,
+          "frequency_hz": 0.05942623322215611,
+          "real": 0.9092263091944259,
+          "imaginary": 0.006789974357171015
+        }
+      ]
+    },
+    {
+      "iteration": 403000,
+      "source_frame": 500,
+      "state_difference_epsilon": 0.0003,
+      "control_dt": 0.02,
+      "largest_modes": [
+        {
+          "magnitude": 1.0240948232718081,
+          "frequency_hz": 0.0,
+          "real": 1.0240948232718081,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 1.000000000004122,
+          "frequency_hz": 0.0,
+          "real": 1.000000000004122,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9999999999957707,
+          "frequency_hz": 0.0,
+          "real": 0.9999999999957707,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9989794106651261,
+          "frequency_hz": 0.0,
+          "real": 0.9989794106651261,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9968022422569031,
+          "frequency_hz": 0.0,
+          "real": 0.9968022422569031,
+          "imaginary": 0.0
+        },
+        {
+          "magnitude": 0.9413697171965091,
+          "frequency_hz": 0.09487386568412656,
+          "real": 0.9413028153653998,
+          "imaginary": 0.011222933654244316
+        },
+        {
+          "magnitude": 0.9413697171965091,
+          "frequency_hz": 0.09487386568412656,
+          "real": 0.9413028153653998,
+          "imaginary": -0.011222933654244316
+        },
+        {
+          "magnitude": 0.9089589365671376,
+          "frequency_hz": 0.06170052535137814,
+          "real": 0.9089316147522699,
+          "imaginary": 0.007047557668638772
+        }
+      ]
+    }
+  ],
+  "interpretation_limit": "Local derivatives at reference states do not establish global stability or exact equilibrium.",
+  "official_source_modified": false,
+  "architecture_modified": false,
+  "optimizer_steps": 0
+}

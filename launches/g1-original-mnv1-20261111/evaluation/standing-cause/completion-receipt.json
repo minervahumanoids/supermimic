@@ -1,0 +1,55 @@
+{
+  "verified_utc": "2026-11-12T19:21:25.206528+00:00",
+  "service_state": "Restart=no\nMainPID=0\nActiveState=inactive\n",
+  "gpu_compute_processes": "",
+  "sources": {
+    "supermimic": {
+      "commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+      "tracked_changes": ""
+    },
+    "mjlab_research": {
+      "commit": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+      "tracked_changes": ""
+    }
+  },
+  "selected_checkpoint": {
+    "checkpoint_artifact": "minervahumanoids/Supermimic/model-ga216ipt:v25",
+    "iteration": 25000,
+    "actor_sha256": "a0ce1eb1614c6380dc304a0781dc0dc16c9f79e9b05b33d1b0e3ccd06a3c013c",
+    "backend": "standalone CPU MuJoCo",
+    "full_fixed_cohort": "30 BONES clips and three PICO sessions",
+    "reason": "Checkpoint 403000 has a standing regression. Select the unchanged earlier artifact after matched evaluation.",
+    "previous_evaluation_preserved": "model-ga216ipt:v403 at iteration 403000",
+    "source_verified_unchanged": {
+      "supermimic": {
+        "commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+        "tracked_changes": ""
+      },
+      "mjlab_research": {
+        "commit": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+        "tracked_changes": ""
+      }
+    },
+    "architecture_modified": false,
+    "pull_request": "https://github.com/minervahumanoids/supermimic/pull/1",
+    "gate_file": "launches/g1-original-mnv1-20261111/evaluation/standing-cause/checkpoint-selection.json",
+    "training_started": false,
+    "limitations": "Higher aggregate palm-orientation error than checkpoint 403000. The precise training cause of the regression remains unproven."
+  },
+  "wandb_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/ga216ipt",
+  "wandb_state": "killed",
+  "launch_commit_preserved": "ad813ef33ed15201044b8d8c0bf0c808628ae64f",
+  "original_evaluation_preserved": true,
+  "orion_before": {
+    "machine": "mnv1",
+    "owner": "Mattia",
+    "kind": "reservation",
+    "note": "PR1 G1 cause: standing",
+    "end": 1794523438787.9697,
+    "version": "a55fc4a04afe417f8d427401d2880cd0",
+    "wandb_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/ga216ipt"
+  },
+  "orion_after": null,
+  "new_training_started": false,
+  "unrelated_jobs_modified": false
+}

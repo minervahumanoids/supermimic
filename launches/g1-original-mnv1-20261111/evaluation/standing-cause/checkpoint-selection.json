@@ -1,0 +1,267 @@
+{
+  "passed": true,
+  "scope": "Frozen checkpoint promotion only. No training-stop or budget changes.",
+  "selected_artifact": "minervahumanoids/Supermimic/model-ga216ipt:v25",
+  "selected_iteration": 25000,
+  "actor_sha256": "a0ce1eb1614c6380dc304a0781dc0dc16c9f79e9b05b33d1b0e3ccd06a3c013c",
+  "thresholds": {
+    "root_xy_max_cm": 10.0,
+    "joint_velocity_rms_rad_s": 0.05,
+    "action_change_rms": 0.02,
+    "ankle_xy_speed_rms_after_2s_cm_s": 1.0
+  },
+  "checks": [
+    {
+      "name": "original artifact",
+      "actual": "a0ce1eb1614c6380dc304a0781dc0dc16c9f79e9b05b33d1b0e3ccd06a3c013c",
+      "passed": true
+    },
+    {
+      "name": "zero learning steps",
+      "actual": 0,
+      "passed": true
+    },
+    {
+      "name": "bones simulator",
+      "actual": "standalone CPU MuJoCo",
+      "passed": true
+    },
+    {
+      "name": "bones policy",
+      "actual": "a0ce1eb1614c6380dc304a0781dc0dc16c9f79e9b05b33d1b0e3ccd06a3c013c",
+      "passed": true
+    },
+    {
+      "name": "bones model_sha256",
+      "actual": "da23e209ca71e74fcd1d333378f3055d46ef9e8b8099ef0d550431e422e2126c",
+      "passed": true
+    },
+    {
+      "name": "bones plant_contract_sha256",
+      "actual": "7a7338d5a1c49d72ac468d80b86f0416e230e40aca00a8df2a6d01ac3828aceb",
+      "passed": true
+    },
+    {
+      "name": "bones input_selection_sha256",
+      "actual": "20073e45ba1f92959274f8a9aa28bfc3d37d623ecba5efd10376ed49272f1e41",
+      "passed": true
+    },
+    {
+      "name": "bones authoritative_selection_sha256",
+      "actual": "08b1c7d4e47dd95f99834a4dc2a8a75beba0fb53de04f85c3bbaad6cb16e1cc6",
+      "passed": true
+    },
+    {
+      "name": "bones full fixed cohort",
+      "actual": 30,
+      "passed": true
+    },
+    {
+      "name": "bones full intervals",
+      "actual": 16423,
+      "passed": true
+    },
+    {
+      "name": "pico simulator",
+      "actual": "standalone CPU MuJoCo",
+      "passed": true
+    },
+    {
+      "name": "pico policy",
+      "actual": "a0ce1eb1614c6380dc304a0781dc0dc16c9f79e9b05b33d1b0e3ccd06a3c013c",
+      "passed": true
+    },
+    {
+      "name": "pico model_sha256",
+      "actual": "da23e209ca71e74fcd1d333378f3055d46ef9e8b8099ef0d550431e422e2126c",
+      "passed": true
+    },
+    {
+      "name": "pico plant_contract_sha256",
+      "actual": "7a7338d5a1c49d72ac468d80b86f0416e230e40aca00a8df2a6d01ac3828aceb",
+      "passed": true
+    },
+    {
+      "name": "pico input_selection_sha256",
+      "actual": "a6c3e4e46d6f0954f78770953dab5d477fc38d045363b0d8432566cfb36feb52",
+      "passed": true
+    },
+    {
+      "name": "pico authoritative_selection_sha256",
+      "actual": "64d5b6610ac1bea432dc8aaa3320bdbe1817d97df22b9762508598c4d2722e39",
+      "passed": true
+    },
+    {
+      "name": "pico full fixed cohort",
+      "actual": 3,
+      "passed": true
+    },
+    {
+      "name": "pico full intervals",
+      "actual": 15898,
+      "passed": true
+    },
+    {
+      "name": "v25_screen_nominal full interval",
+      "actual": 1001,
+      "passed": true
+    },
+    {
+      "name": "v25_screen_nominal policy",
+      "actual": "a0ce1eb1614c6380dc304a0781dc0dc16c9f79e9b05b33d1b0e3ccd06a3c013c",
+      "passed": true
+    },
+    {
+      "name": "v25_screen_nominal root_xy_max_cm",
+      "actual": 3.8641367172653265,
+      "passed": true
+    },
+    {
+      "name": "v25_screen_nominal joint_velocity_rms_rad_s",
+      "actual": 0.020126924265476163,
+      "passed": true
+    },
+    {
+      "name": "v25_screen_nominal action_change_rms",
+      "actual": 0.004356980789452791,
+      "passed": true
+    },
+    {
+      "name": "v25_screen_nominal ankle XY speed",
+      "actual": [
+        0.045621064811364236,
+        0.042426809711947
+      ],
+      "passed": true
+    },
+    {
+      "name": "v25_screen_friction_1 full interval",
+      "actual": 1001,
+      "passed": true
+    },
+    {
+      "name": "v25_screen_friction_1 policy",
+      "actual": "a0ce1eb1614c6380dc304a0781dc0dc16c9f79e9b05b33d1b0e3ccd06a3c013c",
+      "passed": true
+    },
+    {
+      "name": "v25_screen_friction_1 root_xy_max_cm",
+      "actual": 3.832092513121764,
+      "passed": true
+    },
+    {
+      "name": "v25_screen_friction_1 joint_velocity_rms_rad_s",
+      "actual": 0.020295141975877205,
+      "passed": true
+    },
+    {
+      "name": "v25_screen_friction_1 action_change_rms",
+      "actual": 0.004360984079539776,
+      "passed": true
+    },
+    {
+      "name": "v25_screen_friction_1 ankle XY speed",
+      "actual": [
+        0.05006385661647341,
+        0.042225898985401585
+      ],
+      "passed": true
+    },
+    {
+      "name": "native diagnostic policy",
+      "actual": "a0ce1eb1614c6380dc304a0781dc0dc16c9f79e9b05b33d1b0e3ccd06a3c013c",
+      "passed": true
+    },
+    {
+      "name": "native standing root error",
+      "actual": 3.8643875122070312,
+      "passed": true
+    },
+    {
+      "name": "regressed final checkpoint rejected",
+      "actual": {
+        "root_xy_max_cm": true,
+        "joint_velocity_rms_rad_s": true,
+        "action_change_rms": true
+      },
+      "passed": true
+    }
+  ],
+  "standing": {
+    "v25_screen_nominal": {
+      "label": "v25_screen_nominal",
+      "backend": "standalone CPU MuJoCo",
+      "inference_device": "cpu",
+      "precision": "ieee",
+      "mode": "motion",
+      "frames": 1001,
+      "complete": true,
+      "foot_friction_override": null,
+      "inference_batch": 1,
+      "stop": null,
+      "actor_sha256": "a0ce1eb1614c6380dc304a0781dc0dc16c9f79e9b05b33d1b0e3ccd06a3c013c",
+      "root_xy_mean_cm": 3.4938524226498178,
+      "root_xy_final_cm": 3.758600505415822,
+      "root_xy_max_cm": 3.8641367172653265,
+      "root_velocity_xy_rms_m_s": 0.005584251388010469,
+      "joint_velocity_rms_rad_s": 0.020126924265476163,
+      "action_change_rms": 0.004356980789452791,
+      "optimizer_steps": 0,
+      "source_data_modified": false,
+      "ankle_xy_speed_rms_after_2s_cm_s": [
+        0.045621064811364236,
+        0.042426809711947
+      ],
+      "ankle_xy_path_after_2s_cm": [
+        0.7886449564929808,
+        0.7405310933305053
+      ],
+      "recording_sha256": "98c8b142612dbc31f945a560ca7ac37718ab84d5160f74e1654b715dbf61f2d6"
+    },
+    "v25_screen_friction_1": {
+      "label": "v25_screen_friction_1",
+      "backend": "standalone CPU MuJoCo",
+      "inference_device": "cpu",
+      "precision": "ieee",
+      "mode": "motion",
+      "frames": 1001,
+      "complete": true,
+      "foot_friction_override": 1.0,
+      "inference_batch": 1,
+      "stop": null,
+      "actor_sha256": "a0ce1eb1614c6380dc304a0781dc0dc16c9f79e9b05b33d1b0e3ccd06a3c013c",
+      "root_xy_mean_cm": 3.4797131163287465,
+      "root_xy_final_cm": 3.7211929483539055,
+      "root_xy_max_cm": 3.832092513121764,
+      "root_velocity_xy_rms_m_s": 0.0055510743139582435,
+      "joint_velocity_rms_rad_s": 0.020295141975877205,
+      "action_change_rms": 0.004360984079539776,
+      "optimizer_steps": 0,
+      "source_data_modified": false,
+      "ankle_xy_speed_rms_after_2s_cm_s": [
+        0.05006385661647341,
+        0.042225898985401585
+      ],
+      "ankle_xy_path_after_2s_cm": [
+        0.857951042341707,
+        0.7318991200424398
+      ],
+      "recording_sha256": "ebc17f91ef1f6c36ab004c7775c5cfe4fd33b6074217805551d7886bd2c97b7a"
+    }
+  },
+  "foot_definition": "Ankle-frame XY movement after two seconds on the saved 50 Hz clock. This is not a contact-slip estimate.",
+  "report_sha256": {
+    "bones": "8bd7860cbc3c9cc57f0de2adc280111d23270f1da54136b0f35cb8a1f6548146",
+    "pico": "3d82db13d7f70b924f31dfe8c8f38ebaaa1e3acde4274cd9a21faa08c8c379f7"
+  },
+  "latest_artifact_preserved": "minervahumanoids/Supermimic/model-ga216ipt:v403",
+  "official_source_modified": false,
+  "architecture_modified": false,
+  "optimizer_steps": 0,
+  "new_training_started": false,
+  "limitations": [
+    "The standing gate does not establish gait quality on every motion.",
+    "The selected checkpoint has higher aggregate palm-orientation error than checkpoint 403000.",
+    "The tests identify a learned-policy regression. They do not establish which training choice caused it."
+  ]
+}

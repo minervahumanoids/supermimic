@@ -85,3 +85,13 @@ The standalone MuJoCo evaluation completed all 30 approved BONES clips and all t
 The [evaluation report](evaluation/README.md) preserves the results, source identities, compatibility approval, and checkpoint hashes.
 The service remains inactive with automatic restart disabled.
 The original launch commit remains `ad813ef33ed15201044b8d8c0bf0c808628ae64f`.
+
+## Standing regression correction
+
+The final checkpoint develops standing movement that also occurs in native physics.
+The [standing investigation](evaluation/standing-cause/README.md) selects the unchanged checkpoint at iteration 25,000.
+The selection reduces the standing endpoint root error from 40.49 cm to 3.76 cm.
+The earlier checkpoint passes the full approved cohort and the separate standing gate at two friction values.
+The earlier checkpoint has higher aggregate hand errors than the final checkpoint.
+The official source and architecture remain unchanged.
+The precise training cause remains unproven, so the next training remains on hold.
