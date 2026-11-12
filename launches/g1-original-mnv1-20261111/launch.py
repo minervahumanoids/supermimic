@@ -227,22 +227,43 @@ def main():
       raise RuntimeError("Smoke must never initialize W&B")
     runner.env.reset()
     runner._seed_sim_history()
+    started = time.perf_counter()
     for step in range(32):
       runner.step()
       if not torch.isfinite(runner.env.get_observations()["full_state"]).all():
         raise RuntimeError("Nonfinite G1 collection")
       if step % 8 == 0:
         print(json.dumps({"smoke_collection_step": step + 1}), flush=True)
+    collect_time = time.perf_counter() - started
+    wm_time = policy_time = 0.0
     for update in range(5):
       batches = [
         runner.replay_buffer.sample(cfg.runner.wm.horizon, cfg.runner.wm.batch_size)
         for _ in range(cfg.runner.wm.num_batches)
       ]
+      started = time.perf_counter()
       losses = runner.world_model_learner.update(batches)
+      wm_time += time.perf_counter() - started
+      started = time.perf_counter()
       losses.update(runner.policy_learner.update())
+      policy_time += time.perf_counter() - started
       if not all(torch.isfinite(v).all() for v in losses.values()):
         raise RuntimeError("Nonfinite native G1 learner values")
       print(json.dumps({"smoke_learner_update": update + 1}), flush=True)
+    logger.log(
+      it=0,
+      total_it=1,
+      collect_time=collect_time,
+      wm_learn_time=wm_time,
+      policy_learn_time=policy_time,
+      loss_dict=losses,
+      num_collected_steps=32 * cfg.num_envs,
+    )
+    if any(
+      abs(sum(episode[4:]) - episode[0]) > 1e-4 * max(1, abs(episode[0]))
+      for episode in logger.episodes
+    ):
+      raise RuntimeError("Completed episode reward components do not match returns")
     receipt = {
       "passed": True,
       "num_envs": cfg.num_envs,
