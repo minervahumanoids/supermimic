@@ -1,0 +1,40 @@
+{
+  "status": "Completed with explicitly approved G1 support",
+  "robot": "Unitree G1",
+  "training_run": "ga216ipt",
+  "training_pr": "https://github.com/minervahumanoids/supermimic/pull/1",
+  "approved_tool_files": {
+    "review.py": "ec0b41b4a466d8896d1f1dab5ccf6f24cc327d4dd64c9ab07c6b84ffdff96632",
+    "motion_metrics.py": "248637bf92f56a9b211317a02032521380cb33f17fad25b309b391d8c17d2353",
+    "comparison_manifest.py": "781e71566556e04aa58fd12ac96ff03430fc429708a1556e9a1354c096a68c2d"
+  },
+  "preserved_cohort_sha256": {
+    "bones": "08b1c7d4e47dd95f99834a4dc2a8a75beba0fb53de04f85c3bbaad6cb16e1cc6",
+    "pico": "64d5b6610ac1bea432dc8aaa3320bdbe1817d97df22b9762508598c4d2722e39"
+  },
+  "approval": {
+    "date": "2026-11-12",
+    "reply": "Add G1 support",
+    "scope": "Preserve the approved cohort, metrics, layout, and controls"
+  },
+  "initial_compatibility_findings": [
+    "The approved standalone evaluator expects Roger checkpoint fields identity, args, and pi. The official G1 actor is a native state dictionary.",
+    "The approved viewer requires Roger hand_l and hand_r bodies and fixed Roger palm offsets. The G1 asset uses wrist links and has 29 joints.",
+    "The frozen comparison uses one physical model for all policy lanes. Roger policy A cannot execute on the G1 plant.",
+    "The approved PICO cohort has Roger references. G1 requires matching retargeted references for the same source intervals."
+  ],
+  "resolution": {
+    "actor": "Load the original state dictionary through the native actor builder",
+    "palms": "Use official G1 palm sites with the unchanged pelvis-relative definitions",
+    "pico": "Retarget the exact original SMPL inputs with the pinned MDP GMR backend",
+    "baseline": "Roger Policy A remains explicitly unavailable on G1",
+    "encoders": "Evaluate the trained motion encoder. Label the SMPL encoder unavailable and velocity encoder untrained."
+  },
+  "scope": "Add G1 support to the approved standalone evaluator and viewer. Preserve controls, metrics, source clocks, and exact 30 BONES and three PICO inputs. Label unavailable G1 baseline and SMPL route explicitly.",
+  "completed_tool_files": {
+    "review.py": "f21c8bb423b71dc1e8a854e4a9b04832b0f570ae08c32a0c0bd6a7350dbcc77d",
+    "motion_metrics.py": "248637bf92f56a9b211317a02032521380cb33f17fad25b309b391d8c17d2353",
+    "comparison_manifest.py": "9f30b34ecdd1aa31e2d44ae5336ff6d81eeddcfdf1c56943a7ff39b284738cf0",
+    "g1_robot.py": "f716c89376ef92de42df62a5ce095165119c052ad8d7dea832179502da418a10"
+  }
+}

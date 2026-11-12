@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "source": "Original saved world model buffers",
+  "action_scale_verified": true,
+  "action_offset_verified": true,
+  "atol": 1e-06
+}

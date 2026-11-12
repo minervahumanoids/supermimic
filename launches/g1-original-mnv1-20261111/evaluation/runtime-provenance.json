@@ -1,0 +1,27 @@
+{
+  "source_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+  "launch_commit": "ad813ef33ed15201044b8d8c0bf0c808628ae64f",
+  "mjlab_commit": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+  "mdp_commit": "c95462fdcee05b1396ea578b9b3226ea7fc7050f",
+  "gmr_commit": "af90c22c64759568c99e5e39bc1ced50eb7ef25c",
+  "evaluation": {
+    "python": "3.13.18",
+    "mujoco": "3.16.0",
+    "backend": "standalone CPU MuJoCo",
+    "mink": "1.4.0",
+    "daqp": "0.11.2",
+    "joblib": "1.6.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "viewer": {
+    "python": "3.13.15",
+    "viser": "1.1.1",
+    "mujoco": "3.16.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0",
+    "trimesh": "4.12.2"
+  },
+  "unchanged_motion_metrics_sha256": "248637bf92f56a9b211317a02032521380cb33f17fad25b309b391d8c17d2353"
+}

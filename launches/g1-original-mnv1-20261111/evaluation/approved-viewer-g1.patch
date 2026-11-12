@@ -1,0 +1,210 @@
+--- a/experiments/master-baseline-review-20261104/review.py
++++ b/experiments/master-baseline-review-20261104/review.py
+@@ -252,6 +252,9 @@
+     spec = importlib.util.spec_from_file_location("original_robot", ROOT.parent / "friction-five-20261030/review.py")
+     module = importlib.util.module_from_spec(spec)
+     spec.loader.exec_module(module)
++    if COMPARISON.manifest.get('robot') == 'Unitree G1':
++        from g1_robot import G1Robot
++        module.Robot = G1Robot
+     model = mujoco.MjModel.from_xml_path(str(MODEL_PATH))
+     server = viser.ViserServer(host="127.0.0.1", port=args.port,
+         label="MuJoCo sim2sim · saved policies")
+@@ -267,7 +270,9 @@
+         category_control = server.gui.add_dropdown("Policy category", list(categories),
+                                                    initial_value=initial_category)
+         category_info = server.gui.add_markdown(category_description(categories[initial_category]))
+-    encoder_route = server.gui.add_dropdown("Encoder route", ["Retargeted", "SMPL"], initial_value="Retargeted")
++    route_labels = COMPARISON.manifest.get('encoder_route_labels', {'robot': 'Retargeted', 'human': 'SMPL'})
++    encoder_options = [route_labels[route] for route in COMPARISON.available_routes]
++    encoder_route = server.gui.add_dropdown("Encoder route", encoder_options, initial_value=encoder_options[0])
+     focused_lanes = tuple(name for name, (policy, _) in TRIALS.items()
+                           if policy in {"F1", "F2", "F3", "F4"})
+     policy_control = (server.gui.add_dropdown("Policies", policy_choices(
+@@ -300,8 +305,16 @@
+         thickness_units="screen", position=offsets[name]) for name in offsets}
+     labels = {name: server.scene.add_label(f"/labels/{name}", SHORT[name],
+         position=offsets[name] + [0., 0., 2.]) for name in offsets}
+-    palms = [model.body(name).id for name in ["hand_l", "hand_r"]]
+-    palm_offsets = np.array([[0., .0795, 0.], [0., -.0795, 0.]])
++    palm_sites = COMPARISON.manifest.get('palm_sites')
++    if palm_sites:
++        palm_ids = [model.site(name).id for name in palm_sites]
++        def palm_positions(data):
++            return data.site_xpos[palm_ids].copy()
++    else:
++        palms = [model.body(name).id for name in ["hand_l", "hand_r"]]
++        palm_offsets = np.array([[0., .0795, 0.], [0., -.0795, 0.]])
++        def palm_positions(data):
++            return data.xpos[palms] + np.einsum("bij,bj->bi", data.xmat[palms].reshape(2, 3, 3), palm_offsets)
+     targets = {name: server.scene.add_point_cloud(f"/targets/{name}", np.zeros((2, 3)),
+         colors=np.array([[255, 205, 40]] * 2, dtype=np.uint8), point_size=.02,
+         position=offsets[name], visible=False) for name in LANES}
+@@ -318,7 +331,8 @@
+         horizontal = (float(span[0]) + 1.5) / (2 * np.tan(client.camera.fov / 2) * max(client.camera.aspect, .5))
+         distance = max(5.5, horizontal * 1.12, float(span[1]) + 4.)
+         client.camera.position = center + np.array([0., -distance, distance * .32])
+-        client.camera.look_at = center
++        vertical_offset = COMPARISON.manifest.get('camera_vertical_view_offset', 0.)
++        client.camera.look_at = center - np.array([0., 0., distance * np.tan(client.camera.fov / 2) * vertical_offset])
+
+     @server.on_client_connect
+     def connected(client):
+@@ -367,7 +381,8 @@
+     label_stamp = (ROOT / "clip-labels.json").stat().st_mtime_ns
+     last = time.monotonic()
+     while True:
+-        COMPARISON.activate_route("robot" if encoder_route.value == "Retargeted" else "human")
++        COMPARISON.activate_route(next(route for route in COMPARISON.available_routes
++                                      if route_labels[route] == encoder_route.value))
+         if category_control is not None:
+             if category_control.value != previous_category:
+                 previous_category = category_control.value
+@@ -406,14 +421,18 @@
+             roots = np.concatenate(roots)
+             xy = (roots[:, :2].min(axis=0) + roots[:, :2].max(axis=0)) / 2
+             span = np.ptp(roots[:, :2], axis=0)
+-            camera_state = {"center": np.array([*xy, .95]), "span": span}
++            camera_state = {"center": np.array([*xy, COMPARISON.manifest.get('camera_look_at_height', .95)]), "span": span}
+             for client in server.get_clients().values():
+                 fit_camera(client)
+             source = clip["source"]
+             start = source.get("source_interval", {}).get("start_s", 0.)
+             external = COHORTS[key[0]] == "pico-inputs"
+-            membership = "Recorded PICO · outside the training cohort" if external else "BONES 0.3.0 screened · training member"
+-            source_info.content = f"**{clip['clip']}**\n\n{membership}\n\n{clip['frames']} frames · {(clip['frames'] - 1) / 50:.2f} s · assets 1.11.3\n\nOriginal source starts at {start:.2f} s."
++            dataset_label = COMPARISON.manifest.get('dataset_label', 'BONES 0.3.0 screened')
++            membership = ("Recorded PICO · outside the training cohort" if external else
++                          dataset_label + (" · training member" if clip.get('training_membership', True)
++                                           else " · excluded from training"))
++            asset_label = COMPARISON.manifest.get('asset_label', 'assets 1.11.3')
++            source_info.content = f"**{clip['clip']}**\n\n{membership}\n\n{clip['frames']} frames · {(clip['frames'] - 1) / 50:.2f} s · {asset_label}\n\nOriginal source starts at {start:.2f} s."
+             last = time.monotonic()
+         binding = (current, visible_trials)
+         if binding != metrics_binding:
+@@ -454,7 +473,7 @@
+             roots.extend(recordings[name]["actual_root"] + offsets[name] for name in visible_trials)
+             roots = np.concatenate(roots)
+             xy = (roots[:, :2].min(axis=0) + roots[:, :2].max(axis=0)) / 2
+-            camera_state = {"center": np.array([*xy, .95]), "span": np.ptp(roots[:, :2], axis=0)}
++            camera_state = {"center": np.array([*xy, COMPARISON.manifest.get('camera_look_at_height', .95)]), "span": np.ptp(roots[:, :2], axis=0)}
+             for client in server.get_clients().values():
+                 fit_camera(client)
+         now = time.monotonic()
+@@ -476,7 +495,7 @@
+             with server.atomic():
+                 robots["reference"].show(reference["root_pos"][f], reference["root_quat_wxyz"][f], reference["joint_pos"][f])
+                 physical = robots["reference"].data
+-                target = physical.xpos[palms] + np.einsum("bij,bj->bi", physical.xmat[palms].reshape(2, 3, 3), palm_offsets)
++                target = palm_positions(physical)
+                 labels["source"].text = "PICO / SMPL" if COHORTS[current[0]] == "pico-inputs" else "SMPL"
+                 labels["source"].position = human[f, 0] + offsets["source"] + [0., 0., 1.25]
+                 labels["reference"].position = reference["root_pos"][f] + offsets["reference"] + [0., 0., 1.25]
+@@ -508,7 +527,7 @@
+                     targets[name].visible = palm_control.value and not ended_recording
+                     if palm_control.value and not ended_recording:
+                         physical = robots[name].data
+-                        actual = physical.xpos[palms] + np.einsum("bij,bj->bi", physical.xmat[palms].reshape(2, 3, 3), palm_offsets)
++                        actual = palm_positions(physical)
+                         errors[name].points = np.stack((actual, target), axis=1)
+                 interval = "Complete source clip."
+                 clock.content = f"**Frame {f} / {frame.max} · {f / 50:.2f} s**\n\n{interval}\n\nSpace: play or pause."
+--- a/experiments/master-baseline-review-20261104/comparison_manifest.py
++++ b/experiments/master-baseline-review-20261104/comparison_manifest.py
+@@ -20,6 +20,8 @@
+         self.path = Path(manifest_path).resolve()
+         self.manifest = json.loads(self.path.read_text())
+         assert self.manifest['schema'] == 'frozen-policy-review-v1'
++        self.available_routes = self.manifest.get('available_encoder_routes', ['robot', 'human'])
++        assert self.available_routes and set(self.available_routes) <= {'robot', 'human'}
+         self.root = self.path.parent
+         self.source_world = source_world
+         self.require_mujoco = require_mujoco
+@@ -83,7 +85,8 @@
+         for lane, entry in self.display['lanes'].items():
+             selected = route if entry['route'] == 'selected' else entry['route']
+             self.trials[lane] = (entry['policy'], selected)
+-            suffix = 'SMPL' if selected == 'human' else 'robot'
++            suffix = self.manifest.get('recording_route_labels', {}).get(
++                selected, 'SMPL' if selected == 'human' else 'robot')
+             fixed = entry['route'] != 'selected'
+             label = entry['short'] + (' · ' + suffix + ' only' if fixed else '')
+             styles[lane] = (label, entry['color'], entry.get('dash', ''))
+@@ -97,7 +100,7 @@
+     def activate_route(self, route):
+         if self.route == route:
+             return
+-        assert route in ('robot', 'human')
++        assert route in self.available_routes
+         self.route = route
+         self.trials.clear()
+         if self.display is not None:
+@@ -199,7 +202,7 @@
+             assert self.manifest['policies']['reference-u14500']['routes'] == ['robot']
+         counts = {}
+         previous = self.route
+-        for route in ('robot', 'human'):
++        for route in self.available_routes:
+             self.activate_route(route)
+             for directory in ('inputs', 'pico-inputs'):
+                 cohort = self.load_cohort(directory)
+--- /dev/null
++++ b/experiments/master-baseline-review-20261104/g1_robot.py
+@@ -0,0 +1,57 @@
++"""Render the official G1 model inside the approved comparison viewer."""
++
++import mujoco
++import numpy as np
++from scipy.spatial.transform import Rotation
++import trimesh
++
++
++class G1Robot:
++    """Keep native visible geometry, site markers, and MuJoCo colors."""
++
++    def __init__(self, server, name, model, joints, offset):
++        self.model, self.offset = model, np.array(offset)
++        self.data = mujoco.MjData(model)
++        self.scene = mujoco.MjvScene(model, maxgeom=1000)
++        self.options, self.camera = mujoco.MjvOption(), mujoco.MjvCamera()
++        self.addresses = [int(model.joint(joint).qposadr[0]) for joint in joints]
++        self.nodes, self.geometry_ids = [], []
++        self.update_scene()
++        for i in range(self.scene.ngeom):
++            geom = self.scene.geoms[i]
++            if geom.type == mujoco.mjtGeom.mjGEOM_MESH:
++                mesh = int(model.geom_dataid[geom.objid])
++                va, vn = model.mesh_vertadr[mesh], model.mesh_vertnum[mesh]
++                fa, fn = model.mesh_faceadr[mesh], model.mesh_facenum[mesh]
++                vertices = model.mesh_vert[va:va+vn].copy()
++                faces = model.mesh_face[fa:fa+fn].copy()
++            elif geom.type == mujoco.mjtGeom.mjGEOM_PLANE:
++                # The approved viewer already draws one shared world grid.
++                # Keep original human coordinates visible below that reference plane.
++                continue
++            elif geom.type == mujoco.mjtGeom.mjGEOM_SPHERE:
++                primitive = trimesh.creation.icosphere(subdivisions=2,radius=geom.size[0])
++                vertices, faces = primitive.vertices, primitive.faces
++            else:
++                raise ValueError(f'Unsupported native G1 visible geometry: {geom.type}')
++            self.geometry_ids.append(i)
++            self.nodes.append(server.scene.add_mesh_simple(
++                f'/{name}/geom-{i}',vertices,faces,
++                color=tuple(int(x*255) for x in geom.rgba[:3]),opacity=float(geom.rgba[3]),
++                position=geom.pos+self.offset,
++                wxyz=Rotation.from_matrix(geom.mat.reshape(3,3)).as_quat()[[3,0,1,2]]))
++
++    def update_scene(self):
++        mujoco.mj_forward(self.model,self.data)
++        mujoco.mjv_updateScene(self.model,self.data,self.options,None,self.camera,
++                              mujoco.mjtCatBit.mjCAT_ALL,self.scene)
++
++    def show(self,root,quaternion,q,*,visible=True):
++        self.data.qpos[:3],self.data.qpos[3:7] = root,quaternion
++        self.data.qpos[self.addresses] = q
++        self.update_scene()
++        for i,node in zip(self.geometry_ids,self.nodes,strict=True):
++            geom = self.scene.geoms[i]
++            node.visible = visible
++            node.position = geom.pos+self.offset
++            node.wxyz = Rotation.from_matrix(geom.mat.reshape(3,3)).as_quat()[[3,0,1,2]]

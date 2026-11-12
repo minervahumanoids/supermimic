@@ -1,0 +1,84 @@
+{
+  "dataset": "Recorded PICO Ali takes 1\u20133",
+  "asset_version": "1.11.3",
+  "fps": 50,
+  "training_membership": false,
+  "clips": [
+    {
+      "category": "PICO \u00b7 Ali 1",
+      "clip": "oct02-ali-01",
+      "frames": 5634,
+      "training_membership": false,
+      "original_human": "original-human/00.pkl",
+      "source": {
+        "source_interval": {
+          "start_s": 0,
+          "end_s": 112.66
+        }
+      },
+      "original_stream_sha256": "4655a725fd97659097a02d238e1d566c95e87a483aece34047f76062b603fbc9",
+      "robot_reference_sha256": "2b71f538cb11cd6926d44960b0bf148522c17a07a8af18a3d3f5fd26ca16d8a2",
+      "capture": {
+        "repeated_source_timestamps": 82,
+        "unavailable_source_frames": 3,
+        "max_source_age_ms": 80.76066799928583
+      },
+      "original_smpl_representation": "Original PICO pose and FK in the saved SMPL convention. No pose fit or filtering.",
+      "original_human_sha256": "bd01364b3a6ae79481e53fb52024084ec11a28682b22aec3637ac5985aac816e",
+      "display_number": 1
+    },
+    {
+      "category": "PICO \u00b7 Ali 2",
+      "clip": "oct02-ali-02",
+      "frames": 4263,
+      "training_membership": false,
+      "original_human": "original-human/01.pkl",
+      "source": {
+        "source_interval": {
+          "start_s": 0,
+          "end_s": 85.24
+        }
+      },
+      "original_stream_sha256": "7f87729b0057e060968a326eeb39d5223bf77ace10047e68e321410e6d73c68b",
+      "robot_reference_sha256": "b9729aab0d63f1036079dd5aad668691f01e82515d08fff51d72fdef8ebde4a6",
+      "capture": {
+        "repeated_source_timestamps": 289,
+        "unavailable_source_frames": 1,
+        "max_source_age_ms": 110.62075199919974
+      },
+      "original_smpl_representation": "Original PICO pose and FK in the saved SMPL convention. No pose fit or filtering.",
+      "original_human_sha256": "e604d0667cc8d27534d459bd765a021ac1980b225bedbefc6fd0a02dd2c8ee23",
+      "display_number": 2
+    },
+    {
+      "category": "PICO \u00b7 Ali 3",
+      "clip": "oct02-ali-03",
+      "frames": 6001,
+      "training_membership": false,
+      "original_human": "original-human/02.pkl",
+      "source": {
+        "source_interval": {
+          "start_s": 0,
+          "end_s": 120.0
+        }
+      },
+      "original_stream_sha256": "a42053fc78074da37b908f57dede740e7a89ad715ae3fa3aca9acdbbd1ee51b9",
+      "robot_reference_sha256": "0d3421b7baeb4ef8be2f0830f2c4e3430ff763e0307eb410c1ea7336c9f37584",
+      "capture": {
+        "repeated_source_timestamps": 448,
+        "unavailable_source_frames": 1,
+        "max_source_age_ms": 2126.4746420008296
+      },
+      "original_smpl_representation": "Original PICO pose and FK in the saved SMPL convention. No pose fit or filtering.",
+      "original_human_sha256": "45074c365c54d80ee4d4bbb3d50d29c38b8c3df809d9a6de7b84df25b8eda5e9",
+      "display_number": 3
+    }
+  ],
+  "frames": 15898,
+  "package_manifest_sha256": "5972c075c9c6572b8472854aacc2d35137e19b8209fb7ba4e79ebf9274ebd279",
+  "source_boundary_rule": "Clear human derivative/history context at saved tracking losses. Never reset the physical state.",
+  "reference_rule": "Frozen Fresh Universal + Guarded 4 Hz retargeting, including original holds and source age.",
+  "authoritative_selection_sha256": "64d5b6610ac1bea432dc8aaa3320bdbe1817d97df22b9762508598c4d2722e39",
+  "robot": "Unitree G1",
+  "source_clocks_preserved": true
+}

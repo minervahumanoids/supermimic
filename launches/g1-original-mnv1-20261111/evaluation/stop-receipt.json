@@ -1,0 +1,40 @@
+{
+  "user_requested_stop": true,
+  "host": "mnv1",
+  "unit": "supermimic-g1-original-train-20261111.service",
+  "service_state": "Restart=no\nMainPID=0\nExecMainStatus=0\nActiveState=inactive\n",
+  "gpu_processes_after": "",
+  "run_id": "ga216ipt",
+  "wandb_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/ga216ipt",
+  "wandb_state": "killed",
+  "checkpoint_artifact": "minervahumanoids/Supermimic/model-ga216ipt:v403",
+  "checkpoint_version": "v403",
+  "checkpoint_digest": "f9678b3c41db6cb7b3e65325507956a1",
+  "checkpoint_iteration": 403000,
+  "checkpoint_iteration_basis": "Version v403, one launch, native save interval 1000, no checkpoint upload errors, final iteration bound",
+  "last_collector_iteration": 403091,
+  "checkpoint_files": {
+    "actor.pt": {
+      "sha256": "07e064bd4b6500b97a4a6b4af0060a801588abb8f0abdceb38138e2c40c0144b",
+      "md5": "suSW38TYj1gad2+kBzwCUQ==",
+      "bytes": 39378253
+    },
+    "critic.pt": {
+      "sha256": "c0e203cda0519a9507c8618c21e58868372c62e4128b1022aba5be2d263f42f7",
+      "md5": "QFgbtPO/EWOMeXD+02h+JQ==",
+      "bytes": 929269
+    },
+    "world_model.pt": {
+      "sha256": "c3cf9966614f5b7e0fe1a6017bb9636318613aea18c5c8ad90251b146213b14e",
+      "md5": "GB4W3aHQ4alZmn/3qOcegQ==",
+      "bytes": 34990357
+    }
+  },
+  "checkpoint_directory": "/home/mattia/workspace/supermimic-official-g1-mnv1-20261111/stopped-by-user-20261112/checkpoint-v403",
+  "optimizer_state_available": false,
+  "source_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+  "launch_commit": "ad813ef33ed15201044b8d8c0bf0c808628ae64f",
+  "pull_request": "https://github.com/minervahumanoids/supermimic/pull/1",
+  "unrelated_jobs_modified": false,
+  "verified_utc": "2026-11-12T16:16:54.686327+00:00"
+}

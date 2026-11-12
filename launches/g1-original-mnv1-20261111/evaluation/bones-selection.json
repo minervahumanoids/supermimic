@@ -1,0 +1,2534 @@
+{
+  "dataset": "0.3.0-screened428",
+  "scope": "Active comparison selection",
+  "clips": [
+    {
+      "category": "standing",
+      "catalog_index": 41068,
+      "clip": "idle_loop_001__A235__seg_47d13b4c66c6f13e",
+      "frames": 1001,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892877033530,
+          "sha256": "ce10c2ba61cc9a77ccaf3f06085f7afcb4ec42280077fc625dd460972b4ec700",
+          "size": 792488,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00603__bodyimport__chunk_30ac60aafb96eba6/paired/export.tar.gz"
+        },
+        "archive_sha256": "ce10c2ba61cc9a77ccaf3f06085f7afcb4ec42280077fc625dd460972b4ec700",
+        "clip": "idle_loop_001__A235__seg_47d13b4c66c6f13e",
+        "export_interval": {
+          "end_s": 20.0,
+          "source_clip": "idle_loop_001__A235",
+          "start_s": 0.0
+        },
+        "frames": 1001,
+        "original_member_sha256": {
+          "feature": "d7aa8bd682e61d16f13df5f1f903f798d7474c9c8e83968afd0140f8b042a3d3",
+          "human": "0af5acd96d00d1a311eaff26d97ae200f9c73399e2bf865fbf1822d47809f407",
+          "robot": "fd6dc48bc89f8dec123ba8f3b42f19b46933e54bc6e45597cb24e887eaf77043"
+        },
+        "source_clip": "idle_loop_001__A235",
+        "source_id": "clip_da584d1e4f15bef8",
+        "source_interval": {
+          "end_s": 20.02,
+          "source_clip": "idle_loop_001__A235",
+          "start_s": 0.0
+        },
+        "source_sha256": "5fd9f344b4c8edbcb565cf0ab4bfac0e6911ae03f9baace2300312b0cc60cb54"
+      },
+      "original_human": "original-human/00.pkl",
+      "human_primitive_slice_sha256": "7935448afe58ddf1282a8b18a6f12e6208eb82b2adb406e715339a7028037c1c",
+      "evaluation_index": 0,
+      "comparison_number": 1,
+      "saved_source_index": 0,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "idle_loop_001__A235__seg_47d13b4c66c6f13e",
+          "clip_index": 0,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/reference-u14500/trial-0000.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "idle_loop_001__A235__seg_47d13b4c66c6f13e",
+          "clip_index": 0,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/clean-u64000/trial-0001.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "idle_loop_001__A235__seg_47d13b4c66c6f13e",
+          "clip_index": 0,
+          "file": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/trial-0001.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "idle_loop_001__A235__seg_47d13b4c66c6f13e",
+          "clip_index": 0,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/clean-u64000/trial-0000.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "idle_loop_001__A235__seg_47d13b4c66c6f13e",
+          "clip_index": 0,
+          "file": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/trial-0000.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 1,
+      "original_human_sha256": "0af5acd96d00d1a311eaff26d97ae200f9c73399e2bf865fbf1822d47809f407",
+      "training_membership": true,
+      "g1_source_name": "idle_loop_001__A235",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "reaching",
+      "catalog_index": 91520,
+      "clip": "reaching_up_R_002__A405__seg_024a71d522b1ce4a",
+      "frames": 638,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892338254893,
+          "sha256": "8f62863e013c0c7ac6851aee2107b70a6356de468f0cc9c11d386b85eb6d3dac",
+          "size": 571131,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00528__bodyimport__chunk_9c03b4fd1011089f/paired/export.tar.gz"
+        },
+        "archive_sha256": "8f62863e013c0c7ac6851aee2107b70a6356de468f0cc9c11d386b85eb6d3dac",
+        "clip": "reaching_up_R_002__A405__seg_024a71d522b1ce4a",
+        "export_interval": {
+          "end_s": 12.74,
+          "source_clip": "reaching_up_R_002__A405",
+          "start_s": 0.0
+        },
+        "frames": 638,
+        "original_member_sha256": {
+          "feature": "8c513b59ae3dd3113ccd364e2477d3b5f4e8dec6e4c349acede6803b878cbe72",
+          "human": "00bbe10a33c40a2b263dc6632c98c5a1795ffcde6cb6e068780c06495608d2c4",
+          "robot": "6ef455ce800491ecc8473acd527c9978ed7d310e5b04af983494b9f62f003508"
+        },
+        "source_clip": "reaching_up_R_002__A405",
+        "source_id": "clip_dd02c159774e8bc8",
+        "source_interval": {
+          "end_s": 12.76,
+          "source_clip": "reaching_up_R_002__A405",
+          "start_s": 0.0
+        },
+        "source_sha256": "9b8c37dfbc362c8c5a1bc82588c679495eb70df76466afde06512109ba27634c"
+      },
+      "original_human": "original-human/01.pkl",
+      "human_primitive_slice_sha256": "3729aa20b96e212137ec5031a6bbcc33437cd48fca865244bbd2653d55b22c98",
+      "source_clip_index": 1,
+      "comparison_number": 2,
+      "evaluation_index": 1,
+      "saved_source_index": 1,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "reaching_up_R_002__A405__seg_024a71d522b1ce4a",
+          "clip_index": 1,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0012.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "reaching_up_R_002__A405__seg_024a71d522b1ce4a",
+          "clip_index": 1,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0036.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "reaching_up_R_002__A405__seg_024a71d522b1ce4a",
+          "clip_index": 1,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0036.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "reaching_up_R_002__A405__seg_024a71d522b1ce4a",
+          "clip_index": 1,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0024.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "reaching_up_R_002__A405__seg_024a71d522b1ce4a",
+          "clip_index": 1,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0024.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 2,
+      "original_human_sha256": "00bbe10a33c40a2b263dc6632c98c5a1795ffcde6cb6e068780c06495608d2c4",
+      "training_membership": true,
+      "g1_source_name": "reaching_up_R_002__A405",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "walk_forward",
+      "catalog_index": 108284,
+      "clip": "walk_ff_loop_180_R_003__A047__seg_601a96eb8d48d345",
+      "frames": 481,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892961355438,
+          "sha256": "fa6316f785c747030475d67d98cd5b5b700c5ea61cb91a48a32da0e3cfae3da0",
+          "size": 891519,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00460__bodyimport__chunk_41753a66253b58d5/paired/export.tar.gz"
+        },
+        "archive_sha256": "fa6316f785c747030475d67d98cd5b5b700c5ea61cb91a48a32da0e3cfae3da0",
+        "clip": "walk_ff_loop_180_R_003__A047__seg_601a96eb8d48d345",
+        "export_interval": {
+          "end_s": 9.6,
+          "source_clip": "walk_ff_loop_180_R_003__A047",
+          "start_s": 0.0
+        },
+        "frames": 481,
+        "original_member_sha256": {
+          "feature": "d0b684f92f8c906a1474d53398649960e139e6948f0df610793d6d53fa92d253",
+          "human": "789382f99db79f134f1d6407cc8f445467d05aef7e9199ffcf69c676eed23403",
+          "robot": "a7c386cc089dd54171a05c568e866443cb23c6331fd6ccd3fe8be78f21ba0d82"
+        },
+        "source_clip": "walk_ff_loop_180_R_003__A047",
+        "source_id": "clip_ad5a2ccbbc3a9ced",
+        "source_interval": {
+          "end_s": 9.62,
+          "source_clip": "walk_ff_loop_180_R_003__A047",
+          "start_s": 0.0
+        },
+        "source_sha256": "dc59c575fba7420219cf5f9ebdb59ffc026ec5e9f245db34cf0ddfda81502986"
+      },
+      "original_human": "original-human/02.pkl",
+      "human_primitive_slice_sha256": "3f1f2e9c1d0632713dd67c97cca82be31daa8e6fb6d248895552148100d4361d",
+      "evaluation_index": 2,
+      "comparison_number": 3,
+      "saved_source_index": 2,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "walk_ff_loop_180_R_003__A047__seg_601a96eb8d48d345",
+          "clip_index": 1,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/reference-u14500/trial-0001.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "walk_ff_loop_180_R_003__A047__seg_601a96eb8d48d345",
+          "clip_index": 1,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/clean-u64000/trial-0003.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "walk_ff_loop_180_R_003__A047__seg_601a96eb8d48d345",
+          "clip_index": 1,
+          "file": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/trial-0003.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "walk_ff_loop_180_R_003__A047__seg_601a96eb8d48d345",
+          "clip_index": 1,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/clean-u64000/trial-0002.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "walk_ff_loop_180_R_003__A047__seg_601a96eb8d48d345",
+          "clip_index": 1,
+          "file": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/trial-0002.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 3,
+      "original_human_sha256": "789382f99db79f134f1d6407cc8f445467d05aef7e9199ffcf69c676eed23403",
+      "training_membership": true,
+      "g1_source_name": "walk_ff_loop_180_R_003__A047",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "walk_backward",
+      "catalog_index": 107282,
+      "clip": "walk_backward_loop_003__A040__seg_106fca53db92738d",
+      "frames": 621,
+      "source": {
+        "archive_reference": {
+          "generation": 1792893008643927,
+          "sha256": "45c6a51817c4def42c871c10ef92cc8fa427c4dbc5b9ab8e88b38bdf800c4747",
+          "size": 600936,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00521__bodyimport__chunk_ad255a1621617048/paired/export.tar.gz"
+        },
+        "archive_sha256": "45c6a51817c4def42c871c10ef92cc8fa427c4dbc5b9ab8e88b38bdf800c4747",
+        "clip": "walk_backward_loop_003__A040__seg_106fca53db92738d",
+        "export_interval": {
+          "end_s": 12.4,
+          "source_clip": "walk_backward_loop_003__A040",
+          "start_s": 0.0
+        },
+        "frames": 621,
+        "original_member_sha256": {
+          "feature": "bc31d379b0eb6763084ad30e8f648df89bf92af09805bd558a7f86f1994cc911",
+          "human": "aaa8461333fafbfcdb12616a224c883d6dc717a22d61a54f4f9e7da687103ddb",
+          "robot": "6cfa32e052fcbd56bd322e975dc607ea58a9f4af4089e1217da1d0d9418b7e45"
+        },
+        "source_clip": "walk_backward_loop_003__A040",
+        "source_id": "clip_13b3a5c966e29ad6",
+        "source_interval": {
+          "end_s": 12.42,
+          "source_clip": "walk_backward_loop_003__A040",
+          "start_s": 0.0
+        },
+        "source_sha256": "3bdb041a4927840996cb824dd84d048d0e05872c4dad9b4863f7983c3574dd39"
+      },
+      "original_human": "original-human/03.pkl",
+      "human_primitive_slice_sha256": "599d3a8bfa10abc6f06047e375d0863d19f224ddc24c6130885532ce91aec124",
+      "evaluation_index": 3,
+      "comparison_number": 4,
+      "saved_source_index": 3,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "walk_backward_loop_003__A040__seg_106fca53db92738d",
+          "clip_index": 2,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/reference-u14500/trial-0002.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "walk_backward_loop_003__A040__seg_106fca53db92738d",
+          "clip_index": 2,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/clean-u64000/trial-0005.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "walk_backward_loop_003__A040__seg_106fca53db92738d",
+          "clip_index": 2,
+          "file": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/trial-0005.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "walk_backward_loop_003__A040__seg_106fca53db92738d",
+          "clip_index": 2,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/clean-u64000/trial-0004.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "walk_backward_loop_003__A040__seg_106fca53db92738d",
+          "clip_index": 2,
+          "file": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/trial-0004.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 4,
+      "original_human_sha256": "aaa8461333fafbfcdb12616a224c883d6dc717a22d61a54f4f9e7da687103ddb",
+      "training_membership": true,
+      "g1_source_name": "walk_backward_loop_003__A040",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "walk_sideways",
+      "catalog_index": 117374,
+      "clip": "walk_sideway_left_loop_002__A026__seg_a0cc53cbff5d9923",
+      "frames": 1369,
+      "source": {
+        "archive_reference": {
+          "generation": 1792893786720359,
+          "sha256": "33dc9677d82ce003a6a059504f59435aeb4a6b2f3b6eb13cc56ddc71c80961bb",
+          "size": 1252103,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00626__bodyimport__chunk_1f55df17911ea3ec/paired/export.tar.gz"
+        },
+        "archive_sha256": "33dc9677d82ce003a6a059504f59435aeb4a6b2f3b6eb13cc56ddc71c80961bb",
+        "clip": "walk_sideway_left_loop_002__A026__seg_a0cc53cbff5d9923",
+        "export_interval": {
+          "end_s": 27.36,
+          "source_clip": "walk_sideway_left_loop_002__A026",
+          "start_s": 0.0
+        },
+        "frames": 1369,
+        "original_member_sha256": {
+          "feature": "49d492999195b30fff1fa987712b0ff3a36f24930c44754e9a8c3b99c75b2e43",
+          "human": "2298ad6f890b662d40f2bc5a744bb7ac2554c7d028ff46b60c880c596273b2b1",
+          "robot": "8273900073cc3c6f94690916bdadd841ec7defe6f3852cbb792b1c6d6ecf4066"
+        },
+        "source_clip": "walk_sideway_left_loop_002__A026",
+        "source_id": "clip_ccba2dee568fabdc",
+        "source_interval": {
+          "end_s": 27.38,
+          "source_clip": "walk_sideway_left_loop_002__A026",
+          "start_s": 0.0
+        },
+        "source_sha256": "8d0fe833b3ea11c3b0a2bd4cdc554f27d523264e3c1b22a31a8e1bab8652da98"
+      },
+      "original_human": "original-human/04.pkl",
+      "human_primitive_slice_sha256": "b3569f56b9ddb4793c9e914665ae543f29063bb0cea21690d0858e813fe9a33d",
+      "source_clip_index": 4,
+      "comparison_number": 5,
+      "evaluation_index": 4,
+      "saved_source_index": 4,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "walk_sideway_left_loop_002__A026__seg_a0cc53cbff5d9923",
+          "clip_index": 4,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0048.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "walk_sideway_left_loop_002__A026__seg_a0cc53cbff5d9923",
+          "clip_index": 4,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0108.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "walk_sideway_left_loop_002__A026__seg_a0cc53cbff5d9923",
+          "clip_index": 4,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0108.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "walk_sideway_left_loop_002__A026__seg_a0cc53cbff5d9923",
+          "clip_index": 4,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0096.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "walk_sideway_left_loop_002__A026__seg_a0cc53cbff5d9923",
+          "clip_index": 4,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0096.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 5,
+      "original_human_sha256": "2298ad6f890b662d40f2bc5a744bb7ac2554c7d028ff46b60c880c596273b2b1",
+      "training_membership": true,
+      "g1_source_name": "walk_sideway_left_loop_002__A026",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "turning",
+      "catalog_index": 106209,
+      "clip": "walk_arc_cw_loop_R_very_slow_001__A443__seg_53eeb9ee3903ca75",
+      "frames": 974,
+      "source": {
+        "archive_reference": {
+          "generation": 1792891701042206,
+          "sha256": "1b19281d9dd2ae6dadc04061853bf02be68ca8c2c5d35d464318346e35373682",
+          "size": 936787,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00600__bodyimport__chunk_3aba8303bbf947c0/paired/export.tar.gz"
+        },
+        "archive_sha256": "1b19281d9dd2ae6dadc04061853bf02be68ca8c2c5d35d464318346e35373682",
+        "clip": "walk_arc_cw_loop_R_very_slow_001__A443__seg_53eeb9ee3903ca75",
+        "export_interval": {
+          "end_s": 19.46,
+          "source_clip": "walk_arc_cw_loop_R_very_slow_001__A443",
+          "start_s": 0.0
+        },
+        "frames": 974,
+        "original_member_sha256": {
+          "feature": "84d6ba76860877dcd179f20248b0f6d415acbcafd3b90509a13ab2d3cf975cbb",
+          "human": "4b921e09dbc5b2864a6c8455c102f347c9a0b0038fc56528dac02a653771fc51",
+          "robot": "e05bd5f1c643ceff063fa14d9d3475cc5cc3847db066f5ab57ada36db0c82c4c"
+        },
+        "source_clip": "walk_arc_cw_loop_R_very_slow_001__A443",
+        "source_id": "clip_00831c8a1e6fea36",
+        "source_interval": {
+          "end_s": 19.48,
+          "source_clip": "walk_arc_cw_loop_R_very_slow_001__A443",
+          "start_s": 0.0
+        },
+        "source_sha256": "4cdbda866b72484234baefc0814f1468c6b0ba9d956856d069bafd9081e42126"
+      },
+      "original_human": "original-human/05.pkl",
+      "human_primitive_slice_sha256": "e3b5be7d0308b55e075d3127c6120014db2ceaaa882d9de19034fad4b2e411d4",
+      "source_clip_index": 5,
+      "comparison_number": 6,
+      "evaluation_index": 5,
+      "saved_source_index": 5,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "walk_arc_cw_loop_R_very_slow_001__A443__seg_53eeb9ee3903ca75",
+          "clip_index": 5,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0060.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "walk_arc_cw_loop_R_very_slow_001__A443__seg_53eeb9ee3903ca75",
+          "clip_index": 5,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0132.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "walk_arc_cw_loop_R_very_slow_001__A443__seg_53eeb9ee3903ca75",
+          "clip_index": 5,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0132.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "walk_arc_cw_loop_R_very_slow_001__A443__seg_53eeb9ee3903ca75",
+          "clip_index": 5,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0120.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "walk_arc_cw_loop_R_very_slow_001__A443__seg_53eeb9ee3903ca75",
+          "clip_index": 5,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0120.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 6,
+      "original_human_sha256": "4b921e09dbc5b2864a6c8455c102f347c9a0b0038fc56528dac02a653771fc51",
+      "training_membership": true,
+      "g1_source_name": "walk_arc_cw_loop_R_very_slow_001__A443",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "running_stop",
+      "catalog_index": 65511,
+      "clip": "jog_ff_stop_360_004__A052__seg_981ec8574514f8bc__cut_28dc9fb38eb57a8f",
+      "frames": 463,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892837726122,
+          "sha256": "eb7940736314c5ecea5c64aa44a9b58f72e49469333443a84d212eb0a9405808",
+          "size": 408677,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00507__bodyimport__chunk_00fc4ae071c7af7f/paired/export.tar.gz"
+        },
+        "archive_sha256": "eb7940736314c5ecea5c64aa44a9b58f72e49469333443a84d212eb0a9405808",
+        "clip": "jog_ff_stop_360_004__A052__seg_981ec8574514f8bc__cut_28dc9fb38eb57a8f",
+        "export_interval": {
+          "end_s": 11.6,
+          "source_clip": "jog_ff_stop_360_004__A052",
+          "start_s": 2.36
+        },
+        "frames": 463,
+        "original_member_sha256": {
+          "feature": "af34f4f860271fec7fd7438f278d9de9d0ecfb1a04a43786845ec138501e6491",
+          "human": "76ea87b5802463c3fd9ac494edc0b0ce266d8178d8b043c01a2ed0c87c617cec",
+          "robot": "6e61e9fdfa8a806687c8bd4dce3a934e2ab0c2da34d3697896e5fd96ede3c00c"
+        },
+        "source_clip": "jog_ff_stop_360_004__A052",
+        "source_id": "clip_e8df6f61465b2288",
+        "source_interval": {
+          "end_s": 11.62,
+          "source_clip": "jog_ff_stop_360_004__A052",
+          "start_s": 2.36
+        },
+        "source_sha256": "2c872357e7252a828fdd802b906f653a347fd9a50960604a4b2d4323cdd8a2ea"
+      },
+      "original_human": "original-human/06.pkl",
+      "human_primitive_slice_sha256": "278498d8f34add8fe36813d44a90f70f6a81c211f0fd76157c3b5ccc214c6740",
+      "source_clip_index": 6,
+      "comparison_number": 7,
+      "evaluation_index": 6,
+      "saved_source_index": 6,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "jog_ff_stop_360_004__A052__seg_981ec8574514f8bc__cut_28dc9fb38eb57a8f",
+          "clip_index": 6,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0072.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "jog_ff_stop_360_004__A052__seg_981ec8574514f8bc__cut_28dc9fb38eb57a8f",
+          "clip_index": 6,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0156.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "jog_ff_stop_360_004__A052__seg_981ec8574514f8bc__cut_28dc9fb38eb57a8f",
+          "clip_index": 6,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0156.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "jog_ff_stop_360_004__A052__seg_981ec8574514f8bc__cut_28dc9fb38eb57a8f",
+          "clip_index": 6,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0144.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "jog_ff_stop_360_004__A052__seg_981ec8574514f8bc__cut_28dc9fb38eb57a8f",
+          "clip_index": 6,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0144.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 7,
+      "original_human_sha256": "76ea87b5802463c3fd9ac494edc0b0ce266d8178d8b043c01a2ed0c87c617cec",
+      "training_membership": true,
+      "g1_source_name": "jog_ff_stop_360_004__A052",
+      "g1_start_frame": 118
+    },
+    {
+      "category": "squat",
+      "catalog_index": 97213,
+      "clip": "squat_001__A362__seg_4d776800f999bf9f",
+      "frames": 493,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892578430396,
+          "sha256": "5ecce49974facf10ef8457f733b063c96396f77166394cd811bd6dfc2a5473fa",
+          "size": 907921,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00466__bodyimport__chunk_403680519f282fe9/paired/export.tar.gz"
+        },
+        "archive_sha256": "5ecce49974facf10ef8457f733b063c96396f77166394cd811bd6dfc2a5473fa",
+        "clip": "squat_001__A362__seg_4d776800f999bf9f",
+        "export_interval": {
+          "end_s": 9.84,
+          "source_clip": "squat_001__A362",
+          "start_s": 0.0
+        },
+        "frames": 493,
+        "original_member_sha256": {
+          "feature": "2d088b88e31c0d5b577dd2e899064324864b10a5868cd806e6e95b1ca0f071b8",
+          "human": "2d604f8ad66f51821de08b03bf8cb6f3c178cc54f0c5dff46ad575a8cb6cb4b4",
+          "robot": "7648eb512ccbf1d4389e2ded2296a4d8f8256f59d54e3ea16f444eeda2273470"
+        },
+        "source_clip": "squat_001__A362",
+        "source_id": "clip_47f8f2b4dbe02311",
+        "source_interval": {
+          "end_s": 9.86,
+          "source_clip": "squat_001__A362",
+          "start_s": 0.0
+        },
+        "source_sha256": "0ffed644f053f084cbad8d4e8901ed31483af97d9bda35c30e7b19d6d0e3f437"
+      },
+      "original_human": "original-human/07.pkl",
+      "human_primitive_slice_sha256": "0441d0f090e94b7182b63d3fc4a7499815d9f411ca7d72e827d9c583bcc65139",
+      "source_clip_index": 7,
+      "comparison_number": 8,
+      "evaluation_index": 7,
+      "saved_source_index": 7,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "squat_001__A362__seg_4d776800f999bf9f",
+          "clip_index": 7,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0084.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "squat_001__A362__seg_4d776800f999bf9f",
+          "clip_index": 7,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0180.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "squat_001__A362__seg_4d776800f999bf9f",
+          "clip_index": 7,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0180.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "squat_001__A362__seg_4d776800f999bf9f",
+          "clip_index": 7,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0168.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "squat_001__A362__seg_4d776800f999bf9f",
+          "clip_index": 7,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0168.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 8,
+      "original_human_sha256": "2d604f8ad66f51821de08b03bf8cb6f3c178cc54f0c5dff46ad575a8cb6cb4b4",
+      "training_membership": true,
+      "g1_source_name": "squat_001__A362",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "crouch",
+      "catalog_index": 16177,
+      "clip": "crouch_idle_002__A244__seg_d8ff3a0d81dd261a",
+      "frames": 631,
+      "source": {
+        "archive_reference": {
+          "generation": 1792893203981414,
+          "sha256": "4cd7ba7c37f2327b1db10334b8c297abe6139e1dd88033c4e99eb3d611b5d810",
+          "size": 554968,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00526__bodyimport__chunk_ee7378cdfc4ee441/paired/export.tar.gz"
+        },
+        "archive_sha256": "4cd7ba7c37f2327b1db10334b8c297abe6139e1dd88033c4e99eb3d611b5d810",
+        "clip": "crouch_idle_002__A244__seg_d8ff3a0d81dd261a",
+        "export_interval": {
+          "end_s": 12.6,
+          "source_clip": "crouch_idle_002__A244",
+          "start_s": 0.0
+        },
+        "frames": 631,
+        "original_member_sha256": {
+          "feature": "22cff038251b5b993d6ccaa140b6c9e804f08e75fd444de99a52069a349d2916",
+          "human": "c7b999cdcd7395fc77f805e5b676652b89bbc1e7468372ca9ac8bfe3dd863f3e",
+          "robot": "85600aad94b24ee8078376a552cd88becd2347d8762c425a499703104b4895c5"
+        },
+        "source_clip": "crouch_idle_002__A244",
+        "source_id": "clip_2dc3ea32399f1827",
+        "source_interval": {
+          "end_s": 12.62,
+          "source_clip": "crouch_idle_002__A244",
+          "start_s": 0.0
+        },
+        "source_sha256": "c2a925e5ec4e7f93e12a482a77a8e7a0695a52eba5f20d2a8a801417b4fa3167"
+      },
+      "original_human": "original-human/08.pkl",
+      "human_primitive_slice_sha256": "898983c633f38d33b65226b2ee6ed7443f3c5f99cedc91f1bdcfb125c1ceb95b",
+      "source_clip_index": 8,
+      "comparison_number": 9,
+      "evaluation_index": 8,
+      "saved_source_index": 8,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "crouch_idle_002__A244__seg_d8ff3a0d81dd261a",
+          "clip_index": 8,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0096.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "crouch_idle_002__A244__seg_d8ff3a0d81dd261a",
+          "clip_index": 8,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0204.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "crouch_idle_002__A244__seg_d8ff3a0d81dd261a",
+          "clip_index": 8,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0204.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "crouch_idle_002__A244__seg_d8ff3a0d81dd261a",
+          "clip_index": 8,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0192.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "crouch_idle_002__A244__seg_d8ff3a0d81dd261a",
+          "clip_index": 8,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0192.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 9,
+      "original_human_sha256": "c7b999cdcd7395fc77f805e5b676652b89bbc1e7468372ca9ac8bfe3dd863f3e",
+      "training_membership": true,
+      "g1_source_name": "crouch_idle_002__A244",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "jump",
+      "catalog_index": 71473,
+      "clip": "jump_forward_003__A032__seg_5f3f593debfb979a",
+      "frames": 333,
+      "source": {
+        "archive_reference": {
+          "generation": 1792894885395932,
+          "sha256": "c08cbeaaea97214ea96d5f7a5dbb95af981621332703a1224926ab67910f82ea",
+          "size": 959780,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00343__bodyimport__chunk_a755e1d1c2a73b84/paired/export.tar.gz"
+        },
+        "archive_sha256": "c08cbeaaea97214ea96d5f7a5dbb95af981621332703a1224926ab67910f82ea",
+        "clip": "jump_forward_003__A032__seg_5f3f593debfb979a",
+        "export_interval": {
+          "end_s": 6.64,
+          "source_clip": "jump_forward_003__A032",
+          "start_s": 0.0
+        },
+        "frames": 333,
+        "original_member_sha256": {
+          "feature": "6a8593d4b6fe8db4d32a530f2f4ca481e584004b077f3075f029a3627312dba4",
+          "human": "2b82e580a7c1486f2d3d59838a693cb2e62be2abb742577e31caaad3f425d622",
+          "robot": "2160bdaa9db43f5b38412f9db745107a0f6d85b5e0fa19b165634c06bbbe8e06"
+        },
+        "source_clip": "jump_forward_003__A032",
+        "source_id": "clip_10ff49cea07a4156",
+        "source_interval": {
+          "end_s": 6.66,
+          "source_clip": "jump_forward_003__A032",
+          "start_s": 0.0
+        },
+        "source_sha256": "9e48247708699d0b0bf9067d07fa5d089af65f7c66f302bdd4170856cd4523eb"
+      },
+      "original_human": "original-human/09.pkl",
+      "human_primitive_slice_sha256": "06711177a0d5c7bc9f744831406ad7fccc5c89e1e3f0071743a535613fd67f9b",
+      "source_clip_index": 9,
+      "comparison_number": 10,
+      "evaluation_index": 9,
+      "saved_source_index": 9,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "jump_forward_003__A032__seg_5f3f593debfb979a",
+          "clip_index": 9,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0108.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "jump_forward_003__A032__seg_5f3f593debfb979a",
+          "clip_index": 9,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0228.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "jump_forward_003__A032__seg_5f3f593debfb979a",
+          "clip_index": 9,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0228.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "jump_forward_003__A032__seg_5f3f593debfb979a",
+          "clip_index": 9,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0216.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "jump_forward_003__A032__seg_5f3f593debfb979a",
+          "clip_index": 9,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0216.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 10,
+      "original_human_sha256": "2b82e580a7c1486f2d3d59838a693cb2e62be2abb742577e31caaad3f425d622",
+      "training_membership": true,
+      "g1_source_name": "jump_forward_003__A032",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "reach_down",
+      "catalog_index": 90689,
+      "clip": "reaching_down_R_001__A272__seg_fc1aea4ea2006997",
+      "frames": 511,
+      "source": {
+        "archive_reference": {
+          "generation": 1792893164323620,
+          "sha256": "63345ed5ccab56e0a9808849e4fe889eabfad0f46959815efc061aebd07ea475",
+          "size": 473832,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00476__bodyimport__chunk_e11546eeb3fe9174/paired/export.tar.gz"
+        },
+        "archive_sha256": "63345ed5ccab56e0a9808849e4fe889eabfad0f46959815efc061aebd07ea475",
+        "clip": "reaching_down_R_001__A272__seg_fc1aea4ea2006997",
+        "export_interval": {
+          "end_s": 10.2,
+          "source_clip": "reaching_down_R_001__A272",
+          "start_s": 0.0
+        },
+        "frames": 511,
+        "original_member_sha256": {
+          "feature": "3a8b27d42667c5880c6825a16ad267a202941af78992eb71a162d8c506acd893",
+          "human": "48f71e9e518b94d4785ed0e7757e06fd97786f2acce7f57189526eac9f6d7d93",
+          "robot": "1840e84654360243c183623f2a61b316b1e9e5acdd3a27a71c8e724ea1ddddc7"
+        },
+        "source_clip": "reaching_down_R_001__A272",
+        "source_id": "clip_a27ba79cb1199c6c",
+        "source_interval": {
+          "end_s": 10.22,
+          "source_clip": "reaching_down_R_001__A272",
+          "start_s": 0.0
+        },
+        "source_sha256": "722b74928f7e08b59b9cd1e99ee5cdeced9ccdd534c5acc3abcdfac47142f1e1"
+      },
+      "original_human": "original-human/10.pkl",
+      "human_primitive_slice_sha256": "1d610dc24b0e49d8ba378dab1bec21e1e8c6d6e28879c645ba9af90373547657",
+      "source_clip_index": 10,
+      "comparison_number": 11,
+      "evaluation_index": 10,
+      "saved_source_index": 10,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "reaching_down_R_001__A272__seg_fc1aea4ea2006997",
+          "clip_index": 10,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0120.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "reaching_down_R_001__A272__seg_fc1aea4ea2006997",
+          "clip_index": 10,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0252.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "reaching_down_R_001__A272__seg_fc1aea4ea2006997",
+          "clip_index": 10,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0252.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "reaching_down_R_001__A272__seg_fc1aea4ea2006997",
+          "clip_index": 10,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0240.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "reaching_down_R_001__A272__seg_fc1aea4ea2006997",
+          "clip_index": 10,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0240.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 11,
+      "original_human_sha256": "48f71e9e518b94d4785ed0e7757e06fd97786f2acce7f57189526eac9f6d7d93",
+      "training_membership": true,
+      "g1_source_name": "reaching_down_R_001__A272",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "squat_extra",
+      "catalog_index": 97209,
+      "clip": "squat_001__A360__seg_e10f5aff2ac0a345",
+      "frames": 481,
+      "source": {
+        "archive_reference": {
+          "generation": 1792893081660410,
+          "sha256": "2ea860d1103e094e46d9751e6ac5376d1d916c0a18ef7f64497c702fd74f6f8b",
+          "size": 832431,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00460__bodyimport__chunk_7bfa34eb4d5f8439/paired/export.tar.gz"
+        },
+        "archive_sha256": "2ea860d1103e094e46d9751e6ac5376d1d916c0a18ef7f64497c702fd74f6f8b",
+        "clip": "squat_001__A360__seg_e10f5aff2ac0a345",
+        "export_interval": {
+          "end_s": 9.6,
+          "source_clip": "squat_001__A360",
+          "start_s": 0.0
+        },
+        "frames": 481,
+        "original_member_sha256": {
+          "feature": "cc490a5e241cd8b043b6b584ba269f6e2a56a606092c12ee4d8f8d39c8b9dcd0",
+          "human": "8cf032180768fe32304765d34272f2e4b3b7ebe3665187b05e03a82ba97ed940",
+          "robot": "ef5567fd40334c6a066e4e4f1eccb9c4620464880409d07344600f9f139bb769"
+        },
+        "source_clip": "squat_001__A360",
+        "source_id": "clip_32136663ee027226",
+        "source_interval": {
+          "end_s": 9.62,
+          "source_clip": "squat_001__A360",
+          "start_s": 0.0
+        },
+        "source_sha256": "5af24ddab9e49a76b74527e5a7641abd2d175d5020fc14d156f6d396ec6c2d8e"
+      },
+      "original_human": "original-human/11.pkl",
+      "human_primitive_slice_sha256": "ab37896215b84b813f4078fb4214e500a374b95ef2267d8a76dbd8519533d4c2",
+      "source_clip_index": 11,
+      "comparison_number": 12,
+      "evaluation_index": 11,
+      "saved_source_index": 11,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "squat_001__A360__seg_e10f5aff2ac0a345",
+          "clip_index": 11,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0132.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "squat_001__A360__seg_e10f5aff2ac0a345",
+          "clip_index": 11,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0276.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "squat_001__A360__seg_e10f5aff2ac0a345",
+          "clip_index": 11,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0276.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "squat_001__A360__seg_e10f5aff2ac0a345",
+          "clip_index": 11,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0264.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "squat_001__A360__seg_e10f5aff2ac0a345",
+          "clip_index": 11,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0264.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 12,
+      "original_human_sha256": "8cf032180768fe32304765d34272f2e4b3b7ebe3665187b05e03a82ba97ed940",
+      "training_membership": true,
+      "g1_source_name": "squat_001__A360",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "crouch_walk",
+      "catalog_index": 119925,
+      "clip": "yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472__seg_09eabd9d6abafdc7",
+      "frames": 538,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892372103076,
+          "sha256": "6ed38c470788b93a31daac756760af78213ce696a54a5539e29149fc0a5219af",
+          "size": 496027,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00488__bodyimport__chunk_c89d6b67b1d801e4/paired/export.tar.gz"
+        },
+        "archive_sha256": "6ed38c470788b93a31daac756760af78213ce696a54a5539e29149fc0a5219af",
+        "clip": "yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472__seg_09eabd9d6abafdc7",
+        "export_interval": {
+          "end_s": 10.74,
+          "source_clip": "yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472",
+          "start_s": 0.0
+        },
+        "frames": 538,
+        "original_member_sha256": {
+          "feature": "48307084981e44b4fdc37157ec27f04006e488caaf976b3571ab97cb698467c3",
+          "human": "e2aa2b96d3aa98d867fddaa1d176d9ee6f4c9ad688987a7d048283d89bf0135f",
+          "robot": "d655454aaa5dcd6bd5f567671d31cacb5b2f2c79213b88d4a72eda9bc17fbb5d"
+        },
+        "source_clip": "yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472",
+        "source_id": "clip_c2899f1649887348",
+        "source_interval": {
+          "end_s": 10.76,
+          "source_clip": "yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472",
+          "start_s": 0.0
+        },
+        "source_sha256": "445c467e17292fb8b738a2662298ad20b12d86f68778dec6d76f957033ec0ca1"
+      },
+      "original_human": "original-human/12.pkl",
+      "human_primitive_slice_sha256": "93bbbc6f2eae6c14d1dee4a4b7a9479f4f86d0b65d2dd047bf84da50dc8aca48",
+      "source_clip_index": 12,
+      "comparison_number": 13,
+      "evaluation_index": 12,
+      "saved_source_index": 12,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472__seg_09eabd9d6abafdc7",
+          "clip_index": 12,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0144.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472__seg_09eabd9d6abafdc7",
+          "clip_index": 12,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0300.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472__seg_09eabd9d6abafdc7",
+          "clip_index": 12,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0300.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472__seg_09eabd9d6abafdc7",
+          "clip_index": 12,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0288.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472__seg_09eabd9d6abafdc7",
+          "clip_index": 12,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0288.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 13,
+      "original_human_sha256": "e2aa2b96d3aa98d867fddaa1d176d9ee6f4c9ad688987a7d048283d89bf0135f",
+      "training_membership": true,
+      "g1_source_name": "yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "lunge",
+      "catalog_index": 36266,
+      "clip": "forward_lunge_R_003__A361__seg_21c4055128f706a9",
+      "frames": 448,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892597530417,
+          "sha256": "46347be3a5ba3919bd5140f0c057a0c73cd9510bf3ba80e6ed4f45c6bf20efa4",
+          "size": 846968,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00438__bodyimport__chunk_9eaf2d816d51e184/paired/export.tar.gz"
+        },
+        "archive_sha256": "46347be3a5ba3919bd5140f0c057a0c73cd9510bf3ba80e6ed4f45c6bf20efa4",
+        "clip": "forward_lunge_R_003__A361__seg_21c4055128f706a9",
+        "export_interval": {
+          "end_s": 8.94,
+          "source_clip": "forward_lunge_R_003__A361",
+          "start_s": 0.0
+        },
+        "frames": 448,
+        "original_member_sha256": {
+          "feature": "9d4064a04b8066bc527316ea14d89ace64a4c8b89e4b3ce2af8be54eb95823be",
+          "human": "5e19ceb4e2a7a094b4df593a9465aa3553c2003614f1797bf8e4a1ec3188fb9a",
+          "robot": "5dc734bf6210dda7ae3d3d34a2063d167878c1a68eab7f11de5433b2ea5da22c"
+        },
+        "source_clip": "forward_lunge_R_003__A361",
+        "source_id": "clip_1c1a57caea1f11d7",
+        "source_interval": {
+          "end_s": 8.96,
+          "source_clip": "forward_lunge_R_003__A361",
+          "start_s": 0.0
+        },
+        "source_sha256": "f697eec663396eb03e6f97ded6615ac346b23b6e58ff1a16e07acd28c33a36c4"
+      },
+      "original_human": "original-human/13.pkl",
+      "human_primitive_slice_sha256": "0a978f77aedeeba32b7b53d387f062804f08bd653e7187aa75f5866a0c9557de",
+      "source_clip_index": 13,
+      "comparison_number": 14,
+      "evaluation_index": 13,
+      "saved_source_index": 13,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "forward_lunge_R_003__A361__seg_21c4055128f706a9",
+          "clip_index": 13,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0156.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "forward_lunge_R_003__A361__seg_21c4055128f706a9",
+          "clip_index": 13,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0324.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "forward_lunge_R_003__A361__seg_21c4055128f706a9",
+          "clip_index": 13,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0324.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "forward_lunge_R_003__A361__seg_21c4055128f706a9",
+          "clip_index": 13,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0312.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "forward_lunge_R_003__A361__seg_21c4055128f706a9",
+          "clip_index": 13,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0312.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 14,
+      "original_human_sha256": "5e19ceb4e2a7a094b4df593a9465aa3553c2003614f1797bf8e4a1ec3188fb9a",
+      "training_membership": true,
+      "g1_source_name": "forward_lunge_R_003__A361",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "balance",
+      "catalog_index": 86628,
+      "clip": "one_leg_idle_R_003__A533__seg_7d86b6d8cb2cd57e",
+      "frames": 566,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892042009916,
+          "sha256": "3febbf12792a52592efdf9d84ee36dcaa64c97c9b72c84631ae146a4793097a1",
+          "size": 491116,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00501__bodyimport__chunk_5fd7dbf7fe14877f/paired/export.tar.gz"
+        },
+        "archive_sha256": "3febbf12792a52592efdf9d84ee36dcaa64c97c9b72c84631ae146a4793097a1",
+        "clip": "one_leg_idle_R_003__A533__seg_7d86b6d8cb2cd57e",
+        "export_interval": {
+          "end_s": 11.3,
+          "source_clip": "one_leg_idle_R_003__A533",
+          "start_s": 0.0
+        },
+        "frames": 566,
+        "original_member_sha256": {
+          "feature": "e09f28d99669292d0e11d03349ecae730423989d4b08beff9005569795605ebe",
+          "human": "9778e2f36c6028deee6e5f4a13b75508385da98c9eeef2601724b2bd55079d6c",
+          "robot": "d894a3f8930b910ab9492eeb86c7316462eae83660f4d7b0ee1224b1ccac1609"
+        },
+        "source_clip": "one_leg_idle_R_003__A533",
+        "source_id": "clip_27506b66a92395b0",
+        "source_interval": {
+          "end_s": 11.32,
+          "source_clip": "one_leg_idle_R_003__A533",
+          "start_s": 0.0
+        },
+        "source_sha256": "addb0760bdf620f1c96647e4f036efaceff7407188ecb5de56cb8a54836f4b30"
+      },
+      "original_human": "original-human/14.pkl",
+      "human_primitive_slice_sha256": "886a67936fae1881cd14c7542a283205470d4b2419e68c4313df8b6059b238bd",
+      "source_clip_index": 14,
+      "comparison_number": 15,
+      "evaluation_index": 14,
+      "saved_source_index": 14,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "one_leg_idle_R_003__A533__seg_7d86b6d8cb2cd57e",
+          "clip_index": 14,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0168.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "one_leg_idle_R_003__A533__seg_7d86b6d8cb2cd57e",
+          "clip_index": 14,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0348.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": false
+        },
+        "mnv3-human": {
+          "clip": "one_leg_idle_R_003__A533__seg_7d86b6d8cb2cd57e",
+          "clip_index": 14,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0348.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": false
+        },
+        "mnv2-robot": {
+          "clip": "one_leg_idle_R_003__A533__seg_7d86b6d8cb2cd57e",
+          "clip_index": 14,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0336.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": false
+        },
+        "mnv3-robot": {
+          "clip": "one_leg_idle_R_003__A533__seg_7d86b6d8cb2cd57e",
+          "clip_index": 14,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0336.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": false
+        }
+      },
+      "display_number": 15,
+      "original_human_sha256": "9778e2f36c6028deee6e5f4a13b75508385da98c9eeef2601724b2bd55079d6c",
+      "training_membership": true,
+      "g1_source_name": "one_leg_idle_R_003__A533",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "sideways_right",
+      "catalog_index": 117460,
+      "clip": "walk_sideway_right_loop_003__A026__seg_97aa24b35455c3ca__cut_aea649afe5ca48ba",
+      "frames": 520,
+      "source": {
+        "archive_reference": {
+          "generation": 1792893556163864,
+          "sha256": "d475022313c0262f3cbb4fa30f99c681e9a00e93f8e5d96f893f2817a34715bc",
+          "size": 847205,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00595__bodyimport__chunk_fb294faa29c222eb/paired/export.tar.gz"
+        },
+        "archive_sha256": "d475022313c0262f3cbb4fa30f99c681e9a00e93f8e5d96f893f2817a34715bc",
+        "clip": "walk_sideway_right_loop_003__A026__seg_97aa24b35455c3ca__cut_aea649afe5ca48ba",
+        "export_interval": {
+          "end_s": 10.38,
+          "source_clip": "walk_sideway_right_loop_003__A026",
+          "start_s": 0.0
+        },
+        "frames": 520,
+        "original_member_sha256": {
+          "feature": "0f3805c5a2da86f4bf6d25d84518b513047115f122f19bd2db5bd4e2c248d6d1",
+          "human": "4383e873b27ac1ae4fc17f131edca4f70c9019a77832aad98aa0ca62d4493f24",
+          "robot": "862c54de7310a5df70410a49608db3165e05a9bfeb97b234522e9c79727f907d"
+        },
+        "source_clip": "walk_sideway_right_loop_003__A026",
+        "source_id": "clip_a6ec0729e5ec889e",
+        "source_interval": {
+          "end_s": 10.4,
+          "source_clip": "walk_sideway_right_loop_003__A026",
+          "start_s": 0.0
+        },
+        "source_sha256": "3f448a322255b18ce79e72bbabc97bfb0778e2812ef6d8c601c32f379758448d"
+      },
+      "original_human": "original-human/15.pkl",
+      "human_primitive_slice_sha256": "2e578629fd3e308ec9dcf0b78b300565356bc2cb9cf5491d61693382e45dacdf",
+      "source_clip_index": 15,
+      "comparison_number": 16,
+      "evaluation_index": 15,
+      "saved_source_index": 15,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "walk_sideway_right_loop_003__A026__seg_97aa24b35455c3ca__cut_aea649afe5ca48ba",
+          "clip_index": 15,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0180.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "walk_sideway_right_loop_003__A026__seg_97aa24b35455c3ca__cut_aea649afe5ca48ba",
+          "clip_index": 15,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0372.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "walk_sideway_right_loop_003__A026__seg_97aa24b35455c3ca__cut_aea649afe5ca48ba",
+          "clip_index": 15,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0372.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "walk_sideway_right_loop_003__A026__seg_97aa24b35455c3ca__cut_aea649afe5ca48ba",
+          "clip_index": 15,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0360.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "walk_sideway_right_loop_003__A026__seg_97aa24b35455c3ca__cut_aea649afe5ca48ba",
+          "clip_index": 15,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0360.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 16,
+      "original_human_sha256": "4383e873b27ac1ae4fc17f131edca4f70c9019a77832aad98aa0ca62d4493f24",
+      "training_membership": true,
+      "g1_source_name": "walk_sideway_right_loop_003__A026",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "turn_180",
+      "catalog_index": 18396,
+      "clip": "dance_basic_turn_v2_180_R_loop_001__A323__seg_7a5716ed7af2057b",
+      "frames": 503,
+      "source": {
+        "archive_reference": {
+          "generation": 1792893463535513,
+          "sha256": "4f90ecf5675372fc21fb30a9fb4d04fcd8c23656367058207787d54546098228",
+          "size": 961744,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00472__bodyimport__chunk_99019a9223abc373/paired/export.tar.gz"
+        },
+        "archive_sha256": "4f90ecf5675372fc21fb30a9fb4d04fcd8c23656367058207787d54546098228",
+        "clip": "dance_basic_turn_v2_180_R_loop_001__A323__seg_7a5716ed7af2057b",
+        "export_interval": {
+          "end_s": 10.04,
+          "source_clip": "dance_basic_turn_v2_180_R_loop_001__A323",
+          "start_s": 0.0
+        },
+        "frames": 503,
+        "original_member_sha256": {
+          "feature": "4db91b9d0e56431461d39b0f3e67b52645f271d243b5a2d1066e3b233e529a7b",
+          "human": "ece919bf3256e91f37ab49da6b7eac5218413058fe2dc90cd9f912bde3a822cb",
+          "robot": "571d26114c88526575915b9d3918525c21ac63db2c5e5faf9c6e4bd9702f50c7"
+        },
+        "source_clip": "dance_basic_turn_v2_180_R_loop_001__A323",
+        "source_id": "clip_beae082761f17477",
+        "source_interval": {
+          "end_s": 10.06,
+          "source_clip": "dance_basic_turn_v2_180_R_loop_001__A323",
+          "start_s": 0.0
+        },
+        "source_sha256": "8b2775df605bc105e458cabc76af45eebaa4e89a5859446b7b06015121441c8a"
+      },
+      "original_human": "original-human/16.pkl",
+      "human_primitive_slice_sha256": "e5488fb4af20dfc375e37fc6ab8773532b634d89ec91c505cc020449baa8e2f3",
+      "source_clip_index": 16,
+      "comparison_number": 17,
+      "evaluation_index": 16,
+      "saved_source_index": 16,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "dance_basic_turn_v2_180_R_loop_001__A323__seg_7a5716ed7af2057b",
+          "clip_index": 16,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0192.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "dance_basic_turn_v2_180_R_loop_001__A323__seg_7a5716ed7af2057b",
+          "clip_index": 16,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0396.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "dance_basic_turn_v2_180_R_loop_001__A323__seg_7a5716ed7af2057b",
+          "clip_index": 16,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0396.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": false
+        },
+        "mnv2-robot": {
+          "clip": "dance_basic_turn_v2_180_R_loop_001__A323__seg_7a5716ed7af2057b",
+          "clip_index": 16,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0384.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "dance_basic_turn_v2_180_R_loop_001__A323__seg_7a5716ed7af2057b",
+          "clip_index": 16,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0384.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 17,
+      "original_human_sha256": "ece919bf3256e91f37ab49da6b7eac5218413058fe2dc90cd9f912bde3a822cb",
+      "training_membership": true,
+      "g1_source_name": "dance_basic_turn_v2_180_R_loop_001__A323",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "pull",
+      "catalog_index": 90303,
+      "clip": "pull_shoudler_180_standing_R_001__A428__seg_57207942468746bd",
+      "frames": 468,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892962978697,
+          "sha256": "72b9e04c4a28445ff2f91364633b9def2a8fdf0a4d9d5bee4cb12bb4b1d6df14",
+          "size": 876428,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00451__bodyimport__chunk_e2ab3970a59dfa1a/paired/export.tar.gz"
+        },
+        "archive_sha256": "72b9e04c4a28445ff2f91364633b9def2a8fdf0a4d9d5bee4cb12bb4b1d6df14",
+        "clip": "pull_shoudler_180_standing_R_001__A428__seg_57207942468746bd",
+        "export_interval": {
+          "end_s": 9.34,
+          "source_clip": "pull_shoudler_180_standing_R_001__A428",
+          "start_s": 0.0
+        },
+        "frames": 468,
+        "original_member_sha256": {
+          "feature": "a9beca6eeb7a60f5cbc51534444a997cc7fdcd94dcf9ee2e4f62caca90fc5a78",
+          "human": "836185de97c5d8722206f5b2eab45a70294ab767e31d849791e59754774215f1",
+          "robot": "29a51b390f73ad3b0afe1f6ae25286f12d4ee8800e82156885aa1d24f0e5f317"
+        },
+        "source_clip": "pull_shoudler_180_standing_R_001__A428",
+        "source_id": "clip_2999f317e10e58d0",
+        "source_interval": {
+          "end_s": 9.36,
+          "source_clip": "pull_shoudler_180_standing_R_001__A428",
+          "start_s": 0.0
+        },
+        "source_sha256": "3a09b966dbd8d1f6c09f14de7a07d6a28ee58e78a4f615c3dec71848beb2db3c"
+      },
+      "original_human": "original-human/17.pkl",
+      "human_primitive_slice_sha256": "58417e5f3831665ef5386a4d41f80cb7f99dbf45a4a74e5f65e28fe90940ab1a",
+      "source_clip_index": 18,
+      "comparison_number": 19,
+      "evaluation_index": 17,
+      "saved_source_index": 18,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "pull_shoudler_180_standing_R_001__A428__seg_57207942468746bd",
+          "clip_index": 18,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0216.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "pull_shoudler_180_standing_R_001__A428__seg_57207942468746bd",
+          "clip_index": 18,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0444.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "pull_shoudler_180_standing_R_001__A428__seg_57207942468746bd",
+          "clip_index": 18,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0444.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "pull_shoudler_180_standing_R_001__A428__seg_57207942468746bd",
+          "clip_index": 18,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0432.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "pull_shoudler_180_standing_R_001__A428__seg_57207942468746bd",
+          "clip_index": 18,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0432.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 18,
+      "original_human_sha256": "836185de97c5d8722206f5b2eab45a70294ab767e31d849791e59754774215f1",
+      "training_membership": true,
+      "g1_source_name": "pull_shoudler_180_standing_R_001__A428",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "throw",
+      "catalog_index": 51857,
+      "clip": "injured_torso_throw_ball_R_002__A338__seg_084a3e6cfdccf3d1",
+      "frames": 496,
+      "source": {
+        "archive_reference": {
+          "generation": 1792894719399019,
+          "sha256": "e82a1484cbd004a17d4867ceee41eb9446ead3f4c0d1d73b17403485c7f54a74",
+          "size": 657863,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00469__bodyimport__chunk_7bfd22be8ff9b59c/paired/export.tar.gz"
+        },
+        "archive_sha256": "e82a1484cbd004a17d4867ceee41eb9446ead3f4c0d1d73b17403485c7f54a74",
+        "clip": "injured_torso_throw_ball_R_002__A338__seg_084a3e6cfdccf3d1",
+        "export_interval": {
+          "end_s": 9.9,
+          "source_clip": "injured_torso_throw_ball_R_002__A338",
+          "start_s": 0.0
+        },
+        "frames": 496,
+        "original_member_sha256": {
+          "feature": "b3a2c6aa6c4ef940e28fe437a8bc1b60f775a1dc05babbefa739cdc3ed1b5dad",
+          "human": "fec72c0ae316a9d80e63ab5ca92274202695ea6cce7ea2ad2965fde9e672b467",
+          "robot": "b9a59955dc8dc6d135a490596ec44b906aafa510b5ba1887617df41474f02cc6"
+        },
+        "source_clip": "injured_torso_throw_ball_R_002__A338",
+        "source_id": "clip_a420ca41b7cb9395",
+        "source_interval": {
+          "end_s": 9.92,
+          "source_clip": "injured_torso_throw_ball_R_002__A338",
+          "start_s": 0.0
+        },
+        "source_sha256": "4e07480840ab9107274b789d8bf71b58980ee61ef293d946773b348b6802b41d"
+      },
+      "original_human": "original-human/18.pkl",
+      "human_primitive_slice_sha256": "976af739c79aa5dadb9a9e772038d3232c63d7d1c66ca4bb10db85c5219b286d",
+      "source_clip_index": 19,
+      "comparison_number": 20,
+      "evaluation_index": 18,
+      "saved_source_index": 19,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "injured_torso_throw_ball_R_002__A338__seg_084a3e6cfdccf3d1",
+          "clip_index": 19,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0228.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "injured_torso_throw_ball_R_002__A338__seg_084a3e6cfdccf3d1",
+          "clip_index": 19,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0468.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "injured_torso_throw_ball_R_002__A338__seg_084a3e6cfdccf3d1",
+          "clip_index": 19,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0468.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "injured_torso_throw_ball_R_002__A338__seg_084a3e6cfdccf3d1",
+          "clip_index": 19,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0456.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "injured_torso_throw_ball_R_002__A338__seg_084a3e6cfdccf3d1",
+          "clip_index": 19,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0456.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 19,
+      "original_human_sha256": "fec72c0ae316a9d80e63ab5ca92274202695ea6cce7ea2ad2965fde9e672b467",
+      "training_membership": true,
+      "g1_source_name": "injured_torso_throw_ball_R_002__A338",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "arm_stretch",
+      "catalog_index": 118246,
+      "clip": "warm_up_arms_001__A360__seg_e7ebe24544f3131c__cut_c7e71bfae94c3104",
+      "frames": 509,
+      "source": {
+        "archive_reference": {
+          "generation": 1792894709493154,
+          "sha256": "7a9f0765b44f798be6093087641e04788bdbd1a4c87ff46ddd7cda6d0ddc8c12",
+          "size": 653401,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00589__bodyimport__chunk_093ac5df0d6fe492/paired/export.tar.gz"
+        },
+        "archive_sha256": "7a9f0765b44f798be6093087641e04788bdbd1a4c87ff46ddd7cda6d0ddc8c12",
+        "clip": "warm_up_arms_001__A360__seg_e7ebe24544f3131c__cut_c7e71bfae94c3104",
+        "export_interval": {
+          "end_s": 17.5,
+          "source_clip": "warm_up_arms_001__A360",
+          "start_s": 7.34
+        },
+        "frames": 509,
+        "original_member_sha256": {
+          "feature": "5a9ece8af07efc6104d19c222cc39464a04fb43765e8f78f69815dcb99c9d46e",
+          "human": "01857089fe423eaf84b6a9cd32ba56506312147f7185844e843439c278f3a4ce",
+          "robot": "64678027cc71a642bcf3de55b6138da6393efc9945505169d4da459dfa1fabb9"
+        },
+        "source_clip": "warm_up_arms_001__A360",
+        "source_id": "clip_908fd23f12110d14",
+        "source_interval": {
+          "end_s": 17.52,
+          "source_clip": "warm_up_arms_001__A360",
+          "start_s": 7.34
+        },
+        "source_sha256": "33c9e7439e3f0b16a634732ad20fea49a98c9117ce429478259981c777af0dfd"
+      },
+      "original_human": "original-human/19.pkl",
+      "human_primitive_slice_sha256": "338c6bed25d27ebbbd50baf44a9ba3b4d41583f77955f5d02628c38c14a98c4b",
+      "source_clip_index": 20,
+      "comparison_number": 21,
+      "evaluation_index": 19,
+      "saved_source_index": 20,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "warm_up_arms_001__A360__seg_e7ebe24544f3131c__cut_c7e71bfae94c3104",
+          "clip_index": 20,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0240.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "warm_up_arms_001__A360__seg_e7ebe24544f3131c__cut_c7e71bfae94c3104",
+          "clip_index": 20,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0492.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "warm_up_arms_001__A360__seg_e7ebe24544f3131c__cut_c7e71bfae94c3104",
+          "clip_index": 20,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0492.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "warm_up_arms_001__A360__seg_e7ebe24544f3131c__cut_c7e71bfae94c3104",
+          "clip_index": 20,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0480.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "warm_up_arms_001__A360__seg_e7ebe24544f3131c__cut_c7e71bfae94c3104",
+          "clip_index": 20,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0480.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 20,
+      "original_human_sha256": "01857089fe423eaf84b6a9cd32ba56506312147f7185844e843439c278f3a4ce",
+      "training_membership": true,
+      "g1_source_name": "warm_up_arms_001__A360",
+      "g1_start_frame": 367
+    },
+    {
+      "category": "dance",
+      "catalog_index": 22577,
+      "clip": "dance_hiphop_the_whoop_R_003__A314__seg_22ddf8299ba9021d__cut_f81743590eed0c92",
+      "frames": 500,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892118709587,
+          "sha256": "ddb90067d47bd4c4dc82ca892627dc3e5ac5e8bc88e95ebbc2a2d6340c1340a1",
+          "size": 485243,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00484__bodyimport__chunk_947854eb0162a526/paired/export.tar.gz"
+        },
+        "archive_sha256": "ddb90067d47bd4c4dc82ca892627dc3e5ac5e8bc88e95ebbc2a2d6340c1340a1",
+        "clip": "dance_hiphop_the_whoop_R_003__A314__seg_22ddf8299ba9021d__cut_f81743590eed0c92",
+        "export_interval": {
+          "end_s": 10.56,
+          "source_clip": "dance_hiphop_the_whoop_R_003__A314",
+          "start_s": 0.58
+        },
+        "frames": 500,
+        "original_member_sha256": {
+          "feature": "cefa9a0ba8d4b8d6d1f78df63c5da38634a7fcfdbd55c2b22367ab126220f7af",
+          "human": "27979b517ca9e45171cdb6c1e488d81ae6a4899387b6c96cddd67b8bce09d8eb",
+          "robot": "99c1d5dc445369663575ec65e9e2a00d4829068dbbf96c44a93d3f986bb51561"
+        },
+        "source_clip": "dance_hiphop_the_whoop_R_003__A314",
+        "source_id": "clip_377323b877c61eb5",
+        "source_interval": {
+          "end_s": 10.58,
+          "source_clip": "dance_hiphop_the_whoop_R_003__A314",
+          "start_s": 0.58
+        },
+        "source_sha256": "047853641445e137dd65de0cbc4d42f4d75853757a16285830c37f8d0e1afc9c"
+      },
+      "original_human": "original-human/20.pkl",
+      "human_primitive_slice_sha256": "29a158aa20609194583c652c2a1646e670696a266a7fa688326aa8ff314e6916",
+      "source_clip_index": 21,
+      "comparison_number": 22,
+      "evaluation_index": 20,
+      "saved_source_index": 21,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "dance_hiphop_the_whoop_R_003__A314__seg_22ddf8299ba9021d__cut_f81743590eed0c92",
+          "clip_index": 21,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0252.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "dance_hiphop_the_whoop_R_003__A314__seg_22ddf8299ba9021d__cut_f81743590eed0c92",
+          "clip_index": 21,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0516.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "dance_hiphop_the_whoop_R_003__A314__seg_22ddf8299ba9021d__cut_f81743590eed0c92",
+          "clip_index": 21,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0516.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "dance_hiphop_the_whoop_R_003__A314__seg_22ddf8299ba9021d__cut_f81743590eed0c92",
+          "clip_index": 21,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0504.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "dance_hiphop_the_whoop_R_003__A314__seg_22ddf8299ba9021d__cut_f81743590eed0c92",
+          "clip_index": 21,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0504.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 21,
+      "original_human_sha256": "27979b517ca9e45171cdb6c1e488d81ae6a4899387b6c96cddd67b8bce09d8eb",
+      "training_membership": true,
+      "g1_source_name": "dance_hiphop_the_whoop_R_003__A314",
+      "g1_start_frame": 29
+    },
+    {
+      "category": "rise",
+      "catalog_index": 35615,
+      "clip": "faint_stand_up_lying_side_R_001__A493__seg_1e47c51014b5fbfe",
+      "frames": 571,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892658621071,
+          "sha256": "d9eb298da35c06bdfd23124427f56a544155524be47b3990b7f369cc9239a959",
+          "size": 520495,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00503__bodyimport__chunk_262868a07314d630/paired/export.tar.gz"
+        },
+        "archive_sha256": "d9eb298da35c06bdfd23124427f56a544155524be47b3990b7f369cc9239a959",
+        "clip": "faint_stand_up_lying_side_R_001__A493__seg_1e47c51014b5fbfe",
+        "export_interval": {
+          "end_s": 11.4,
+          "source_clip": "faint_stand_up_lying_side_R_001__A493",
+          "start_s": 0.0
+        },
+        "frames": 571,
+        "original_member_sha256": {
+          "feature": "1e3cd34500c662c9495996d1f2d941b56419de14c7360ad337c1882bf37268de",
+          "human": "057233bef379ab5594f8aac31275358b02701b43162b62977b052d1f84777347",
+          "robot": "761035432a1597ba8c4af5a013ca97c84b807a796d354a917e88b216327427e7"
+        },
+        "source_clip": "faint_stand_up_lying_side_R_001__A493",
+        "source_id": "clip_59d2fb7fe710236d",
+        "source_interval": {
+          "end_s": 11.42,
+          "source_clip": "faint_stand_up_lying_side_R_001__A493",
+          "start_s": 0.0
+        },
+        "source_sha256": "02dd7f0ab6358b6e31baf4c5f95bebcabb1167054e06f4dce86a7b3e15c94f55"
+      },
+      "original_human": "original-human/21.pkl",
+      "human_primitive_slice_sha256": "a520b9983c5ec89f57c6e0c981d0364d6187595c0994849f503e297eade221ce",
+      "source_clip_index": 22,
+      "comparison_number": 23,
+      "evaluation_index": 21,
+      "saved_source_index": 22,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "faint_stand_up_lying_side_R_001__A493__seg_1e47c51014b5fbfe",
+          "clip_index": 22,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0264.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "faint_stand_up_lying_side_R_001__A493__seg_1e47c51014b5fbfe",
+          "clip_index": 22,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0540.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": false
+        },
+        "mnv3-human": {
+          "clip": "faint_stand_up_lying_side_R_001__A493__seg_1e47c51014b5fbfe",
+          "clip_index": 22,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0540.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": false
+        },
+        "mnv2-robot": {
+          "clip": "faint_stand_up_lying_side_R_001__A493__seg_1e47c51014b5fbfe",
+          "clip_index": 22,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0528.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": false
+        },
+        "mnv3-robot": {
+          "clip": "faint_stand_up_lying_side_R_001__A493__seg_1e47c51014b5fbfe",
+          "clip_index": 22,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0528.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": false
+        }
+      },
+      "display_number": 22,
+      "original_human_sha256": "057233bef379ab5594f8aac31275358b02701b43162b62977b052d1f84777347",
+      "training_membership": false,
+      "g1_source_name": "faint_stand_up_lying_side_R_001__A493",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "jump_side",
+      "catalog_index": 71540,
+      "clip": "jump_sideway_045_002__A037__seg_87656ec880b0a53e",
+      "frames": 389,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892651134174,
+          "sha256": "4dfb19695e9f002b108410650402cc6386029b328b1036cb10ee984428e06d2a",
+          "size": 723030,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00397__bodyimport__chunk_5ee843d713ce927c/paired/export.tar.gz"
+        },
+        "archive_sha256": "4dfb19695e9f002b108410650402cc6386029b328b1036cb10ee984428e06d2a",
+        "clip": "jump_sideway_045_002__A037__seg_87656ec880b0a53e",
+        "export_interval": {
+          "end_s": 7.76,
+          "source_clip": "jump_sideway_045_002__A037",
+          "start_s": 0.0
+        },
+        "frames": 389,
+        "original_member_sha256": {
+          "feature": "510cf2902c8b8e9dea8b8cfabf22b090ec37de97773d5bd12df10ebc5535b845",
+          "human": "655aafe68ad2d2e8f3b2fa6c292e810729560417e68205050f4b40a0d8f42db2",
+          "robot": "1cb3efa3d708c66dd20f3675753bb6986e986584ccf208fc4b31ae507b8391b8"
+        },
+        "source_clip": "jump_sideway_045_002__A037",
+        "source_id": "clip_0aaa2f2ac3b42431",
+        "source_interval": {
+          "end_s": 7.78,
+          "source_clip": "jump_sideway_045_002__A037",
+          "start_s": 0.0
+        },
+        "source_sha256": "b7b8c3c2cebeab74156db04e8706372cc9d72b12ef558642dec693db3c5082a7"
+      },
+      "original_human": "original-human/22.pkl",
+      "human_primitive_slice_sha256": "cbf125841daac7eadae97473d96c6ee16d740a0a3c67fef64fd08d6ea8687396",
+      "source_clip_index": 23,
+      "comparison_number": 24,
+      "evaluation_index": 22,
+      "saved_source_index": 23,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "jump_sideway_045_002__A037__seg_87656ec880b0a53e",
+          "clip_index": 23,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0276.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "jump_sideway_045_002__A037__seg_87656ec880b0a53e",
+          "clip_index": 23,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0564.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "jump_sideway_045_002__A037__seg_87656ec880b0a53e",
+          "clip_index": 23,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0564.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "jump_sideway_045_002__A037__seg_87656ec880b0a53e",
+          "clip_index": 23,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0552.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "jump_sideway_045_002__A037__seg_87656ec880b0a53e",
+          "clip_index": 23,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0552.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 23,
+      "original_human_sha256": "655aafe68ad2d2e8f3b2fa6c292e810729560417e68205050f4b40a0d8f42db2",
+      "training_membership": true,
+      "g1_source_name": "jump_sideway_045_002__A037",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "wave",
+      "catalog_index": 107136,
+      "clip": "walk_arc_cw_stop_R_wave_right_hand_090_R_point_dir_horizontal_right_hand_head_270_R_002__A479__seg_121e6776f6da19b0",
+      "frames": 508,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892343110832,
+          "sha256": "4aba909a39c75b87554e6ee305c7ebc216f3424d1f73f249f32339895fbe3432",
+          "size": 952218,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00474__bodyimport__chunk_1d17ca4d283d8c50/paired/export.tar.gz"
+        },
+        "archive_sha256": "4aba909a39c75b87554e6ee305c7ebc216f3424d1f73f249f32339895fbe3432",
+        "clip": "walk_arc_cw_stop_R_wave_right_hand_090_R_point_dir_horizontal_right_hand_head_270_R_002__A479__seg_121e6776f6da19b0",
+        "export_interval": {
+          "end_s": 10.14,
+          "source_clip": "walk_arc_cw_stop_R_wave_right_hand_090_R_point_dir_horizontal_right_hand_head_270_R_002__A479",
+          "start_s": 0.0
+        },
+        "frames": 508,
+        "original_member_sha256": {
+          "feature": "e7de44d860446700cb26feeb012aa55dc2f82789869decbb4b340b370f51f8ff",
+          "human": "cc3649c1a50df94e5f1ec4ecd1e3f7a5205757b4fe55b5e5bbd276574fcb460c",
+          "robot": "e811ff39c44889913ba43ff7824c7af5e9469cea7c722451f33b81bb1ca15e5c"
+        },
+        "source_clip": "walk_arc_cw_stop_R_wave_right_hand_090_R_point_dir_horizontal_right_hand_head_270_R_002__A479",
+        "source_id": "clip_c89707c2b7a104b6",
+        "source_interval": {
+          "end_s": 10.16,
+          "source_clip": "walk_arc_cw_stop_R_wave_right_hand_090_R_point_dir_horizontal_right_hand_head_270_R_002__A479",
+          "start_s": 0.0
+        },
+        "source_sha256": "8e96adc489a5ececdc319b2355e88b0de196c86e36c65d9979d509731a5d79ff"
+      },
+      "original_human": "original-human/23.pkl",
+      "human_primitive_slice_sha256": "3dc4f0712d3c9fe2b45d2dbbb4e2950b46e1b1dfc49bfd52f30a1a37602b427e",
+      "source_clip_index": 24,
+      "comparison_number": 25,
+      "evaluation_index": 23,
+      "saved_source_index": 24,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "walk_arc_cw_stop_R_wave_right_hand_090_R_point_dir_horizontal_right_hand_head_270_R_002__A479__seg_121e6776f6da19b0",
+          "clip_index": 24,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0288.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "walk_arc_cw_stop_R_wave_right_hand_090_R_point_dir_horizontal_right_hand_head_270_R_002__A479__seg_121e6776f6da19b0",
+          "clip_index": 24,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0588.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "walk_arc_cw_stop_R_wave_right_hand_090_R_point_dir_horizontal_right_hand_head_270_R_002__A479__seg_121e6776f6da19b0",
+          "clip_index": 24,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0588.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "walk_arc_cw_stop_R_wave_right_hand_090_R_point_dir_horizontal_right_hand_head_270_R_002__A479__seg_121e6776f6da19b0",
+          "clip_index": 24,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0576.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "walk_arc_cw_stop_R_wave_right_hand_090_R_point_dir_horizontal_right_hand_head_270_R_002__A479__seg_121e6776f6da19b0",
+          "clip_index": 24,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0576.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 24,
+      "original_human_sha256": "cc3649c1a50df94e5f1ec4ecd1e3f7a5205757b4fe55b5e5bbd276574fcb460c",
+      "training_membership": true,
+      "g1_source_name": "walk_arc_cw_stop_R_wave_right_hand_090_R_point_dir_horizontal_right_hand_head_270_R_002__A479",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "run_forward",
+      "catalog_index": 61630,
+      "clip": "jog_ff_start_180_R_003__A067__seg_5ec0c08a97c74c9b",
+      "frames": 191,
+      "source": {
+        "archive_reference": {
+          "generation": 1792896719888704,
+          "sha256": "9c9811fca1c018c7b55fd174ea7608a607fd872eb46a2a9c67068685bf62826f",
+          "size": 613678,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00126__bodyimport__chunk_c9f6d9d8becd34c8/paired/export.tar.gz"
+        },
+        "archive_sha256": "9c9811fca1c018c7b55fd174ea7608a607fd872eb46a2a9c67068685bf62826f",
+        "clip": "jog_ff_start_180_R_003__A067__seg_5ec0c08a97c74c9b",
+        "export_interval": {
+          "end_s": 3.8,
+          "source_clip": "jog_ff_start_180_R_003__A067",
+          "start_s": 0.0
+        },
+        "frames": 191,
+        "original_member_sha256": {
+          "feature": "4b3d795f55af66ba22ce7705a4bbb64444f1e5de65012d2e44385938eefcb2bd",
+          "human": "fbb44f2a2099d839936822c54f2cf766c7d0d8f15bff49be4bb2f92e957a8bcb",
+          "robot": "92632bfed6b40f22f1dfd5ee43933ea8bc10c93cbb4dd772d377df433e26e2cb"
+        },
+        "source_clip": "jog_ff_start_180_R_003__A067",
+        "source_id": "clip_dfb71ef31b5e24d6",
+        "source_interval": {
+          "end_s": 3.82,
+          "source_clip": "jog_ff_start_180_R_003__A067",
+          "start_s": 0.0
+        },
+        "source_sha256": "cf9dd27f317e987a3bb966f1d7d7d2575261923037a237d1c5d2bbdd2d305b8e"
+      },
+      "original_human": "original-human/24.pkl",
+      "human_primitive_slice_sha256": "05e54f5013deb15a872c681d9728e1c87a6e9a9b20be93ec4e7ca4d26b4ddf80",
+      "evaluation_index": 24,
+      "comparison_number": 26,
+      "saved_source_index": 25,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "jog_ff_start_180_R_003__A067__seg_5ec0c08a97c74c9b",
+          "clip_index": 0,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/reference-u14500/trial-0000.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "jog_ff_start_180_R_003__A067__seg_5ec0c08a97c74c9b",
+          "clip_index": 0,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/clean-u64000/trial-0001.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "jog_ff_start_180_R_003__A067__seg_5ec0c08a97c74c9b",
+          "clip_index": 3,
+          "file": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/trial-0007.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "jog_ff_start_180_R_003__A067__seg_5ec0c08a97c74c9b",
+          "clip_index": 0,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/clean-u64000/trial-0000.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "jog_ff_start_180_R_003__A067__seg_5ec0c08a97c74c9b",
+          "clip_index": 3,
+          "file": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/trial-0006.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 25,
+      "original_human_sha256": "fbb44f2a2099d839936822c54f2cf766c7d0d8f15bff49be4bb2f92e957a8bcb",
+      "training_membership": true,
+      "g1_source_name": "jog_ff_start_180_R_003__A067",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "reach_up_extra",
+      "catalog_index": 91607,
+      "clip": "reaching_up_R_003__A409__seg_4e758875f8b84178",
+      "frames": 494,
+      "source": {
+        "archive_reference": {
+          "generation": 1792894740586617,
+          "sha256": "1625d97f055f6cf234193e6eb42bb3d960e648439f113556d73ddb15159110ef",
+          "size": 942285,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00468__bodyimport__chunk_abb52b4302b6daff/paired/export.tar.gz"
+        },
+        "archive_sha256": "1625d97f055f6cf234193e6eb42bb3d960e648439f113556d73ddb15159110ef",
+        "clip": "reaching_up_R_003__A409__seg_4e758875f8b84178",
+        "export_interval": {
+          "end_s": 9.86,
+          "source_clip": "reaching_up_R_003__A409",
+          "start_s": 0.0
+        },
+        "frames": 494,
+        "original_member_sha256": {
+          "feature": "c3d5345b5a420aabfbffbee19b853e82d908188c12f9eb5e6d014528a380c8a8",
+          "human": "3aadb1b189633efb3ed14d0c72311c9c366d846c435429e8e4da14bdf9060dbf",
+          "robot": "5383e8428b7388a160c0778fa1bf39c60bb3455186b5ce7512c5314653aad0d8"
+        },
+        "source_clip": "reaching_up_R_003__A409",
+        "source_id": "clip_2257c4532817b974",
+        "source_interval": {
+          "end_s": 9.88,
+          "source_clip": "reaching_up_R_003__A409",
+          "start_s": 0.0
+        },
+        "source_sha256": "7c6e6b00b385bc474629778c6626d5762f49f0da42e9bb29c8215bdfa1e8562c"
+      },
+      "original_human": "original-human/25.pkl",
+      "human_primitive_slice_sha256": "dd14ded6fa617d64f76fb8ee00900e7c96b9e4bb8b92d8d290f779fd25f51731",
+      "source_clip_index": 26,
+      "comparison_number": 27,
+      "evaluation_index": 25,
+      "saved_source_index": 26,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "reaching_up_R_003__A409__seg_4e758875f8b84178",
+          "clip_index": 26,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0312.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "reaching_up_R_003__A409__seg_4e758875f8b84178",
+          "clip_index": 26,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0636.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "reaching_up_R_003__A409__seg_4e758875f8b84178",
+          "clip_index": 26,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0636.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "reaching_up_R_003__A409__seg_4e758875f8b84178",
+          "clip_index": 26,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0624.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "reaching_up_R_003__A409__seg_4e758875f8b84178",
+          "clip_index": 26,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0624.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 26,
+      "original_human_sha256": "3aadb1b189633efb3ed14d0c72311c9c366d846c435429e8e4da14bdf9060dbf",
+      "training_membership": true,
+      "g1_source_name": "reaching_up_R_003__A409",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "fast_walk_normal",
+      "catalog_index": 108213,
+      "clip": "walk_ff_loop_180_R_002__A049__seg_57328a0b314411b4",
+      "frames": 271,
+      "source": {
+        "archive_reference": {
+          "generation": 1792895881048141,
+          "sha256": "b999037d47339a5a06a25c292e5f1007e26c850d49a544f407ba54cb0367eb99",
+          "size": 607938,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00258__bodyimport__chunk_9d09ae91abef7959/paired/export.tar.gz"
+        },
+        "archive_sha256": "b999037d47339a5a06a25c292e5f1007e26c850d49a544f407ba54cb0367eb99",
+        "clip": "walk_ff_loop_180_R_002__A049__seg_57328a0b314411b4",
+        "export_interval": {
+          "end_s": 5.4,
+          "source_clip": "walk_ff_loop_180_R_002__A049",
+          "start_s": 0.0
+        },
+        "frames": 271,
+        "original_member_sha256": {
+          "feature": "2b5732c753bfcbb8916d7c1bd086ca7f447f7eb8a7c7e1af3e030daebd93e23b",
+          "human": "628ea575c0a4d614181f0a3c164d0de96d978db7c4931ee28ec7b1f27ea454e2",
+          "robot": "86b2db6cd48029f609e5858b396a5fb361a3d8ac0c240dd08f625740e901c1da"
+        },
+        "source_clip": "walk_ff_loop_180_R_002__A049",
+        "source_id": "clip_da9e2626928e54f7",
+        "source_interval": {
+          "end_s": 5.42,
+          "source_clip": "walk_ff_loop_180_R_002__A049",
+          "start_s": 0.0
+        },
+        "source_sha256": "6ddb8ef8ed7e66aee8499d67ab47aef5f8c7f3245b8ce9f95b71374d4ce0c82e"
+      },
+      "original_human": "original-human/26.pkl",
+      "human_primitive_slice_sha256": "2ef77cf2072af0b26470cab332eac1f3b2559b6b293d130ad2becbebd1667d60",
+      "evaluation_index": 26,
+      "comparison_number": 28,
+      "saved_source_index": 27,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "walk_ff_loop_180_R_002__A049__seg_57328a0b314411b4",
+          "clip_index": 1,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/reference-u14500/trial-0001.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "walk_ff_loop_180_R_002__A049__seg_57328a0b314411b4",
+          "clip_index": 1,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/clean-u64000/trial-0003.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "walk_ff_loop_180_R_002__A049__seg_57328a0b314411b4",
+          "clip_index": 4,
+          "file": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/trial-0009.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "walk_ff_loop_180_R_002__A049__seg_57328a0b314411b4",
+          "clip_index": 1,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/clean-u64000/trial-0002.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-locomotion/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "walk_ff_loop_180_R_002__A049__seg_57328a0b314411b4",
+          "clip_index": 4,
+          "file": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/trial-0008.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 27,
+      "original_human_sha256": "628ea575c0a4d614181f0a3c164d0de96d978db7c4931ee28ec7b1f27ea454e2",
+      "training_membership": true,
+      "g1_source_name": "walk_ff_loop_180_R_002__A049",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "bow",
+      "catalog_index": 14072,
+      "clip": "courtly_bow_male_R_002__A431__seg_218eb5671bb579b0",
+      "frames": 479,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892713696666,
+          "sha256": "2a0cc3cac188261c63c438e4f50c1ae710e6dcf87314449a03b591202ac276c7",
+          "size": 836267,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00459__bodyimport__chunk_fde8cdd527756dc4/paired/export.tar.gz"
+        },
+        "archive_sha256": "2a0cc3cac188261c63c438e4f50c1ae710e6dcf87314449a03b591202ac276c7",
+        "clip": "courtly_bow_male_R_002__A431__seg_218eb5671bb579b0",
+        "export_interval": {
+          "end_s": 9.56,
+          "source_clip": "courtly_bow_male_R_002__A431",
+          "start_s": 0.0
+        },
+        "frames": 479,
+        "original_member_sha256": {
+          "feature": "4e55f70a14b57189da6df1fdf74c63892283350ea0461286c40c6f7847f8c377",
+          "human": "d4d9bc7074fe09bdb65b2cbe2950a8f6088bddf9616ab06021c111d572d13669",
+          "robot": "c98fc0a30dcb5a604249ac1bbfa699abf0a23d97432821c1255529b4f0aad956"
+        },
+        "source_clip": "courtly_bow_male_R_002__A431",
+        "source_id": "clip_f8616230c77abb5b",
+        "source_interval": {
+          "end_s": 9.58,
+          "source_clip": "courtly_bow_male_R_002__A431",
+          "start_s": 0.0
+        },
+        "source_sha256": "24ba6111a6ee7e3239f0167d5d48c3d326f35d47c57089e45db95bcb5269e95e"
+      },
+      "original_human": "original-human/27.pkl",
+      "human_primitive_slice_sha256": "210ccd50023bea74aabeefd51a556e142876faf6661ad18082e385266d6f6a23",
+      "source_clip_index": 28,
+      "comparison_number": 29,
+      "evaluation_index": 27,
+      "saved_source_index": 28,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "courtly_bow_male_R_002__A431__seg_218eb5671bb579b0",
+          "clip_index": 28,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0336.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "courtly_bow_male_R_002__A431__seg_218eb5671bb579b0",
+          "clip_index": 28,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0684.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "courtly_bow_male_R_002__A431__seg_218eb5671bb579b0",
+          "clip_index": 28,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0684.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "courtly_bow_male_R_002__A431__seg_218eb5671bb579b0",
+          "clip_index": 28,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0672.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "courtly_bow_male_R_002__A431__seg_218eb5671bb579b0",
+          "clip_index": 28,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0672.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 28,
+      "original_human_sha256": "d4d9bc7074fe09bdb65b2cbe2950a8f6088bddf9616ab06021c111d572d13669",
+      "training_membership": true,
+      "g1_source_name": "courtly_bow_male_R_002__A431",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "hammer",
+      "catalog_index": 94028,
+      "clip": "sledgehammering_wall_from_side_R_002__A357__seg_d5164d1c52d095f3",
+      "frames": 478,
+      "source": {
+        "archive_reference": {
+          "generation": 1792892429109633,
+          "sha256": "a8e2f90c6c0b9f8feead8ab8b5f47601b0377744a550852d5598a5c2a857dc91",
+          "size": 911584,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00458__bodyimport__chunk_c6ecf522fb7402ff/paired/export.tar.gz"
+        },
+        "archive_sha256": "a8e2f90c6c0b9f8feead8ab8b5f47601b0377744a550852d5598a5c2a857dc91",
+        "clip": "sledgehammering_wall_from_side_R_002__A357__seg_d5164d1c52d095f3",
+        "export_interval": {
+          "end_s": 9.54,
+          "source_clip": "sledgehammering_wall_from_side_R_002__A357",
+          "start_s": 0.0
+        },
+        "frames": 478,
+        "original_member_sha256": {
+          "feature": "96e3739d9d735b295e3e486c3edde1158ac3d24d7a888b78d8769d3b185ac9a2",
+          "human": "aa277b0d6a9073e19e54bafbeb45aaa2beecaf848df02e9d61ac2efcb87e434a",
+          "robot": "512ba4dc16e29bf1ed2b9463f289003fb052638b185edf442adaeab9d1d24370"
+        },
+        "source_clip": "sledgehammering_wall_from_side_R_002__A357",
+        "source_id": "clip_de2592e91eaffafb",
+        "source_interval": {
+          "end_s": 9.56,
+          "source_clip": "sledgehammering_wall_from_side_R_002__A357",
+          "start_s": 0.0
+        },
+        "source_sha256": "22a8b261a86af2e9bb19d00cd31f2685d25b45ef30826bae911770ed37ee82cd"
+      },
+      "original_human": "original-human/28.pkl",
+      "human_primitive_slice_sha256": "c130477ac8198ec6ec9818ab5efad11e9bc582a11d6ec1777c1deadf494de46f",
+      "evaluation_index": 28,
+      "comparison_number": 30,
+      "saved_source_index": 29,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-hammer/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "sledgehammering_wall_from_side_R_002__A357__seg_d5164d1c52d095f3",
+          "clip_index": 0,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-hammer/reference-u14500/trial-0000.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-hammer/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "sledgehammering_wall_from_side_R_002__A357__seg_d5164d1c52d095f3",
+          "clip_index": 0,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-hammer/clean-u64000/trial-0001.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-hammer/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "sledgehammering_wall_from_side_R_002__A357__seg_d5164d1c52d095f3",
+          "clip_index": 5,
+          "file": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/trial-0011.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "sledgehammering_wall_from_side_R_002__A357__seg_d5164d1c52d095f3",
+          "clip_index": 0,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-hammer/clean-u64000/trial-0000.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/replacements-hammer/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "sledgehammering_wall_from_side_R_002__A357__seg_d5164d1c52d095f3",
+          "clip_index": 5,
+          "file": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/trial-0010.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/WBT/gaussian64k-review-20261104/supplement/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 29,
+      "original_human_sha256": "aa277b0d6a9073e19e54bafbeb45aaa2beecaf848df02e9d61ac2efcb87e434a",
+      "training_membership": true,
+      "g1_source_name": "sledgehammering_wall_from_side_R_002__A357",
+      "g1_start_frame": 0
+    },
+    {
+      "category": "open_door",
+      "catalog_index": 87958,
+      "clip": "outside_door_knob_right_side_open_walk_turn_close_R_001__A514__seg_86f8cab422ca8bb1",
+      "frames": 498,
+      "source": {
+        "archive_reference": {
+          "generation": 1792894206781204,
+          "sha256": "21d5d7dcb37ae70cb1ae7aaad7eb6921acde071c6c7a0dfba3fcc34b47e74656",
+          "size": 863709,
+          "uri": "gs://minerva-datasets/release-candidates/bones-seed/0.3.0/run-20261025-r7/retained/flight-v4-chunk-00469__bodyimport__chunk_30867e8d77519555/paired/export.tar.gz"
+        },
+        "archive_sha256": "21d5d7dcb37ae70cb1ae7aaad7eb6921acde071c6c7a0dfba3fcc34b47e74656",
+        "clip": "outside_door_knob_right_side_open_walk_turn_close_R_001__A514__seg_86f8cab422ca8bb1",
+        "export_interval": {
+          "end_s": 9.94,
+          "source_clip": "outside_door_knob_right_side_open_walk_turn_close_R_001__A514",
+          "start_s": 0.0
+        },
+        "frames": 498,
+        "original_member_sha256": {
+          "feature": "d7f34bdd68a6c43bdcc74e0e195afb5978dbe1fd508340e8e12f999b3a143e3b",
+          "human": "065bce72724f10c0d46f810213b9ebb30b73cdb7d3eb0b2c34c7ff98c028f721",
+          "robot": "810c545e1f68c8aaed44aea2d99bf879442ce6f82b1a417ee62c8cc205b15817"
+        },
+        "source_clip": "outside_door_knob_right_side_open_walk_turn_close_R_001__A514",
+        "source_id": "clip_d1becacade3c4a58",
+        "source_interval": {
+          "end_s": 9.96,
+          "source_clip": "outside_door_knob_right_side_open_walk_turn_close_R_001__A514",
+          "start_s": 0.0
+        },
+        "source_sha256": "c60b2844018f3e1032426088137e5ff3f7977904a918ee3602cc1574a62ca8b0"
+      },
+      "original_human": "original-human/29.pkl",
+      "human_primitive_slice_sha256": "b81f3e4f35fe0514e5c39cb2e0ca83470110521ca1baee9e93f1c2a5527c46b9",
+      "source_clip_index": 30,
+      "comparison_number": 31,
+      "evaluation_index": 29,
+      "saved_source_index": 30,
+      "input_root": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs",
+      "recordings": {
+        "maurice": {
+          "clip": "outside_door_knob_right_side_open_walk_turn_close_R_001__A514__seg_86f8cab422ca8bb1",
+          "clip_index": 30,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/trial-0360.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/reference-u14500/report.json",
+          "complete": true
+        },
+        "mnv2-human": {
+          "clip": "outside_door_knob_right_side_open_walk_turn_close_R_001__A514__seg_86f8cab422ca8bb1",
+          "clip_index": 30,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0732.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-human": {
+          "clip": "outside_door_knob_right_side_open_walk_turn_close_R_001__A514__seg_86f8cab422ca8bb1",
+          "clip_index": 30,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0732.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        },
+        "mnv2-robot": {
+          "clip": "outside_door_knob_right_side_open_walk_turn_close_R_001__A514__seg_86f8cab422ca8bb1",
+          "clip_index": 30,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/trial-0720.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/clean-u64000/report.json",
+          "complete": true
+        },
+        "mnv3-robot": {
+          "clip": "outside_door_knob_right_side_open_walk_turn_close_R_001__A514__seg_86f8cab422ca8bb1",
+          "clip_index": 30,
+          "file": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/trial-0720.npz",
+          "report": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/noisy-u64000/report.json",
+          "complete": true
+        }
+      },
+      "display_number": 30,
+      "original_human_sha256": "065bce72724f10c0d46f810213b9ebb30b73cdb7d3eb0b2c34c7ff98c028f721",
+      "training_membership": true,
+      "g1_source_name": "outside_door_knob_right_side_open_walk_turn_close_R_001__A514",
+      "g1_start_frame": 0
+    }
+  ],
+  "pair_count": 30,
+  "excluded_clips": [
+    {
+      "comparison_number": 18,
+      "clip": "push_up_loop_003__A360__seg_9b66bb98144bb56d",
+      "reason": "User excluded this clip from the evaluation dataset."
+    }
+  ],
+  "source_selection": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/gaussian64k-comparison-20261104/inputs/selection.json",
+  "source_selection_sha256": "3965ebbffc16ecbf55039e7e5c9560a059a83970833e91722060ea0885ae02e5",
+  "comparison_numbers": "Use display_number for consecutive labels. Preserve comparison_number as the original source number.",
+  "authoritative_selection_sha256": "08b1c7d4e47dd95f99834a4dc2a8a75beba0fb53de04f85c3bbaad6cb16e1cc6",
+  "robot": "Unitree G1",
+  "source_clocks_preserved": true
+}

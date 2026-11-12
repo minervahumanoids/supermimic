@@ -1,0 +1,28 @@
+{
+  "verified": true,
+  "viewer_url": "http://127.0.0.1:8971/",
+  "walking": {
+    "display_number": 3,
+    "frame": 180,
+    "time_s": 3.6,
+    "root_xy_cm": 4.79,
+    "screenshot_sha256": "8ed8de1ded2cf72f4c808e41c2fac76495eb9168f2f8c8468e7ceeeff1afd8de"
+  },
+  "pico": {
+    "session": "oct02-ali-01",
+    "frame": 5000,
+    "time_s": 100,
+    "root_xy_cm": 104.79,
+    "screenshot_sha256": "6428fe78fa853daa0052bb43a86fce49b4261700891d9f655ed60934cbcec3a0"
+  },
+  "original_human_visible": true,
+  "reference_visible": true,
+  "policy_visible": true,
+  "manual_camera_preserved": true,
+  "plot_cursor_synchronized": true,
+  "tabs": [
+    "Drift",
+    "Palm position",
+    "Palm orientation"
+  ]
+}

@@ -76,3 +76,12 @@ The training starts from fresh model parameters.
 - `launch.py` verifies provenance and admits the original learner.
 - `standard_logger.py` adapts training telemetry.
 - `orion.py` associates the training with its reservation.
+
+## User-requested stop and evaluation
+
+The training stopped at collector iteration 403,091 on November 12, 2026.
+The evaluation uses checkpoint 403,000, W&B artifact `model-ga216ipt:v403`.
+The standalone MuJoCo evaluation completed all 30 approved BONES clips and all three PICO sessions.
+The [evaluation report](evaluation/README.md) preserves the results, source identities, compatibility approval, and checkpoint hashes.
+The service remains inactive with automatic restart disabled.
+The original launch commit remains `ad813ef33ed15201044b8d8c0bf0c808628ae64f`.
