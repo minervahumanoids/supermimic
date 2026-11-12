@@ -1,0 +1,7 @@
+{
+  "gcs_uri": "gs://minerva-datasets/releases/bones-seed-g1/0.1.0/inputs/g1.tar.gz",
+  "generation": "1792535636281233",
+  "bytes": 23499973647,
+  "sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+  "verified": true
+}

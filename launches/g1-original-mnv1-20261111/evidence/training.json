@@ -1,0 +1,20 @@
+{
+  "run_id": "ga216ipt",
+  "wandb_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/ga216ipt",
+  "pull_request": "https://github.com/minervahumanoids/supermimic/pull/1",
+  "launch_commit": "ad813ef33ed15201044b8d8c0bf0c808628ae64f",
+  "source_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+  "mjlab_commit": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+  "host": "mnv1",
+  "training_service": "supermimic-g1-original-train-20261111.service",
+  "wall_limit": null,
+  "restart_policy": "no",
+  "max_iterations": 1000000,
+  "num_envs": 4096,
+  "policy_batch": 2048,
+  "default_policy_batch": 4096,
+  "batch_reason": "The default policy batch exceeds MNV1 GPU capacity during CUDA graph capture with the full dataset.",
+  "checkpoint_provenance": "Fresh initialization. No checkpoint loaded.",
+  "training_source_unchanged": true,
+  "smoke_wandb_initialized": false
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "source_name": "faint_stand_up_lying_side_R_001__A493_M",
+    "archive_member": "g1/csv/231024/faint_stand_up_lying_side_R_001__A493_M.csv",
+    "csv_sha256": "8ce9c29405ebc0ded66b334e974cb1d6ac44d9ce133a2f1a55539d8587008dc8",
+    "source_fps": 120.0,
+    "source_id": "clip_50ffa2b7afd33a51",
+    "human_source_sha256": "5d943eb6e4ca0e5e2a89431a63075128d91d55e7fafe945419e4175b3387feb8",
+    "retained": false,
+    "exclusion": "reviewed rise and mirrored source",
+    "reviewed_fragment": "4de57019aa40237a",
+    "source_frames": 1376,
+    "reviewed_interval_s": [
+      0.0,
+      11.42
+    ],
+    "reason": "The remaining output interval has fewer than three frames"
+  },
+  {
+    "source_name": "faint_stand_up_lying_side_R_001__A493",
+    "archive_member": "g1/csv/231024/faint_stand_up_lying_side_R_001__A493.csv",
+    "csv_sha256": "878992550096be547a07ffd67375f84fa7fac5d4974edb0e19635f0912200094",
+    "source_fps": 120.0,
+    "source_id": "clip_59d2fb7fe710236d",
+    "human_source_sha256": "02dd7f0ab6358b6e31baf4c5f95bebcabb1167054e06f4dce86a7b3e15c94f55",
+    "retained": false,
+    "exclusion": "reviewed rise and mirrored source",
+    "reviewed_fragment": "1e47c51014b5fbfe",
+    "source_frames": 1376,
+    "reviewed_interval_s": [
+      0.0,
+      11.42
+    ],
+    "reason": "The remaining output interval has fewer than three frames"
+  }
+]

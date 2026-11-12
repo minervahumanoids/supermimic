@@ -1,0 +1,9 @@
+{
+  "machine": "mnv1",
+  "owner": "Mattia",
+  "kind": "reservation",
+  "note": "PR1 original G1: batch 2048",
+  "end": 1794537097130.9185,
+  "version": "1958000f14704631b93da3ea2e88aec6",
+  "wandb_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/ga216ipt"
+}

@@ -1,0 +1,19 @@
+{
+  "source": {
+    "gcs_uri": "gs://minerva-datasets/releases/bones-seed-g1/0.1.0/inputs/g1.tar.gz",
+    "generation": "1792535636281233",
+    "bytes": 23499973647,
+    "sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+    "verified": true
+  },
+  "source_population": 142220,
+  "clips": 142218,
+  "frames": 51914212,
+  "rate_hz": 50,
+  "selection_sha256": "fbaef9736b416f5aa9a1b09233ef98faccce8c6e2561ed7760b5904519763898",
+  "exclusion_sha256": "c2899b6ab4451dfd4dbd3efd9dcab696905b56f84bbacca76644dae1f86ba7a9",
+  "source_index_sha256": "48153713c9d2ec5cd20c63f87c588ce67370a0ece473701f4693202a86c50382",
+  "conversion": "BONES units and columns normalized, then unchanged mjlab MotionLoader interpolation and derivatives",
+  "mjlab_commit": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+  "upstream_code_changed": false
+}
