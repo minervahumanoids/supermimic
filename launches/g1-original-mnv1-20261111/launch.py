@@ -125,6 +125,7 @@ def main():
   parser.add_argument("--mode", choices=("check", "smoke", "train"), default="check")
   parser.add_argument("--pr-url")
   parser.add_argument("--launch-commit")
+  parser.add_argument("--policy-batch-size", type=int)
   args = parser.parse_args()
   workspace = args.workspace.resolve()
   repo = workspace / "supermimic"
@@ -137,6 +138,16 @@ def main():
 
   cfg = TrainConfig.from_task(TASK)
   original = asdict(cfg.runner)
+  overrides = {}
+  if args.policy_batch_size is not None:
+    if args.policy_batch_size < 1:
+      parser.error("The policy batch must be positive")
+    cfg.runner.policy.batch_size = args.policy_batch_size
+    overrides["policy.batch_size"] = {
+      "original": original["policy"]["batch_size"],
+      "effective": args.policy_batch_size,
+      "reason": "MNV1 GPU capacity with the full BONES-SEED G1 dataset",
+    }
   cfg.env.seed = 69
   cfg.env.scene.num_envs = cfg.num_envs
   cfg.env.commands["motion"].motion_file = str(args.motion_file.resolve())
@@ -146,10 +157,17 @@ def main():
   date = datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y%m%d")
   cfg.runner.run_name = f"g1-SM-original-{date}-seed69"
   effective = asdict(cfg.runner)
-  if {k: v for k, v in original.items() if k not in ("wandb_project", "run_name")} != {
-    k: v for k, v in effective.items() if k not in ("wandb_project", "run_name")
-  }:
-    raise RuntimeError("The original training parameters changed")
+  expected = json.loads(json.dumps(original))
+  if overrides:
+    expected["policy"]["batch_size"] = args.policy_batch_size
+  if {
+    k: v for k, v in expected.items() if k not in ("wandb_project", "run_name")
+  } != json.loads(
+    json.dumps(
+      {k: v for k, v in effective.items() if k not in ("wandb_project", "run_name")}
+    )
+  ):
+    raise RuntimeError("An undeclared original training parameter changed")
   record = {
     "source_commit": SOURCE,
     "mjlab_commit": DEPENDENCY,
@@ -163,7 +181,9 @@ def main():
     "launch_commit": args.launch_commit,
     "checkpoint_provenance": "Fresh initialization. No checkpoint loaded.",
     "wall_time_limit": None,
-    "unchanged_upstream_parameters": True,
+    "unchanged_upstream_parameters": not overrides,
+    "runner_overrides": overrides,
+    "upstream_source_unchanged": True,
   }
   (workspace / "launch-config.json").write_text(
     json.dumps(record, indent=2, default=str) + "\n"
@@ -175,7 +195,8 @@ def main():
         "data": dataset,
         "iterations": cfg.runner.max_iterations,
         "num_envs": cfg.num_envs,
-        "original_parameters": True,
+        "original_parameters": not overrides,
+        "runner_overrides": overrides,
       }
     ),
     flush=True,
@@ -269,7 +290,8 @@ def main():
       "num_envs": cfg.num_envs,
       "wm_batch": cfg.runner.wm.batch_size,
       "policy_batch": cfg.runner.policy.batch_size,
-      "original_parameters": True,
+      "original_parameters": not overrides,
+      "runner_overrides": overrides,
       "gpu_peak_bytes": torch.cuda.max_memory_allocated(),
       "wandb_initialized": False,
       "dataset": dataset,

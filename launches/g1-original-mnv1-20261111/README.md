@@ -15,14 +15,17 @@ The remote source checkouts remain unchanged.
 | Training iterations | 1,000,000 |
 | Environment count | 4,096 |
 | WM batch | 2,048, ten batches |
-| Policy batch | 4,096 |
+| Policy batch | 2,048 |
 | Wall limit | None |
 | W&B project | `minervahumanoids/Supermimic` |
 
 The actor retains the official motion and velocity encoders.
 The official slot mix assigns all environments to the motion encoder.
 The reference contains the current frame and nine future frames, with stride five.
-The launch retains all other official runner parameters and rewards.
+The launch retains the official rewards, horizons, and other runner parameters.
+The default policy batch of 4,096 exhausts MNV1 memory during CUDA graph capture.
+The launch reduces the policy batch to 2,048 through the native configuration.
+The launch records this hardware adjustment in W&B configuration.
 
 ## Dataset provenance
 
@@ -53,7 +56,8 @@ The separate runtime project preserves the original dependency files.
 The runtime pins Torch 2.14.1 with CUDA 13.0 and mjviser 0.0.16.
 MuJoCo 3.16.0 supports the official asset format.
 
-The smoke run uses local logs and the original environment and learner batch sizes.
+The smoke run uses local logs and the full selected dataset.
+The smoke run tests the complete environment and learner configurations.
 The full run initializes online W&B telemetry before the native training loop starts.
 The admission check verifies a server metric and the saved workspace layout.
 The external logger measures actual completed episodes and actual transitions.
