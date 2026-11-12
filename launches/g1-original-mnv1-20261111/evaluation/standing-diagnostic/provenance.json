@@ -1,0 +1,20 @@
+{
+  "source_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+  "mjlab_commit": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+  "actor_sha256": "07e064bd4b6500b97a4a6b4af0060a801588abb8f0abdceb38138e2c40c0144b",
+  "diagnostic_source_sha256": "3518b9d7f0cb98ccae7bf55935bae38ae6a2c06ad657a5fd5889b316e5a63a3f",
+  "approved_evaluator_sha256": "748f0f615cb12b09ecf25a7277e5c085d99720e5355582bbd80546dde2c1508b",
+  "approved_metric_sha256": "248637bf92f56a9b211317a02032521380cb33f17fad25b309b391d8c17d2353",
+  "review_manifest_sha256": "cca96c6183b754a9103131c1af3f610dcbb62ed497884db3188114dade50895a",
+  "standing_recording_sha256": "082475f91566924937e017ac27c32f1c75f37bb76487c3e2a92686b80366db8a",
+  "screenshot_sha256": "071f7b23fe4fedae501ba64327525ad9e818780a7a2787d594b89ca2daa99ab9",
+  "viewer_url": "http://127.0.0.1:8971/",
+  "display_number": 1,
+  "source_frame": 1000,
+  "source_time_s": 20,
+  "review_backend": "standalone CPU MuJoCo",
+  "native_diagnostic_backend": "MuJoCo-Warp",
+  "model_modified": false,
+  "approved_review_modified": false,
+  "new_training_started": false
+}

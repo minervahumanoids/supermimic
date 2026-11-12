@@ -1,0 +1,21 @@
+{
+  "verified_utc": "2026-11-12T16:51:17.084963+00:00",
+  "service_state": "Restart=no\nMainPID=0\nActiveState=inactive\n",
+  "gpu_compute_processes": "",
+  "wandb_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/ga216ipt",
+  "wandb_state": "killed",
+  "launch_commit": "ad813ef33ed15201044b8d8c0bf0c808628ae64f",
+  "checkpoint_iteration": 403000,
+  "evaluation_published": true,
+  "orion_before": {
+    "machine": "mnv1",
+    "owner": "Mattia",
+    "kind": "reservation",
+    "note": "PR1 G1 eval: checkpoint 403000",
+    "end": 1794514615363.0903,
+    "version": "feaa22aa3b744f7d942c70df50d78b4c",
+    "wandb_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/ga216ipt"
+  },
+  "orion_after": null,
+  "unrelated_jobs_modified": false
+}

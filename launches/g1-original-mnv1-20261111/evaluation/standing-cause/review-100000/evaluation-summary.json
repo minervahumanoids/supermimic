@@ -1,0 +1,29 @@
+{
+  "iteration": 100000,
+  "backend": "standalone CPU MuJoCo",
+  "cohorts": {
+    "bones": {
+      "clips": 30,
+      "complete": 30,
+      "requested_frames": 16423,
+      "recorded_frames": 16423,
+      "mean_clip_root_xy_cm": 11.814927157431978,
+      "mean_clip_palm_position_cm": 3.062501506489521,
+      "mean_clip_palm_orientation_deg": 6.575364006309708
+    },
+    "pico": {
+      "clips": 3,
+      "complete": 3,
+      "requested_frames": 15898,
+      "recorded_frames": 15898,
+      "mean_clip_root_xy_cm": 36.91383523773546,
+      "mean_clip_palm_position_cm": 2.4219805546367232,
+      "mean_clip_palm_orientation_deg": 4.722242021452911
+    }
+  },
+  "policy_modified": false,
+  "optimizer_steps": 0,
+  "evaluator_modified": false,
+  "checkpoint_artifact": "minervahumanoids/Supermimic/model-ga216ipt:v100",
+  "actor_sha256": "edc4ab211f0ec172627b33524317267d3d1c8ad28d83752f2e13fb1ef5bbc6de"
+}

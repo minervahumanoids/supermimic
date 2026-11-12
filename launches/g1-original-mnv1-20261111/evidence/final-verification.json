@@ -1,0 +1,31 @@
+{
+  "run_id": "ga216ipt",
+  "wandb_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/ga216ipt",
+  "state": "running",
+  "latest_learner_metrics": {
+    "_timestamp": 1794450904.2605417,
+    "_step": 157,
+    "Train/iter": 1561,
+    "Train/steps": 6393856.0,
+    "Loss/wm": 0.021275578066706657,
+    "Loss/policy": -6.626421928405762
+  },
+  "learner_metrics_received": true,
+  "service": "Restart=no\nRuntimeMaxUSec=infinity\nExecMainStatus=0\nActiveState=active\n",
+  "runtime": {
+    "gpu": "NVIDIA GeForce RTX 5090, 32607, 580.178.04",
+    "logical_cpu_count": 24,
+    "packages": {
+      "mujoco": "3.16.0",
+      "torch": "2.14.1+cu130",
+      "wandb": "0.31.0",
+      "warp-lang": "1.19.0"
+    },
+    "python": "3.13.18",
+    "runtime_lock_sha256": "c3cae6f2e331466d5e7ae7b08190835dc695985f7a54fcc0fc55edf1004de970"
+  },
+  "source_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+  "launch_commit": "ad813ef33ed15201044b8d8c0bf0c808628ae64f",
+  "pull_request": "https://github.com/minervahumanoids/supermimic/pull/1",
+  "verified_utc": 1794450918.996186
+}

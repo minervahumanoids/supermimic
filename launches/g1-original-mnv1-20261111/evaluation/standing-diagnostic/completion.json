@@ -1,0 +1,17 @@
+{
+  "verified_utc": "2026-11-12T18:10:23.295617+00:00",
+  "gpu_compute_processes": "",
+  "training_service": "Restart=no\nMainPID=0\nActiveState=inactive\n",
+  "orion_before": {
+    "machine": "mnv1",
+    "owner": "Mattia",
+    "kind": "reservation",
+    "note": "PR1 G1 audit: standing drift",
+    "end": 1794513765424.83,
+    "version": "e454cae301934e75aeeef06778297dfd",
+    "wandb_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/ga216ipt"
+  },
+  "orion_after": null,
+  "training_restarted": false,
+  "unrelated_jobs_modified": false
+}

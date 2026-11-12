@@ -1,0 +1,14 @@
+{
+  "diagnostic_only": true,
+  "backend": "native MuJoCo-Warp",
+  "iteration": 25000,
+  "actor_sha256": "a0ce1eb1614c6380dc304a0781dc0dc16c9f79e9b05b33d1b0e3ccd06a3c013c",
+  "root_xy_mean_cm": 3.493924617767334,
+  "root_xy_final_cm": 3.7590410709381104,
+  "root_xy_max_cm": 3.8643875122070312,
+  "joint_velocity_rms_rad_s": 0.02012721449136734,
+  "action_change_rms": 0.004357016645371914,
+  "optimizer_steps": 0,
+  "official_source_modified": false,
+  "architecture_modified": false
+}

@@ -1,0 +1,41 @@
+{
+  "source": "idle_loop_001__A235",
+  "packed_clip_index": 44620,
+  "packed_interval": [
+    19896237,
+    19897239
+  ],
+  "fields": {
+    "root_pos_w": {
+      "packed_matches_source": true,
+      "review_matches_source_interval": true,
+      "packed_frames": 1002
+    },
+    "root_quat_w": {
+      "packed_matches_source": true,
+      "review_matches_source_interval": true,
+      "packed_frames": 1002
+    },
+    "root_lin_vel_w": {
+      "packed_matches_source": true,
+      "review_matches_source_interval": true,
+      "packed_frames": 1002
+    },
+    "root_ang_vel_w": {
+      "packed_matches_source": true,
+      "review_matches_source_interval": true,
+      "packed_frames": 1002
+    },
+    "joint_pos": {
+      "packed_matches_source": true,
+      "review_matches_source_interval": true,
+      "packed_frames": 1002
+    },
+    "joint_vel": {
+      "packed_matches_source": true,
+      "review_matches_source_interval": true,
+      "packed_frames": 1002
+    }
+  },
+  "passed": true
+}

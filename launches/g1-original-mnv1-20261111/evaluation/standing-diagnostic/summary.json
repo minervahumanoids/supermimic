@@ -1,0 +1,33 @@
+{
+  "native_backend": "MuJoCo-Warp diagnostic only",
+  "review_backend": "standalone CPU MuJoCo",
+  "frames": 1001,
+  "duration_s": 20,
+  "actor_sha256": "07e064bd4b6500b97a4a6b4af0060a801588abb8f0abdceb38138e2c40c0144b",
+  "policy_modified": false,
+  "optimizer_steps": 0,
+  "input_parity_maxima": {
+    "state_max_abs": 5.960464477539063e-08,
+    "goal_max_abs": 1.9976869225502014e-07,
+    "action_max_abs": 3.4570693969726562e-06,
+    "control_max_abs": 1.1628942496021838e-06
+  },
+  "trajectories": {
+    "native": {
+      "mean_root_xy_cm": 14.83857536315918,
+      "final_root_xy_cm": 16.950279235839844,
+      "max_root_xy_cm": 33.235721588134766
+    },
+    "cpu": {
+      "mean_root_xy_cm": 24.99821662902832,
+      "final_root_xy_cm": 30.15264320373535,
+      "max_root_xy_cm": 60.07209396362305
+    }
+  },
+  "translation_observability": {
+    "root_x_shift_m": 1.0,
+    "represented_state_max_abs": 0.0,
+    "actor_goal_max_abs": 0.0,
+    "action_max_abs": 0.0
+  }
+}

@@ -1,0 +1,455 @@
+{
+  "joint_names": [
+    "robot/left_hip_pitch_joint",
+    "robot/left_hip_roll_joint",
+    "robot/left_hip_yaw_joint",
+    "robot/left_knee_joint",
+    "robot/left_ankle_pitch_joint",
+    "robot/left_ankle_roll_joint",
+    "robot/right_hip_pitch_joint",
+    "robot/right_hip_roll_joint",
+    "robot/right_hip_yaw_joint",
+    "robot/right_knee_joint",
+    "robot/right_ankle_pitch_joint",
+    "robot/right_ankle_roll_joint",
+    "robot/waist_yaw_joint",
+    "robot/waist_roll_joint",
+    "robot/waist_pitch_joint",
+    "robot/left_shoulder_pitch_joint",
+    "robot/left_shoulder_roll_joint",
+    "robot/left_shoulder_yaw_joint",
+    "robot/left_elbow_joint",
+    "robot/left_wrist_roll_joint",
+    "robot/left_wrist_pitch_joint",
+    "robot/left_wrist_yaw_joint",
+    "robot/right_shoulder_pitch_joint",
+    "robot/right_shoulder_roll_joint",
+    "robot/right_shoulder_yaw_joint",
+    "robot/right_elbow_joint",
+    "robot/right_wrist_roll_joint",
+    "robot/right_wrist_pitch_joint",
+    "robot/right_wrist_yaw_joint"
+  ],
+  "clips": [
+    {
+      "clip": "idle_loop_001__A235__seg_47d13b4c66c6f13e",
+      "path": "00.npz",
+      "frames": 1001,
+      "sha256": "0d1481f80f014a1ce27af6f287e1f2f62bab31e39e3ae429093adef3959b713e",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "idle_loop_001__A235",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "reaching_up_R_002__A405__seg_024a71d522b1ce4a",
+      "path": "01.npz",
+      "frames": 638,
+      "sha256": "51693a308ca7c3f32984f2c7b02187b11cef7ab7863f80b73d66efa13fad6af0",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "reaching_up_R_002__A405",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "walk_ff_loop_180_R_003__A047__seg_601a96eb8d48d345",
+      "path": "02.npz",
+      "frames": 481,
+      "sha256": "1e21cca2d07b7c152bb63d996aef0a2bb4942025083479efc1080be3c775a086",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "walk_ff_loop_180_R_003__A047",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "walk_backward_loop_003__A040__seg_106fca53db92738d",
+      "path": "03.npz",
+      "frames": 621,
+      "sha256": "f88e727ff3c4fa81162c08645c68d8e758ae2022d246938577f7845b723eabb2",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "walk_backward_loop_003__A040",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "walk_sideway_left_loop_002__A026__seg_a0cc53cbff5d9923",
+      "path": "04.npz",
+      "frames": 1369,
+      "sha256": "5a33562ea9c42d8a659ad7e6dabcaa5d067d4ea4685ba5a1535d0b767ee661ed",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "walk_sideway_left_loop_002__A026",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "walk_arc_cw_loop_R_very_slow_001__A443__seg_53eeb9ee3903ca75",
+      "path": "05.npz",
+      "frames": 974,
+      "sha256": "2d019cab79d18ffea769de23679df61325bbf7b186ca649eef0eea6514e1f994",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "walk_arc_cw_loop_R_very_slow_001__A443",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "jog_ff_stop_360_004__A052__seg_981ec8574514f8bc__cut_28dc9fb38eb57a8f",
+      "path": "06.npz",
+      "frames": 463,
+      "sha256": "c6aab5828497caa072445cb08a61728d63f0820b4e168cf715a739eb884d6238",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "jog_ff_stop_360_004__A052",
+        "source_start_frame": 118,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "squat_001__A362__seg_4d776800f999bf9f",
+      "path": "07.npz",
+      "frames": 493,
+      "sha256": "ffe23e6a054d407fbe769a5f38b57e1e49ad92bdc422aea12a423dc6bd496b10",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "squat_001__A362",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "crouch_idle_002__A244__seg_d8ff3a0d81dd261a",
+      "path": "08.npz",
+      "frames": 631,
+      "sha256": "9f3ac0e855e713727bd41547e19689a17523443d72b1fd952cc3b5e35dedb79c",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "crouch_idle_002__A244",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "jump_forward_003__A032__seg_5f3f593debfb979a",
+      "path": "09.npz",
+      "frames": 333,
+      "sha256": "aed4238d78780cfb44e94d1c7d9f71dd46a6c7b7e2d70c096059846deb5760f9",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "jump_forward_003__A032",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "reaching_down_R_001__A272__seg_fc1aea4ea2006997",
+      "path": "10.npz",
+      "frames": 511,
+      "sha256": "b723773fb1ec4a67a05db4e9c25d56cc2c6e3014dc602811b4656eb9e42ac94a",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "reaching_down_R_001__A272",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "squat_001__A360__seg_e10f5aff2ac0a345",
+      "path": "11.npz",
+      "frames": 481,
+      "sha256": "8264ac1556ef5113d0dac181e4ff4fa4ca6d0243947480315c55ee430957cfe7",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "squat_001__A360",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472__seg_09eabd9d6abafdc7",
+      "path": "12.npz",
+      "frames": 538,
+      "sha256": "1cc6d0a34fe3196ca333df05702308a1e608dc3af1a12f4326d14966aaab5f2e",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "forward_lunge_R_003__A361__seg_21c4055128f706a9",
+      "path": "13.npz",
+      "frames": 448,
+      "sha256": "7bee60e9d3506b8664b796e4ddba868fcdba67a88a93e5bd3431450bc0d25788",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "forward_lunge_R_003__A361",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "one_leg_idle_R_003__A533__seg_7d86b6d8cb2cd57e",
+      "path": "14.npz",
+      "frames": 566,
+      "sha256": "9bc8f92350dc2262692ec8c005a46da7af886ef3de9659a9d9d8be07910c0232",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "one_leg_idle_R_003__A533",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "walk_sideway_right_loop_003__A026__seg_97aa24b35455c3ca__cut_aea649afe5ca48ba",
+      "path": "15.npz",
+      "frames": 520,
+      "sha256": "f8e9d47af322fb3c284cb3acc3fa086412447eda5908ff735f4807595795e73d",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "walk_sideway_right_loop_003__A026",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "dance_basic_turn_v2_180_R_loop_001__A323__seg_7a5716ed7af2057b",
+      "path": "16.npz",
+      "frames": 503,
+      "sha256": "01a48f22ec42f9938ca971c17f17eb37e5ddcde30ef09b68b61fe9a19ed8919e",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "dance_basic_turn_v2_180_R_loop_001__A323",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "pull_shoudler_180_standing_R_001__A428__seg_57207942468746bd",
+      "path": "17.npz",
+      "frames": 468,
+      "sha256": "80c7bfb83dc3b53e545487262d0851656c841f80a2c6c3368f487567a5fc915e",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "pull_shoudler_180_standing_R_001__A428",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "injured_torso_throw_ball_R_002__A338__seg_084a3e6cfdccf3d1",
+      "path": "18.npz",
+      "frames": 496,
+      "sha256": "f69004337ca14512f7b98eea0c350225888d4128969d9ecf0de4d2c5127b15d1",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "injured_torso_throw_ball_R_002__A338",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "warm_up_arms_001__A360__seg_e7ebe24544f3131c__cut_c7e71bfae94c3104",
+      "path": "19.npz",
+      "frames": 509,
+      "sha256": "3799e5447a28eba766a2ec88316b72b7d373ebe97b781a1375e2eba00f409e8f",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "warm_up_arms_001__A360",
+        "source_start_frame": 367,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "dance_hiphop_the_whoop_R_003__A314__seg_22ddf8299ba9021d__cut_f81743590eed0c92",
+      "path": "20.npz",
+      "frames": 500,
+      "sha256": "38737d1048160d035b6d1bd3499a82306e541a39daff680b8f092fd4557ad51d",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "dance_hiphop_the_whoop_R_003__A314",
+        "source_start_frame": 29,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "faint_stand_up_lying_side_R_001__A493__seg_1e47c51014b5fbfe",
+      "path": "21.npz",
+      "frames": 571,
+      "sha256": "934a5a72833b689f88e29baaa0da3f6b179fe2ddab59c8c8f290609f20c2cbfb",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "faint_stand_up_lying_side_R_001__A493",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": true
+      }
+    },
+    {
+      "clip": "jump_sideway_045_002__A037__seg_87656ec880b0a53e",
+      "path": "22.npz",
+      "frames": 389,
+      "sha256": "30fde45cb814f542eceb1b3e4b567d99af2997a8e9758ab840235419aa950fd5",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "jump_sideway_045_002__A037",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "walk_arc_cw_stop_R_wave_right_hand_090_R_point_dir_horizontal_right_hand_head_270_R_002__A479__seg_121e6776f6da19b0",
+      "path": "23.npz",
+      "frames": 508,
+      "sha256": "6ca28a2b3c1040b9ed090c097545bffdd1ef725a22fdba8ba1e26021dc352614",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "walk_arc_cw_stop_R_wave_right_hand_090_R_point_dir_horizontal_right_hand_head_270_R_002__A479",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "jog_ff_start_180_R_003__A067__seg_5ec0c08a97c74c9b",
+      "path": "24.npz",
+      "frames": 191,
+      "sha256": "77316120f720ebbe7ccb773db843bb72ea4ed35df62653f693e4346226f8c0b8",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "jog_ff_start_180_R_003__A067",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "reaching_up_R_003__A409__seg_4e758875f8b84178",
+      "path": "25.npz",
+      "frames": 494,
+      "sha256": "e2edbbee296b592b970bc3843e3978fb507fb5ea7e501815b6a185ad02b0334c",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "reaching_up_R_003__A409",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "walk_ff_loop_180_R_002__A049__seg_57328a0b314411b4",
+      "path": "26.npz",
+      "frames": 271,
+      "sha256": "249ecf862828c19f01ef460d56c73c1e3c402939b68dd5f2b2392b310573be64",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "walk_ff_loop_180_R_002__A049",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "courtly_bow_male_R_002__A431__seg_218eb5671bb579b0",
+      "path": "27.npz",
+      "frames": 479,
+      "sha256": "a1ef3556380096928deacf2093aaf15affc90b1c2affd35d8a5e218635394b59",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "courtly_bow_male_R_002__A431",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "sledgehammering_wall_from_side_R_002__A357__seg_d5164d1c52d095f3",
+      "path": "28.npz",
+      "frames": 478,
+      "sha256": "b44fdd5e2e571aafc45c1a17b65d6b7b3b89679fde9c410d3dd3b3289fadcb6f",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "sledgehammering_wall_from_side_R_002__A357",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    },
+    {
+      "clip": "outside_door_knob_right_side_open_walk_turn_close_R_001__A514__seg_86f8cab422ca8bb1",
+      "path": "29.npz",
+      "frames": 498,
+      "sha256": "8f61ad1b65bd2a1121929f9d9658c51da6a4d5ad4d07dacab817694d66e76768",
+      "provenance": {
+        "kind": "original BONES-SEED G1 release",
+        "source_name": "outside_door_knob_right_side_open_walk_turn_close_R_001__A514",
+        "source_start_frame": 0,
+        "source_fps": 50,
+        "source_archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "excluded_from_training": false
+      }
+    }
+  ]
+}

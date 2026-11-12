@@ -1,0 +1,1 @@
+{"passed": true, "cohorts": {"robot/inputs": 30, "robot/pico-inputs": 3}, "manifest_sha256": "8cdf8dadf32d9539ed7c897e191726f61364a567526e82ac60e96dc5afac7f1e", "metric_definitions": "Unchanged drift and calibrated-palm formulas", "optimizer_steps": 0, "backend": "standalone CPU MuJoCo", "verified_reports": 4}

@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "num_envs": 4096,
+  "wm_batch": 2048,
+  "policy_batch": 2048,
+  "original_parameters": false,
+  "runner_overrides": {
+    "policy.batch_size": {
+      "original": 4096,
+      "effective": 2048,
+      "reason": "MNV1 GPU capacity with the full BONES-SEED G1 dataset"
+    }
+  },
+  "gpu_peak_bytes": 24649940992,
+  "wandb_initialized": false,
+  "dataset": {
+    "clips": 142218,
+    "frames": 51914212,
+    "field_sha256": {
+      "joint_names.json": "30355b480e4f89c97a693c72f8baf23902fd458d25e49b5df4741dd47aefce0d",
+      "joint_pos.npy": "6724231d950239a29102df6c8d05898e7d7f195b573441a54ad846b75745ec2c",
+      "joint_vel.npy": "93712a20cd02638ddc71e3df8f81cb0ecc61150b6e421414720b244438d166f8",
+      "motion_ends.npy": "420acebd4aebca32dae1b5508c6cda8661064a7e8253bd317dd9264c0a588790",
+      "motion_names.json": "b6b9550521b880bee63e359a3ba79a2276105d6b7b43bf733da0d6288c6808cc",
+      "provenance.json": "973bf6bcd790f4e4c6bc26a7cdb66b3757ee0f07d574d71410c02c3e8808f7e0",
+      "root_ang_vel_w.npy": "2c6ba220cf3470765f15eeb8077675b888e3d2809101c0e700b8863bfe8472cd",
+      "root_lin_vel_w.npy": "5a3a6e0343516a5d677e97d03be3f5ba75f99738d128422ae1326f74880b42f1",
+      "root_pos_w.npy": "440d43ca514ee581c1f70ff23b57b9173e16ca63b9ac0d392005fd0d3651499e",
+      "root_quat_w.npy": "0943236451ca24cbd15d7eb652187795a0821aaa078ba946a9c938043b4da1ed"
+    },
+    "provenance": {
+      "source": {
+        "gcs_uri": "gs://minerva-datasets/releases/bones-seed-g1/0.1.0/inputs/g1.tar.gz",
+        "generation": "1792535636281233",
+        "bytes": 23499973647,
+        "sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+        "verified": true
+      },
+      "source_population": 142220,
+      "clips": 142218,
+      "frames": 51914212,
+      "rate_hz": 50,
+      "selection_sha256": "fbaef9736b416f5aa9a1b09233ef98faccce8c6e2561ed7760b5904519763898",
+      "exclusion_sha256": "c2899b6ab4451dfd4dbd3efd9dcab696905b56f84bbacca76644dae1f86ba7a9",
+      "source_index_sha256": "48153713c9d2ec5cd20c63f87c588ce67370a0ece473701f4693202a86c50382",
+      "conversion": "BONES units and columns normalized, then unchanged mjlab MotionLoader interpolation and derivatives",
+      "mjlab_commit": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+      "upstream_code_changed": false
+    },
+    "robot": "Unitree G1",
+    "path": "/home/mattia/workspace/supermimic-official-g1-mnv1-20261111/data/packed",
+    "rate_hz": 50
+  },
+  "source_commit": "abc124c1bd5976341034668af3d12c087f2f1f55"
+}

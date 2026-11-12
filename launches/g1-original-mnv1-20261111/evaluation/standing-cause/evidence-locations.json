@@ -1,0 +1,13 @@
+{
+  "working_directory": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/g1-standing-cause-20261112",
+  "remote_directory": "/home/mattia/workspace/supermimic-official-g1-mnv1-20261111/standing-cause-20261112",
+  "standalone_recordings": {
+    "25000": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/g1-standing-cause-20261112/review-25000/recordings",
+    "100000": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/g1-standing-cause-20261112/review-100000/recordings"
+  },
+  "canonical_review": "/Users/mattia/Documents/ChatGPT/Supermimic/experiments/master-baseline-review-20261104/review.py",
+  "viewer_url": "http://127.0.0.1:8972/",
+  "weights_committed": false,
+  "human_inputs_committed": false,
+  "official_source_modified": false
+}

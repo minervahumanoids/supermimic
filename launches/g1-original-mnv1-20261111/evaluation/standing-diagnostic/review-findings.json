@@ -1,0 +1,38 @@
+{
+  "review_backend": "standalone CPU MuJoCo",
+  "review_recording_unchanged": true,
+  "frames": 1001,
+  "duration_s": 20,
+  "root_xy_mean_cm": 24.24812220392191,
+  "root_xy_final_cm": 40.48507599869731,
+  "root_xy_max_cm": 47.068780107326155,
+  "reference_xy_range_cm": [
+    0.46879103779792786,
+    1.4985274076461792
+  ],
+  "diagnostic_backend": "MuJoCo-Warp. Diagnostic only, not a replacement review recording.",
+  "native_root_xy_max_cm": 33.235721588134766,
+  "input_parity": {
+    "state_max_abs": 5.960464477539063e-08,
+    "goal_max_abs": 1.9976869225502014e-07,
+    "action_max_abs": 3.4570693969726562e-06,
+    "control_max_abs": 1.1628942496021838e-06
+  },
+  "translation_observability": {
+    "root_x_shift_m": 1.0,
+    "represented_state_max_abs": 0.0,
+    "actor_goal_max_abs": 0.0,
+    "action_max_abs": 0.0
+  },
+  "conclusions": [
+    "Standing drift exists in both standalone MuJoCo and native MuJoCo-Warp.",
+    "Identical generalized states produce matching state, goal, action, and control values within numerical precision.",
+    "The standing review reference matches the source and packed training samples exactly.",
+    "The actor does not observe global XY position error. A one-meter root translation leaves its inputs and actions unchanged.",
+    "The audit does not identify the sole cause of the initial stepping or establish that dataset filtering or policy batch caused it."
+  ],
+  "initial_diagnostic_correction": "Manual reset initially left native observation cache stale. Explicit cache refresh fixes the probe. No approved evaluation or training code changed.",
+  "policy_modified": false,
+  "optimizer_steps": 0,
+  "new_training_started": false
+}

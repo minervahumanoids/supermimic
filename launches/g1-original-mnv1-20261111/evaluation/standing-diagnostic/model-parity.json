@@ -1,0 +1,203 @@
+{
+  "fields": {
+    "body_mass": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "body_inertia": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "body_ipos": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "body_iquat": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "body_pos": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "body_quat": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "jnt_pos": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "jnt_axis": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "jnt_range": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "dof_armature": {
+      "same_shape": true,
+      "max_abs": 2.4999999997249445e-08
+    },
+    "dof_damping": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "dof_frictionloss": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "geom_size": {
+      "same_shape": true,
+      "max_abs": 4.3743823403830095e-08
+    },
+    "geom_pos": {
+      "same_shape": true,
+      "max_abs": 2.7755575615628914e-17
+    },
+    "geom_quat": {
+      "same_shape": true,
+      "max_abs": 4.161878089103954e-07
+    },
+    "geom_friction": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "geom_condim": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "geom_contype": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "geom_conaffinity": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "geom_solref": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "geom_solimp": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "geom_margin": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "geom_gap": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "actuator_gainprm": {
+      "same_shape": true,
+      "max_abs": 4.6195748577559925e-05
+    },
+    "actuator_biasprm": {
+      "same_shape": true,
+      "max_abs": 4.6195748577559925e-05
+    },
+    "actuator_trnid": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "actuator_forcerange": {
+      "same_shape": true,
+      "max_abs": 0.0
+    },
+    "actuator_ctrlrange": {
+      "same_shape": true,
+      "max_abs": 4.148035572804076e-06
+    },
+    "actuator_gear": {
+      "same_shape": true,
+      "max_abs": 0.0
+    }
+  },
+  "native_joint_names": [
+    "left_hip_pitch_joint",
+    "left_hip_roll_joint",
+    "left_hip_yaw_joint",
+    "left_knee_joint",
+    "left_ankle_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_hip_pitch_joint",
+    "right_hip_roll_joint",
+    "right_hip_yaw_joint",
+    "right_knee_joint",
+    "right_ankle_pitch_joint",
+    "right_ankle_roll_joint",
+    "waist_yaw_joint",
+    "waist_roll_joint",
+    "waist_pitch_joint",
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_joint",
+    "left_wrist_roll_joint",
+    "left_wrist_pitch_joint",
+    "left_wrist_yaw_joint",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_joint",
+    "right_wrist_roll_joint",
+    "right_wrist_pitch_joint",
+    "right_wrist_yaw_joint"
+  ],
+  "action_target_names": [
+    "left_hip_pitch_joint",
+    "left_hip_roll_joint",
+    "left_hip_yaw_joint",
+    "left_knee_joint",
+    "left_ankle_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_hip_pitch_joint",
+    "right_hip_roll_joint",
+    "right_hip_yaw_joint",
+    "right_knee_joint",
+    "right_ankle_pitch_joint",
+    "right_ankle_roll_joint",
+    "waist_yaw_joint",
+    "waist_roll_joint",
+    "waist_pitch_joint",
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_joint",
+    "left_wrist_roll_joint",
+    "left_wrist_pitch_joint",
+    "left_wrist_yaw_joint",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_joint",
+    "right_wrist_roll_joint",
+    "right_wrist_pitch_joint",
+    "right_wrist_yaw_joint"
+  ],
+  "native_physics": {
+    "timestep": 0.005,
+    "integrator": "implicitfast",
+    "impratio": 1.0,
+    "cone": "pyramidal",
+    "jacobian": "auto",
+    "solver": "newton",
+    "iterations": 10,
+    "tolerance": 1e-08,
+    "ls_iterations": 20,
+    "ls_tolerance": 0.01,
+    "ccd_iterations": 50,
+    "gravity": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "disableflags": [],
+    "enableflags": []
+  },
+  "actor_sha256": "07e064bd4b6500b97a4a6b4af0060a801588abb8f0abdceb38138e2c40c0144b"
+}

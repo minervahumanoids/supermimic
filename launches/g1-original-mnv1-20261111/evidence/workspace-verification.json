@@ -1,0 +1,25 @@
+{
+  "workspace_url": "https://forge.coreweave.com/minervahumanoids/Supermimic?nw=c0z6u6ysd8f",
+  "verified": true,
+  "sections": [
+    "Reward",
+    "Loss",
+    "Train",
+    "Metrics",
+    "Episode",
+    "Perf",
+    "System"
+  ],
+  "native_system_keys": [
+    "system.gpu.0.gpu",
+    "system.gpu.0.memoryAllocatedBytes",
+    "system.gpu.0.powerWatts",
+    "system.gpu.0.temp",
+    "system.cpu",
+    "system.memory_percent"
+  ],
+  "system_axis": "Native system samples use elapsed time because they have no training iteration field",
+  "default_axis": "Train/iter",
+  "rows": 1,
+  "columns": 3
+}

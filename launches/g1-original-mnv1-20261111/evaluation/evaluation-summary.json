@@ -1,0 +1,27 @@
+{
+  "iteration": 403000,
+  "backend": "standalone CPU MuJoCo",
+  "cohorts": {
+    "bones": {
+      "clips": 30,
+      "complete": 30,
+      "requested_frames": 16423,
+      "recorded_frames": 16423,
+      "mean_clip_root_xy_cm": 13.705541631530734,
+      "mean_clip_palm_position_cm": 3.614936771184617,
+      "mean_clip_palm_orientation_deg": 6.747695297820354
+    },
+    "pico": {
+      "clips": 3,
+      "complete": 3,
+      "requested_frames": 15898,
+      "recorded_frames": 15898,
+      "mean_clip_root_xy_cm": 81.56578701026093,
+      "mean_clip_palm_position_cm": 3.207429602829689,
+      "mean_clip_palm_orientation_deg": 5.8076302886561555
+    }
+  },
+  "completed_utc": 1794501260.995659,
+  "policy_modified": false,
+  "optimizer_steps": 0
+}
