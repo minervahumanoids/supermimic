@@ -18,7 +18,8 @@ def read():
 
 def associate(run, pr_url, directory):
   number = int(pr_url.rstrip("/").rsplit("/", 1)[1])
-  note = f"PR{number} original G1: native defaults"
+  batch = run.config["runner_cfg"]["policy"]["batch_size"]
+  note = f"PR{number} original G1: batch {batch}"
   current = read()["flags"].get("mnv1")
   if current and (
     current["owner"] != "Mattia"
