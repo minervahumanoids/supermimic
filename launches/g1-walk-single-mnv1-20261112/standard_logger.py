@@ -82,7 +82,8 @@ class StandardLogger:
       dim=-1,
     )
     for name, (lo, hi) in self.routes.items():
-      self.tracking[name].append(root_error[lo:hi].mean())
+      valid = ~done[lo:hi]
+      self.tracking[name].append((root_error[lo:hi][valid].sum(), valid.sum()))
     self.steps += self.env.num_envs
     self.interval_steps += self.env.num_envs
     self.iterations += 1
@@ -110,6 +111,7 @@ class StandardLogger:
       "Perf/learn_s": wm_learn_time + policy_learn_time,
       "Perf/wm_update_s": wm_learn_time,
       "Perf/policy_update_s": policy_learn_time,
+      "Episode/count": len(self.episodes),
     }
     mapping = {
       "Loss/state": "Loss/wm",
@@ -144,6 +146,7 @@ class StandardLogger:
     for name, (lo, hi) in self.routes.items():
       row[f"Train/{name}/steps"] = self.iterations * (hi - lo)
       row[f"Train/{name}/frac"] = (hi - lo) / self.env.num_envs
+      row[f"Episode/{name}/count"] = len(self.route_episodes[name])
       if self.route_episodes[name]:
         columns = list(zip(*self.route_episodes[name], strict=True))
         row[f"Reward/{name}/total"] = statistics.mean(columns[0])
@@ -151,9 +154,10 @@ class StandardLogger:
         row[f"Episode/{name}/fail_frac"] = statistics.mean(columns[2])
         row[f"Episode/{name}/timeout_frac"] = statistics.mean(columns[3])
       if self.tracking[name]:
-        row[f"Metrics/{name}/root_xy_m"] = (
-          torch.stack(self.tracking[name]).mean().item()
-        )
+        sums, counts = zip(*self.tracking[name], strict=True)
+        count = torch.stack(counts).sum().item()
+        if count:
+          row[f"Metrics/{name}/root_xy_m"] = torch.stack(sums).sum().item() / count
       self.tracking[name].clear()
       self.route_episodes[name].clear()
     if not all(torch.isfinite(torch.tensor(value)) for value in row.values()):
@@ -188,6 +192,7 @@ def metric_definitions(reward_names):
       "reduction": "sum applied rewards / actual transitions",
     },
     "Episode/len_s": {"unit": "s", "reduction": "mean completed episode duration"},
+    "Episode/count": {"unit": "episode", "reduction": "completed episode count"},
     "Episode/fail_frac": {
       "unit": "fraction",
       "reduction": "failures / completed episodes",
@@ -270,6 +275,11 @@ def metric_definitions(reward_names):
         "mean completed episodic sum for the encoder route",
       ),
       (
+        f"Episode/{route}/count",
+        "episode",
+        "completed episode count for the encoder route",
+      ),
+      (
         f"Episode/{route}/len_s",
         "s",
         "mean completed episode duration for the encoder route",
@@ -287,7 +297,7 @@ def metric_definitions(reward_names):
       (
         f"Metrics/{route}/root_xy_m",
         "m",
-        "mean instantaneous XY root error over route environments and collector steps",
+        "sum instantaneous XY root errors / nonterminal route samples",
       ),
     ):
       definitions[key] = {
@@ -297,6 +307,7 @@ def metric_definitions(reward_names):
       }
       if key.startswith("Metrics/"):
         definitions[key]["frame"] = "original world XY"
+        definitions[key]["terminal_handling"] = "Exclude terminal and reset transitions. Sample after env.step against the current native reference."
       if key.startswith(("Reward/", "Episode/")):
         definitions[key]["sampling_window"] = (
           "all completed episodes for this route since the previous log"
