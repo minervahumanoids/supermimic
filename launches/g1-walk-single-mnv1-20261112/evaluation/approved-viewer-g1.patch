@@ -1,0 +1,221 @@
+--- a/experiments/ali-baseline-prototype-20261112/review.py
++++ b/experiments/ali-baseline-prototype-20261112/review.py
+@@ -87 +87,2 @@
+-    def __init__(self, client, model, bindings, selection, catalog, registry):
++    def __init__(self, client, model, bindings, selection, catalog, registry, comparison=None):
++        self.comparison = comparison
+@@ -90,2 +91,2 @@
+-        self.matched = read('matched-bindings.json')
+-        self.priorities = read('priority-bindings.json')
++        self.matched = comparison['bindings'] if comparison else read('matched-bindings.json')
++        self.priorities = comparison['bindings'] if comparison else read('priority-bindings.json')
+@@ -92,0 +94,2 @@
++        self.primary_lane = next(iter(self.policy_labels))
++        lanes = ('source', 'reference', *self.policy_labels)
+@@ -94,3 +97,8 @@
+-        self.offsets = {name: np.array([1.2*i, 0., 0.]) for i,name in enumerate(('source','reference','f4','sonic-baseline','sonic-feet'))}
+-        self.robots = {name: approved_robot.Robot(client, name, model, bindings['joint_names'], self.offsets[name])
+-                       for name in ('reference','f4','sonic-baseline','sonic-feet')}
++        self.offsets = {name: np.array([1.2*i, 0., 0.]) for i,name in enumerate(lanes)}
++        if comparison:
++            from g1_robot import G1Robot
++            robot_type = G1Robot
++        else:
++            robot_type = approved_robot.Robot
++        self.robots = {name: robot_type(client, name, model, bindings['joint_names'], self.offsets[name])
++                       for name in ('reference', *self.policy_labels)}
+@@ -98 +106 @@
+-                       for name,label in [('source','Original human'),('reference','Retargeted\nreference'),('f4','F4 · 97,800\nMuJoCo · retargeted'),('sonic-baseline','SONIC filtered · 70,500'),('sonic-feet','SONIC feet-only · 56,500')]}
++                       for name,label in [('source','Original human'),('reference','Retargeted\nreference'),*self.policy_labels.items()]}
+@@ -119 +127 @@
+-        client.gui.add_markdown('### Matched policy evaluation\n\n21 designated clips and four Ali priority clips. Three policies in each cohort. Standalone MuJoCo. '
++        client.gui.add_markdown(comparison['description'] if comparison else '### Matched policy evaluation\n\n21 designated clips and four Ali priority clips. Three policies in each cohort. Standalone MuJoCo. '
+@@ -121 +129,2 @@
+-        self.cohort = client.gui.add_dropdown('Motion cohort', ['Designated evaluation · 21','Ali priorities · 4'], initial_value='Designated evaluation · 21')
++        cohorts = [comparison['cohort_label']] if comparison else ['Designated evaluation · 21','Ali priorities · 4']
++        self.cohort = client.gui.add_dropdown('Motion cohort', cohorts, initial_value=cohorts[0])
+@@ -125 +134 @@
+-        client.gui.add_markdown('**Encoder:** Retargeted robot for every policy. Human encoder trials are unavailable. Original human input remains synchronized.')
++        client.gui.add_markdown(comparison['encoder_description'] if comparison else '**Encoder:** Retargeted robot for every policy. Human encoder trials are unavailable. Original human input remains synchronized.')
+@@ -138,3 +147,3 @@
+-        self.robot_visible = client.gui.add_checkbox('Show F4', initial_value=True)
+-        self.policy_visible={'f4':self.robot_visible, **{lane:client.gui.add_checkbox('Show '+self.policy_labels[lane],initial_value=True) for lane in ('sonic-baseline','sonic-feet')}}
+-        self.wrist_policy=client.gui.add_dropdown('Inspect wrist errors', list(self.policy_labels.values()), initial_value=self.policy_labels['f4'])
++        self.robot_visible = client.gui.add_checkbox('Show '+(self.policy_labels[self.primary_lane] if comparison else 'F4'), initial_value=True)
++        self.policy_visible={self.primary_lane:self.robot_visible, **{lane:client.gui.add_checkbox('Show '+self.policy_labels[lane],initial_value=True) for lane in self.policy_labels if lane != self.primary_lane}}
++        self.wrist_policy=client.gui.add_dropdown('Inspect wrist errors', list(self.policy_labels.values()), initial_value=self.policy_labels[self.primary_lane])
+@@ -146 +155 @@
+-        self.follow = client.gui.add_checkbox('Follow Roger', initial_value=False)
++        self.follow = client.gui.add_checkbox('Follow G1' if comparison else 'Follow Roger', initial_value=False)
+@@ -151 +160 @@
+-        self.metrics = FullBodyMetrics(client,self.offsets,model,bindings['joint_names'],registry)
++        self.metrics = FullBodyMetrics(client,self.offsets,model,bindings['joint_names'],registry, comparison)
+@@ -241 +250 @@
+-        self.record=self.records.get('f4')
++        self.record=self.records.get(self.primary_lane)
+@@ -268 +277 @@
+-            f'<p>{html.escape(release)}. {html.escape(interval_text)}{len(self.human)} frames at 50 Hz.</p></div>')
++            f'<p>{html.escape(release.rstrip("."))}. {html.escape(interval_text)}{len(self.human)} frames at 50 Hz.</p></div>')
+@@ -366 +375 @@
+-            self.follow_target.position=center+self.offsets['f4']
++            self.follow_target.position=center+self.offsets[self.primary_lane]
+@@ -402 +411 @@
+-        pelvis_id=self.model.body('hip').id
++        pelvis_id=self.model.body(self.bindings.get('pelvis_body', 'hip')).id
+@@ -473,0 +483 @@
++    parser.add_argument('--comparison-manifest',type=Path)
+@@ -475 +485,6 @@
+-    receipt=validate()
++    comparison = None
++    if args.comparison_manifest:
++        from g1_comparison import load_comparison
++        comparison, receipt = load_comparison(args.comparison_manifest)
++    else:
++        receipt=validate()
+@@ -478 +493,4 @@
+-    bindings,selection,catalog,registry=(read(name) for name in ('review-bindings.json','inputs/bones/selection.json','catalog-view.json','matched-baseline-registry.json'))
++    if comparison:
++        bindings, selection, catalog, registry = (comparison[name] for name in ('plant', 'selection', 'catalog', 'registry'))
++    else:
++        bindings,selection,catalog,registry=(read(name) for name in ('review-bindings.json','inputs/bones/selection.json','catalog-view.json','matched-baseline-registry.json'))
+@@ -480 +498,2 @@
+-        policy['status']='21 designated clips and four Ali priority clips. Each cohort has matched standalone MuJoCo trials.'
++        policy['status'] = ('Requested G1 walking clip. Matched standalone MuJoCo trial.' if comparison else
++                          '21 designated clips and four Ali priority clips. Each cohort has matched standalone MuJoCo trials.')
+@@ -482 +501 @@
+-    STYLES.update({'f4':('F4 · 97,800','#b94735',''), 'sonic-baseline':('SONIC · 70,500','#356aa0',''), 'sonic-feet':('SONIC feet · 56,500','#43855b','')})
++    STYLES.update(comparison['styles'] if comparison else {'f4':('F4 · 97,800','#b94735',''), 'sonic-baseline':('SONIC · 70,500','#356aa0',''), 'sonic-feet':('SONIC feet · 56,500','#43855b','')})
+@@ -491 +510 @@
+-        sessions[client.client_id]=Session(client,model,bindings,selection,catalog,registry)
++        sessions[client.client_id]=Session(client,model,bindings,selection,catalog,registry,comparison)
+@@ -496,2 +515,3 @@
+-        script=str(Path(__file__).resolve()),prototype=False,matched_clips=21,priority_clips=4,matched_policies=3,
+-        default_evaluation_tool=True,canonical_default_changed=True),indent=2)+'\n')
++        script=str(Path(__file__).resolve()),prototype=False,matched_clips=1 if comparison else 21,priority_clips=0 if comparison else 4,matched_policies=2 if comparison else 3,
++        default_evaluation_tool=True,canonical_default_changed=False if comparison else True,
++        comparison_manifest=str(args.comparison_manifest.resolve()) if comparison else None),indent=2)+'\n')
+--- a/experiments/ali-baseline-prototype-20261112/tracking_metrics.py
++++ b/experiments/ali-baseline-prototype-20261112/tracking_metrics.py
+@@ -30 +30 @@
+-    def __init__(self, model, joints):
++    def __init__(self, model, joints, landmarks=None):
+@@ -33,2 +33,3 @@
+-        self.wrists = [model.body(name).id for name in ('hand_l', 'hand_r')]
+-        self.feet = [model.geom(name).id for name in ('foot_l_m_collision_00', 'foot_r_m_collision_00')]
++        self.wrists = [model.body(name).id for name in (landmarks or {}).get('wrists', ('hand_l', 'hand_r'))]
++        foot_names = (landmarks or {}).get('feet', ('foot_l_m_collision_00', 'foot_r_m_collision_00'))
++        self.feet = None if foot_names is None else [model.geom(name).id for name in foot_names]
+@@ -40,0 +42,4 @@
++        if landmarks:
++            self.definition['wrist'] = 'Native G1 wrist pivots: ' + ', '.join(landmarks['wrists'])
++            if self.feet is None:
++                self.definition['foot'] = 'Unavailable. No Roger sole-center geometry exists on this native G1 plant.'
+@@ -51 +56 @@
+-            foot_p[i] = self.data.geom_xpos[self.feet]
++            foot_p[i] = self.data.geom_xpos[self.feet] if self.feet is not None else np.nan
+@@ -63 +67,0 @@
+-            foot_cm=np.linalg.norm(actual[2]-target[2], axis=-1)*100,
+@@ -64,0 +69,2 @@
++        if self.feet is not None:
++            values['foot_cm'] = np.linalg.norm(actual[2]-target[2], axis=-1)*100
+--- a/experiments/ali-baseline-prototype-20261112/extra_metrics.py
++++ b/experiments/ali-baseline-prototype-20261112/extra_metrics.py
+@@ -46 +46,6 @@
+-    def __init__(self, client, offsets, model, joints, registry):
++    def __init__(self, client, offsets, model, joints, registry, comparison=None):
++        self.comparison = comparison
++        self.joint_count = len(joints)
++        self.specs = dict(SPECS)
++        if comparison:
++            self.specs = {name: tuple(value.replace('28', str(self.joint_count)) if isinstance(value, str) else value for value in values) for name, values in SPECS.items()}
+@@ -48 +53 @@
+-        self.landmarks = Landmarks(model, joints)
++        self.landmarks = Landmarks(model, joints, (comparison or {}).get('landmarks'))
+@@ -55 +60 @@
+-            self.aggregate = client.gui.add_html(self.aggregate_html('matched-summary.json'))
++            self.aggregate = client.gui.add_html(self.aggregate_html('matched-summary.json', self.comparison))
+@@ -70,2 +75,2 @@
+-        scalar=lambda key:[f'{mean[key]:.2f}' for mean in means.values()]
+-        pair=lambda key:[' / '.join(f'{v:.2f}' for v in mean[key]) for mean in means.values()]
++        scalar=lambda key:[f'{mean[key]:.2f}' if key in mean else 'Unavailable' for mean in means.values()]
++        pair=lambda key:[' / '.join(f'{v:.2f}' for v in mean[key]) if key in mean else 'Unavailable' for mean in means.values()]
+@@ -80 +85 @@
+-            '<div style="margin:4px 6px 10px">Means use the common valid prefix. Joint angle RMSE covers 28 joints. '
++            f'<div style="margin:4px 6px 10px">Means use the common valid prefix. Joint angle RMSE covers {self.joint_count} joints. '
+@@ -100 +105 @@
+-        self.aggregate.content=self.aggregate_html(name)
++        self.aggregate.content=self.aggregate_html(name, self.comparison)
+@@ -103 +108 @@
+-    def aggregate_html(name):
++    def aggregate_html(name, comparison=None):
+@@ -105 +110 @@
+-        path=__import__('pathlib').Path(__file__).parent/name
++        path=__import__('pathlib').Path(comparison['summary_path']) if comparison else __import__('pathlib').Path(__file__).parent/name
+@@ -109,2 +114,2 @@
+-        scalar=lambda key:[f'{row["common_prefix_macro_mean"][key]:.2f}' for row in policies.values()]
+-        pair=lambda key:[' / '.join(f'{v:.2f}' for v in row['common_prefix_macro_mean'][key]) for row in policies.values()]
++        scalar=lambda key:[f'{row["common_prefix_macro_mean"][key]:.2f}' if key in row['common_prefix_macro_mean'] else 'Unavailable' for row in policies.values()]
++        pair=lambda key:[' / '.join(f'{v:.2f}' for v in row['common_prefix_macro_mean'][key]) if key in row['common_prefix_macro_mean'] else 'Unavailable' for row in policies.values()]
+@@ -124,2 +129,5 @@
+-        title=f'{summary["clips"]} clips · {summary.get("cohort","Designated evaluation")} · retargeted route · standalone MuJoCo'
+-        parts=['<div style="font:12px system-ui;max-height:240px;overflow-y:auto;overflow-x:hidden"><b>'+html.escape(title)+'</b><p>Equal clip weighting. Tracking uses each clip’s common valid prefix across all three policies.</p>',
++        clip_word = 'clip' if summary['clips'] == 1 else 'clips'
++        title=f'{summary["clips"]} {clip_word} · {summary.get("cohort","Designated evaluation")} · retargeted route · standalone MuJoCo'
++        count = len(policies)
++        footer = ('Both G1 policies use the same native G1 plant, source frames, and deterministic clean input. Sole center errors are unavailable because the approved Roger sole geometry does not exist on G1.' if comparison else 'SONIC uses its native neural implementation on the shared F4 physical plant. Human encoder trials are unavailable in this comparison.')
++        parts=['<div style="font:12px system-ui;max-height:240px;overflow-y:auto;overflow-x:hidden"><b>'+html.escape(title)+f'</b><p>Equal clip weighting. Tracking uses each clip’s common valid prefix across all {count} policies.</p>',
+@@ -127 +135 @@
+-            '<p>'+note+'</p><p>Completion does not establish stable gait. SONIC uses its native neural implementation on the shared F4 physical plant. Human encoder trials are unavailable in this comparison.</p></div>']
++            '<p>'+note+'</p><p>Completion does not establish stable gait. '+footer+'</p></div>']
+@@ -136 +144 @@
+-            key, side, title, definition, unit = SPECS[self.choice.value]
++            key, side, title, definition, unit = self.specs[self.choice.value]
+--- /dev/null
++++ b/experiments/ali-baseline-prototype-20261112/g1_comparison.py
+@@ -0,0 +1,46 @@
++"""Load a source-bound G1 comparison into the approved viewer and controls."""
++
++import copy
++import hashlib
++import json
++from pathlib import Path
++
++
++def sha(path):
++    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
++
++
++def load_comparison(path):
++    profile = json.loads(Path(path).read_text())
++    assert profile['robot'] == 'G1'
++    assert sha(profile['plant']['model_path']) == profile['plant']['model_sha256']
++    assert len(profile['selection']['clips']) == 1
++    clip = profile['selection']['clips'][0]
++    assert clip['clip'] == 'clip_6659630b5d665786' and clip['frames'] == 214
++    assert sha(clip['original_human']) == clip['original_human_sha256']
++    binding = profile['bindings']['bindings'][0]
++    assert binding['clip'] == clip['clip']
++    assert sha(binding['reference']) == binding['reference_sha256']
++    contracts = set()
++    versions = set()
++    for lane, policy in profile['bindings']['policies'].items():
++        assert sha(policy['report']) == policy['report_sha256']
++        report = json.loads(Path(policy['report']).read_text())
++        assert report['backend'] == 'standalone CPU MuJoCo'
++        assert report['optimizer_steps'] == 0 and report['wandb_initialized'] is False
++        assert report['policy_modified'] is False and len(report['trials']) == 1
++        assert report['trials'][0]['clip'] == clip['clip']
++        assert report['policy_sha256'] == policy['actor_sha256']
++        contracts.add(report['plant_contract_sha256'])
++        versions.add((report['mujoco_version'], report['torch_version'], report['control_dt']))
++        record = binding['policies'][lane]
++        assert sha(record['recording']) == record['recording_sha256']
++        assert sha(record['metrics']) == record['metrics_sha256']
++    assert len(contracts) == len(versions) == 1
++    assert next(iter(versions)) == ('3.15.0', '2.15.0+cpu', .02)
++    assert sha(profile['summary_path']) == profile['summary_sha256']
++    return profile, dict(passed=True, robot='G1', requested_clips=1, requested_frames=214,
++                         matched_policies=2, backend='standalone CPU MuJoCo',
++                         mujoco_version='3.15.0', torch_version='2.15.0+cpu',
++                         original_human_verified=True, same_native_physics=True,
++                         fixed_default_cohorts_unchanged=True)

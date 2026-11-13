@@ -1,0 +1,30 @@
+{
+  "user_requested_stop": true,
+  "requested_checkpoint": 15000,
+  "native_zero_based_label": true,
+  "collector_iteration_at_signal": 15051,
+  "last_logged_collector_iteration": 15051,
+  "run_id": "45u76a15",
+  "checkpoint_directory": "/home/mattia/workspace/supermimic-g1-walk-single-mnv1-20261112/stopped-at-15000-20261112",
+  "checkpoint_files": {
+    "world_model.pt": {
+      "sha256": "54753001c7dc62e642afe567fd0324ecba803c84b4852abee660600fba0d6a65",
+      "bytes": 34990357
+    },
+    "actor.pt": {
+      "sha256": "7db8a31f0075a4eef5fe5b5594cbf777389a60b0706d9bc899fb1006ced6d83f",
+      "bytes": 39378253
+    },
+    "critic.pt": {
+      "sha256": "e56d07f873d828ee5d5e62600494196085b88bd24ecf9aebab3d98a472a0bfa0",
+      "bytes": 929269
+    }
+  },
+  "service": "Restart=no\nMainPID=0\nExecMainStatus=0\nActiveState=inactive\n",
+  "original_main_pid_exists": false,
+  "stopped_at_unix_s": 1794535195.1448896,
+  "wandb_state": "killed",
+  "checkpoint_artifact": "minervahumanoids/Supermimic/model-45u76a15:v15",
+  "checkpoint_matches_server": true,
+  "orion_reservation_released": true
+}

@@ -1,0 +1,797 @@
+{
+  "name": "Training log standard",
+  "version": "1.5",
+  "base": "Local WTW scalar and media logging",
+  "scope": [
+    "wtw",
+    "sonic",
+    "sm",
+    "other"
+  ],
+  "adoption": "Use for future training integrations.",
+  "integration_status": "Specification only. Trainer adapters and W&B views require implementation.",
+  "naming": {
+    "forms": [
+      "Section/metric",
+      "Section/group/metric"
+    ],
+    "max_segments": 3,
+    "max_key_chars": 64,
+    "max_segment_chars": 32,
+    "section_case": "Title case",
+    "remaining_segments": "lower_snake_case",
+    "example": "Env/adp_samp/prob_mean",
+    "native_sdk_keys": "Preserve native W&B system keys and internal keys.",
+    "category_prefix": "Store the category in configuration. Keep metric roots identical across categories.",
+    "duplicates": "Publish each quantity once. Preserve original detailed records as files.",
+    "dynamic_names": "Keep clip IDs, checkpoint IDs, and unbounded horizon values in tables or files."
+  },
+  "workspace": {
+    "rows_per_section": 1,
+    "columns_per_section": 3,
+    "pagination": true,
+    "default_page": 1,
+    "panel_size": {
+      "width": 8,
+      "height": 6
+    },
+    "section_order": [
+      "Reward",
+      "Loss",
+      "Train",
+      "Metrics",
+      "Curriculum",
+      "Episode",
+      "Perf",
+      "Media",
+      "Env",
+      "System"
+    ],
+    "section_grouping": "first_prefix",
+    "empty_sections": "hide",
+    "primary_panels": [
+      "Reward/total",
+      "Reward/step",
+      "Loss/policy",
+      "Loss/value",
+      "Episode/len_s",
+      "Curriculum/stage",
+      "Perf/fps",
+      "Media/video"
+    ],
+    "tracking_panels": "Use one representative error per concept. Give left and right measurements separate plots for comparisons across runs.",
+    "diagnostics": "Retain detailed diagnostics in files. Add percentile, extrema, and alternate-frame plots only for a specific diagnosis.",
+    "plots": "Keep units visible. Use step plots for discrete stages and event counts.",
+    "inactive_sections": "Hide Curriculum without meaningful active curriculum measurements. Hide SM Media until actual policy recordings exist.",
+    "configuration_tables": "Do not display placeholder or run-configuration tables. Preserve specifications in run configuration.",
+    "reward_components": "Show all active signed episodic reward components through pagination.",
+    "sm_encoder_routes": "Separate SMPL and robot route training outcomes, exposures, and completed episode populations. Do not claim matched evaluation from different training samples.",
+    "x_axis": "Train/iter",
+    "x_axis_title": "Training iterations"
+  },
+  "axes": {
+    "Train/iter": "Absolute trainer update counter. An update has a trainer-specific meaning.",
+    "Train/steps": "Absolute count of actual environment transitions across all workers.",
+    "Train/time_s": "Cumulative active training wall seconds, including logging and saves. Exclude downtime between processes.",
+    "default": "Train/iter",
+    "cross_category": "Train/steps",
+    "efficiency": "Train/time_s",
+    "excluded_from_steps": [
+      "physics substeps",
+      "imagined transitions",
+      "replay samples",
+      "evaluation transitions"
+    ],
+    "resume": "Restore absolute counters and active elapsed time. Record parent identity and checkpoint counters.",
+    "branch": "Use a new linked run when restored counters overlap history. Preserve the original history.",
+    "payload": "Include the relevant axis values with every scalar payload.",
+    "wandb": "Declare custom axes with define_metric. Do not use upload-call counts as training progress."
+  },
+  "reductions": {
+    "scalar_window": "Record the interval start, interval end, and sample counts in the metric registry or payload.",
+    "episodes": "Pool completed episodes in the logging interval. Use the same episodes for returns, components, and episode lengths.",
+    "empty_episodes": "Log Episode/count as zero. Omit episodic averages when no episodes complete.",
+    "tracking": "Pool valid samples. Exclude reset discontinuities. Record terminal handling, frame, reference timing, and sampling policy.",
+    "statistics": "Use the mean unless the key specifies p95, max, sum, or another registered statistic.",
+    "incompatible_statistics": "Keep pooled statistics separate from averages of group summaries. Do not reuse one key for both.",
+    "percentiles": "Calculate percentiles from pooled samples or a documented estimator. Do not average subgroup percentiles.",
+    "unavailable": "Omit unavailable values. Record the reason in configuration. Do not substitute zero.",
+    "nonfinite": "Record numerical failures explicitly in the detailed record. Do not silently convert nonfinite values to zero."
+  },
+  "reward_contract": {
+    "total": "Mean undiscounted return across completed episodes. Use the actual applied reward, including terminal terms and final transformations.",
+    "step": "Mean applied reward across actual transitions in the logging interval, including terminal transitions.",
+    "terms": "Mean signed, weighted episodic contribution for each additive term. Use the same completed episodes as Reward/total.",
+    "raw": "Optional unweighted term diagnostics. Declare the unit and reduction for each term.",
+    "rate": "Reward per simulated second. Record the simulated-time denominator. Keep rates separate from episodic returns.",
+    "additivity": "Require component sums to match the total only for additive rewards with identical populations and transformations.",
+    "nonlinear": "Record nonlinear reward composition. Do not claim that raw factors sum to the applied reward.",
+    "legacy": "Recompute incompatible reductions from source accumulators. Do not obtain the standard through renaming alone."
+  },
+  "metrics": {
+    "Reward/total": {
+      "unit": "reward",
+      "reduction": "mean_completed_episode_return"
+    },
+    "Reward/step": {
+      "unit": "reward_per_transition",
+      "reduction": "pooled_transition_mean"
+    },
+    "Reward/rate": {
+      "unit": "reward_per_simulated_second",
+      "optional": true
+    },
+    "Reward/normalized": {
+      "unit": "fraction",
+      "optional": true,
+      "definition": "Record the normalization formula."
+    },
+    "Loss/policy": {
+      "unit": "objective",
+      "definition": "Actual policy objective. Record the sign, normalization, and reduction."
+    },
+    "Loss/value": {
+      "unit": "objective",
+      "definition": "Actual value objective. Record the normalization and reduction."
+    },
+    "Loss/wm": {
+      "unit": "objective",
+      "applicability": "world_model"
+    },
+    "Loss/encoder": {
+      "unit": "objective",
+      "applicability": "encoder_training"
+    },
+    "Train/iter": {
+      "unit": "updates",
+      "type": "integer"
+    },
+    "Train/steps": {
+      "unit": "transitions",
+      "type": "integer"
+    },
+    "Train/time_s": {
+      "unit": "seconds",
+      "type": "number"
+    },
+    "Train/lr": {
+      "unit": "optimizer_learning_rate"
+    },
+    "Train/ppo/kl": {
+      "unit": "nats",
+      "applicability": "ppo",
+      "definition": "Record the estimator and aggregation."
+    },
+    "Train/ppo/entropy": {
+      "unit": "nats",
+      "applicability": "ppo",
+      "definition": "Policy entropy statistic. Record action reduction and estimator."
+    },
+    "Train/ppo/clip_frac": {
+      "unit": "fraction",
+      "applicability": "ppo"
+    },
+    "Train/ppo/kl_stop": {
+      "unit": "boolean",
+      "applicability": "ppo"
+    },
+    "Train/ppo/epochs": {
+      "unit": "epochs",
+      "applicability": "ppo",
+      "definition": "Actual completed epochs per update."
+    },
+    "Train/policy/std": {
+      "unit": "action_units",
+      "applicability": "stochastic_policy"
+    },
+    "Train/grad/policy": {
+      "unit": "gradient_norm",
+      "definition": "Preclip norm. Record the norm definition."
+    },
+    "Train/grad/value": {
+      "unit": "gradient_norm",
+      "definition": "Preclip norm. Record the norm definition."
+    },
+    "Train/grad/wm": {
+      "unit": "gradient_norm",
+      "applicability": "world_model"
+    },
+    "Metrics/body/palm_l_m": {
+      "unit": "meters",
+      "reduction": "pooled_mean",
+      "definition": "Left palm TCP error in each pose's own hip frame."
+    },
+    "Metrics/body/palm_r_m": {
+      "unit": "meters",
+      "reduction": "pooled_mean",
+      "definition": "Right palm TCP error in each pose's own hip frame."
+    },
+    "Metrics/world/palm_l_m": {
+      "unit": "meters",
+      "reduction": "pooled_mean",
+      "definition": "Left palm TCP error in the original world frame."
+    },
+    "Metrics/world/palm_r_m": {
+      "unit": "meters",
+      "reduction": "pooled_mean",
+      "definition": "Right palm TCP error in the original world frame."
+    },
+    "Metrics/joint/mae_rad": {
+      "unit": "radians",
+      "reduction": "pooled_mean_absolute_error"
+    },
+    "Metrics/joint/err_p95_rad": {
+      "unit": "radians",
+      "reduction": "pooled_absolute_error_p95"
+    },
+    "Metrics/vel/xy_mps": {
+      "unit": "meters_per_second",
+      "definition": "Mean planar command error norm. Record the frame and reference."
+    },
+    "Metrics/vel/yaw_radps": {
+      "unit": "radians_per_second",
+      "definition": "Mean absolute yaw-rate command error. Record the frame."
+    },
+    "Curriculum/stage": {
+      "unit": "stage_index",
+      "applicability": "staged_curriculum",
+      "definition": "Record the ordered stage definitions in configuration."
+    },
+    "Curriculum/horizon": {
+      "unit": "steps",
+      "applicability": "horizon_curriculum",
+      "definition": "Active horizon. Record whether steps represent control or model steps."
+    },
+    "Curriculum/next_horizon": {
+      "unit": "steps",
+      "applicability": "candidate_horizon_available"
+    },
+    "Curriculum/final": {
+      "unit": "boolean",
+      "applicability": "staged_curriculum"
+    },
+    "Curriculum/val_iter": {
+      "unit": "updates",
+      "applicability": "curriculum_validation"
+    },
+    "Curriculum/val_age": {
+      "unit": "updates",
+      "applicability": "curriculum_validation"
+    },
+    "Curriculum/val_valid": {
+      "unit": "boolean",
+      "applicability": "curriculum_validation"
+    },
+    "Curriculum/streak/pass": {
+      "unit": "validations",
+      "applicability": "curriculum_validation"
+    },
+    "Curriculum/streak/fail": {
+      "unit": "validations",
+      "applicability": "curriculum_validation"
+    },
+    "Curriculum/event/promote": {
+      "unit": "events",
+      "definition": "Count promotions in the logging interval. Preserve exact events in the event table."
+    },
+    "Curriculum/event/demote": {
+      "unit": "events",
+      "definition": "Count demotions in the logging interval. Preserve exact events in the event table."
+    },
+    "Curriculum/block/any": {
+      "unit": "boolean",
+      "definition": "Any active promotion blocker. The final stage alone is not a blocker."
+    },
+    "Episode/count": {
+      "unit": "episodes",
+      "type": "integer",
+      "reduction": "completed_episode_count"
+    },
+    "Episode/len_steps": {
+      "unit": "control_steps",
+      "reduction": "pooled_completed_episode_mean"
+    },
+    "Episode/len_s": {
+      "unit": "seconds",
+      "reduction": "pooled_completed_episode_mean",
+      "definition": "Use the actual control period for each completed episode."
+    },
+    "Episode/fail_frac": {
+      "unit": "fraction",
+      "definition": "Failed completed episodes divided by completed episodes."
+    },
+    "Episode/timeout_frac": {
+      "unit": "fraction",
+      "definition": "Timed-out completed episodes divided by completed episodes."
+    },
+    "Perf/fps": {
+      "unit": "transitions_per_second",
+      "definition": "Actual transition delta divided by wall seconds. Include logging, rendering, and checkpoint overhead."
+    },
+    "Perf/collect_fps": {
+      "unit": "transitions_per_second",
+      "definition": "Actual transition delta divided by measured collection seconds for the same complete interval."
+    },
+    "Perf/time/collect_s": {
+      "unit": "seconds_per_update",
+      "definition": "Host collection time divided by the number of timed updates."
+    },
+    "Perf/time/learn_s": {
+      "unit": "seconds_per_update",
+      "definition": "Host time for all learning phases per update. Include model learning where applicable."
+    },
+    "Perf/time/iter_s": {
+      "unit": "seconds_per_update",
+      "definition": "Full wall seconds per update, including logging and saves."
+    },
+    "Perf/time/wm_s": {
+      "unit": "seconds_per_update",
+      "applicability": "world_model"
+    },
+    "Perf/time/policy_s": {
+      "unit": "seconds_per_update",
+      "definition": "Record whether the phase includes value learning."
+    },
+    "Perf/time/log_s": {
+      "unit": "seconds_per_update",
+      "optional": true
+    },
+    "Perf/time/save_s": {
+      "unit": "seconds_per_update",
+      "optional": true
+    },
+    "Media/video": {
+      "type": "video",
+      "definition": "Rollout video linked to capture counters and checkpoint identity."
+    },
+    "Media/viser": {
+      "type": "html_or_reference",
+      "definition": "Durable Viser review reference with synchronized human input when applicable."
+    },
+    "Media/status": {
+      "type": "table",
+      "definition": "Capture identity, counters, upload state, and unavailable reasons."
+    },
+    "Curriculum/gates": {
+      "type": "table",
+      "definition": "Detailed gates for each route, horizon, statistic, threshold, and validation counter."
+    },
+    "Curriculum/events": {
+      "type": "table",
+      "definition": "Exact event counter, time, previous stage, new stage, horizon, reason, and manual flag."
+    },
+    "Env/adp_samp/prob_mean": {
+      "unit": "probability",
+      "definition": "Mean adaptive sampling probability over the registered population."
+    }
+  },
+  "templates": [
+    {
+      "pattern": "Reward/terms/<term>",
+      "example": "Reward/terms/action_rate",
+      "definition": "Weighted additive episodic contribution under the reward contract."
+    },
+    {
+      "pattern": "Reward/raw/<term>",
+      "example": "Reward/raw/action_rate",
+      "definition": "Optional raw diagnostic with a declared unit and reduction."
+    },
+    {
+      "pattern": "Reward/rates/<term>",
+      "example": "Reward/rates/action_rate",
+      "definition": "Optional weighted rate per simulated second."
+    },
+    {
+      "pattern": "Loss/<module>/<term>",
+      "example": "Loss/wm/one_step",
+      "definition": "Module-specific actual objective. Record its formula and reduction."
+    },
+    {
+      "pattern": "Train/lr/<module>",
+      "example": "Train/lr/wm",
+      "definition": "Use module keys when optimizers have distinct learning rates. Omit the ambiguous Train/lr alias."
+    },
+    {
+      "pattern": "Metrics/<family>/<quantity>",
+      "example": "Metrics/aligned/palm_l_m",
+      "definition": "Register the frame, reference point, unit, statistic, and denominator."
+    },
+    {
+      "pattern": "Curriculum/gate/<quantity>",
+      "example": "Curriculum/gate/next_root_m",
+      "definition": "Current gate error. Use active_ or next_ to identify the tested horizon."
+    },
+    {
+      "pattern": "Curriculum/limit/<quantity>",
+      "example": "Curriculum/limit/next_root_m",
+      "definition": "Threshold for the paired gate with the identical frame, unit, and statistic."
+    },
+    {
+      "pattern": "Curriculum/cover/<population>",
+      "example": "Curriculum/cover/next_robot",
+      "definition": "Coverage fraction with explicit numerator, denominator, and tested horizon."
+    },
+    {
+      "pattern": "Curriculum/block/<reason>",
+      "example": "Curriculum/block/accuracy",
+      "definition": "Boolean blocker. Register accuracy, evidence, dwell, streak, stale, or category-specific reasons."
+    },
+    {
+      "pattern": "Curriculum/<term>/<quantity>",
+      "example": "Curriculum/command/vel_x_max",
+      "definition": "Native curriculum range or parameter. Do not invent a global stage for an unstaged curriculum."
+    },
+    {
+      "pattern": "Episode/end/<reason>",
+      "example": "Episode/end/fall_frac",
+      "definition": "Completed episodes with this reason divided by completed episodes. Record overlapping reasons."
+    },
+    {
+      "pattern": "Perf/cuda/<phase>",
+      "example": "Perf/cuda/collect_s",
+      "definition": "CUDA event seconds per update. Keep device measurements separate from host wall time."
+    },
+    {
+      "pattern": "Media/reward/<term>",
+      "example": "Media/reward/action_rate",
+      "definition": "WTW-style synchronized debug image. Retain the actual signal unit, including reward-rate units."
+    },
+    {
+      "pattern": "Media/debug/<group>",
+      "example": "Media/debug/tracking",
+      "definition": "Synchronized debug image for actions, root, tracking, feet, gait, terminations, or related signals."
+    },
+    {
+      "pattern": "Env/<group>/<quantity>",
+      "example": "Env/adp_samp/prob_mean",
+      "definition": "Environment sampling, commands, randomization, contacts, and numerical diagnostics."
+    },
+    {
+      "pattern": "System/<resource>/<quantity>",
+      "example": "System/gpu/mem_mib",
+      "definition": "Worker resource measurement only when native W&B metrics do not provide the same measurement."
+    }
+  ],
+  "configuration": {
+    "purpose": "Store fixed specifications once. Plot changing values as metrics.",
+    "required_groups": {
+      "log": [
+        "schema_version",
+        "scalar_interval",
+        "diagnostic_interval",
+        "metric_registry",
+        "availability"
+      ],
+      "task": [
+        "category",
+        "robot",
+        "name",
+        "control_dt_s",
+        "reward_composition"
+      ],
+      "algo": [
+        "name",
+        "optimizer",
+        "lr_schedule",
+        "loss_definitions"
+      ],
+      "train": [
+        "seed",
+        "num_envs",
+        "workers",
+        "rollout_steps",
+        "batch_size",
+        "stop_condition"
+      ],
+      "data": [
+        "name",
+        "version",
+        "hash",
+        "clips",
+        "frames"
+      ],
+      "system": [
+        "host",
+        "cpu",
+        "gpu",
+        "gpu_count",
+        "vram_gib",
+        "ram_gib",
+        "os",
+        "python",
+        "torch",
+        "cuda",
+        "driver",
+        "simulator"
+      ],
+      "source": [
+        "repo",
+        "commit",
+        "pr_url",
+        "dirty",
+        "recipe_hash",
+        "parent_run",
+        "checkpoint",
+        "resume_iter",
+        "resume_steps"
+      ],
+      "media": [
+        "enabled",
+        "interval",
+        "duration_s",
+        "fps",
+        "resolution",
+        "capture_mode",
+        "probe_definition"
+      ]
+    },
+    "conditional_groups": {
+      "ppo": [
+        "clip",
+        "gamma",
+        "gae_lambda",
+        "epochs",
+        "minibatches",
+        "target_kl",
+        "entropy_coef",
+        "value_coef",
+        "grad_clip"
+      ],
+      "world_model": [
+        "architecture",
+        "horizon",
+        "replay",
+        "update_ratio"
+      ],
+      "curriculum": [
+        "stage_definitions",
+        "horizon_unit",
+        "gate_definitions",
+        "thresholds",
+        "coverage_rules",
+        "streak_rules",
+        "dwell_rules"
+      ]
+    },
+    "seed": 69,
+    "unknown": "Record unavailable specifications explicitly. Do not guess.",
+    "resources": "Measure the training worker. A publisher host must not masquerade as the training system."
+  },
+  "registry": {
+    "required_fields": [
+      "key",
+      "source",
+      "unit",
+      "frame",
+      "reference_point",
+      "statistic",
+      "reduction",
+      "denominator",
+      "population",
+      "window",
+      "sampling",
+      "terminal_handling",
+      "applicability"
+    ],
+    "not_applicable": "Use an explicit not_applicable field value where a definition does not apply.",
+    "short_names": "Store detailed meanings here so plot names remain short.",
+    "comparisons": "Compare metrics only when their definitions, populations, and reductions match.",
+    "extensions": "Register category-specific keys under existing sections. Preserve the shared key definitions."
+  },
+  "profiles": {
+    "wtw": {
+      "typical_algorithm": "ppo",
+      "metrics": [
+        "Metrics/vel/xy_mps",
+        "Metrics/vel/yaw_radps"
+      ],
+      "extensions": [
+        "gait",
+        "terrain",
+        "commands",
+        "feet",
+        "randomization"
+      ]
+    },
+    "sonic": {
+      "typical_algorithm": "ppo",
+      "metrics": [
+        "Metrics/body/palm_l_m",
+        "Metrics/body/palm_r_m",
+        "Metrics/joint/mae_rad"
+      ],
+      "extensions": [
+        "encoder",
+        "fsq",
+        "motion_tracking",
+        "adaptive_sampling"
+      ]
+    },
+    "sm": {
+      "algorithm": "Record the actual algorithm. Select PPO or world-model fields accordingly.",
+      "default_profile": "telemetry/sm-profile.json",
+      "metrics": [
+        "Metrics/body/hand_l_m",
+        "Metrics/body/hand_r_m",
+        "Metrics/body/hand_l_rad",
+        "Metrics/body/hand_r_rad",
+        "Metrics/joint/pos_rad",
+        "Metrics/joint/vel_radps",
+        "Metrics/root/xy_m",
+        "Metrics/root/z_m"
+      ],
+      "extensions": [
+        "world_model",
+        "replay",
+        "horizon",
+        "admission",
+        "solver"
+      ]
+    }
+  },
+  "media": {
+    "base": "Retain WTW video, synchronized debug signals, debug images, and event markers.",
+    "suggested_interval_updates": 500,
+    "suggested_duration_s": 2,
+    "suggested_fps": 25,
+    "suggested_resolution": [
+      848,
+      480
+    ],
+    "triggers": [
+      "initial",
+      "periodic",
+      "checkpoint",
+      "final"
+    ],
+    "cadence": "Use supported native frame cadence. Record category overrides. Deduplicate overlapping triggers.",
+    "timing": "Preserve signal timestamps and video-frame timestamps. Mark resets, pushes, failures, and curriculum changes.",
+    "identity": "Record capture iteration, transition counters, checkpoint, environment, motion or command, camera, and probe seed.",
+    "asynchronous": "Preserve capture counters in metadata. Do not label an old video with the current checkpoint.",
+    "files": "Retain MP4, debug JSON, and metadata as associated files. Upload video and debug images together.",
+    "probe": "Use a separate evaluation environment for fixed probes. Preserve training RNG and the training environment distribution.",
+    "motion": "Provide synchronized Viser comparison with the original SMPL or SMPL-X input when human motion exists.",
+    "appearance": "Preserve original robot materials and default MuJoCo visual settings.",
+    "availability": "Record unavailable media and the reason. Scalar logging must continue."
+  },
+  "publication": {
+    "smoke": "Write local logs and evidence only. Do not initialize or publish W&B telemetry.",
+    "full": "Initialize the full W&B run before training. Verify received metrics before training.",
+    "curriculum": "Verify the dedicated Curriculum section before full curriculum training.",
+    "continuity": "Maintain live telemetry until training ends. Preserve history and explicit gaps.",
+    "links": "Provide the full W&B run link and the associated PR link.",
+    "stop_condition": "Preserve the authorized stopping criterion. The logging format does not impose a training limit."
+  },
+  "migration": {
+    "policy": "Apply adapters to future runs. Preserve existing histories and detailed source files.",
+    "wtw": [
+      {
+        "from": "Train/mean_reward",
+        "to": "Reward/total",
+        "action": "Recompute over interval episodes. WTW uses the latest 100 completed episodes."
+      },
+      {
+        "from": "Episode_Reward/<term>",
+        "to": "Reward/terms/<term>",
+        "action": "Recompute from completed episode accumulators. WTW divides by maximum episode seconds."
+      },
+      {
+        "from": "Train/mean_episode_length",
+        "to": "Episode/len_steps",
+        "action": "Recompute over the same interval episodes."
+      },
+      {
+        "from": "Loss/surrogate",
+        "to": "Loss/policy",
+        "action": "Preserve the actual surrogate objective definition."
+      },
+      {
+        "from": "Loss/value",
+        "to": "Loss/value",
+        "action": "Preserve the objective definition."
+      },
+      {
+        "from": "Loss/entropy",
+        "to": "Train/ppo/entropy",
+        "action": "Confirm that the source is the entropy statistic."
+      },
+      {
+        "from": "Loss/learning_rate",
+        "to": "Train/lr",
+        "action": "Use module keys if learning rates differ."
+      },
+      {
+        "from": "Policy/mean_std",
+        "to": "Train/policy/std",
+        "action": "Preserve the action units and reduction."
+      },
+      {
+        "from": "Perf/total_fps",
+        "to": "Perf/fps",
+        "action": "Remeasure full wall time. WTW excludes overhead outside collection and learning."
+      },
+      {
+        "from": "Perf/collection_time",
+        "to": "Perf/time/collect_s",
+        "action": "Confirm the per-update interval."
+      },
+      {
+        "from": "Perf/learning_time",
+        "to": "Perf/time/learn_s",
+        "action": "Confirm the per-update interval."
+      },
+      {
+        "from": "video",
+        "to": "Media/video",
+        "action": "Retain capture identity and debug sidecar."
+      },
+      {
+        "from": "video_debug/rewards/<term>_image",
+        "to": "Media/reward/<term>",
+        "action": "Keep the source reward-rate meaning in the image labels."
+      },
+      {
+        "from": "video_debug/metrics/<group>_image",
+        "to": "Media/debug/<group>",
+        "action": "Retain timestamps and event markers."
+      }
+    ],
+    "sm": [
+      {
+        "from": "train/sim_rew",
+        "to": "Reward/normalized",
+        "action": "Preserve the normalization. Do not use this value as episodic return."
+      },
+      {
+        "from": "native/reward_terms/total",
+        "to": "Reward/step",
+        "action": "Confirm the applied reward boundary and pooled transition reduction."
+      },
+      {
+        "from": "Diag/reward/<term>/weighted_rate",
+        "to": "Reward/rates/<term>",
+        "action": "Preserve sampling and pooling. Recompute if the source averages group summaries."
+      },
+      {
+        "from": "Tracking/body/tcp_position_m/left/mean",
+        "to": "Metrics/body/palm_l_m",
+        "action": "Preserve the hip frame, palm offset, sample policy, and pooled reduction."
+      },
+      {
+        "from": "Episode/completed_seconds_pooled/mean",
+        "to": "Episode/len_s",
+        "action": "Preserve the completed episode population."
+      },
+      {
+        "from": "train/ep_len",
+        "to": "Episode/len_steps",
+        "action": "Recompute pooled episode lengths. The source averages completed-group means."
+      },
+      {
+        "from": "ppo/policy_loss",
+        "to": "Loss/policy",
+        "action": "PPO adapter only. Preserve the loss definition."
+      },
+      {
+        "from": "ppo/approx_kl",
+        "to": "Train/ppo/kl",
+        "action": "PPO adapter only. Preserve the KL estimator."
+      }
+    ]
+  },
+  "sources": [
+    "/Users/mattia/Documents/minerva_lab/source/minerva_lab/minerva_lab/rsl_rl_backend/wandb_logging.py",
+    "/Users/mattia/Documents/minerva_lab/external/IsaacLab/source/isaaclab/isaaclab/managers/reward_manager.py",
+    "/Users/mattia/Documents/minerva_lab/source/minerva_lab/minerva_lab/video/config.py",
+    "/Users/mattia/Documents/minerva_lab/source/minerva_lab/minerva_lab/video/recorder.py",
+    "/Users/mattia/Documents/minerva_lab/source/minerva_lab/minerva_lab/video/debug.py",
+    "/Users/mattia/Documents/minerva_lab/source/minerva_lab/minerva_lab/video/wandb.py",
+    "/Users/mattia/Documents/ChatGPT/Supermimic/supermimic_vibed/SONIC_METRICS.md",
+    "/Users/mattia/Documents/ChatGPT/Supermimic/supermimic_vibed/scripts/sonic_wandb.py",
+    "/Users/mattia/Documents/ChatGPT/Supermimic/worktrees/roger-ppo-finetune/supermimic/ppo.py",
+    "https://docs.coreweave.com/products/wandb/track/workspaces",
+    "https://docs.coreweave.com/products/wandb/track/log/customize-logging-axes",
+    "https://docs.coreweave.com/products/wandb/track/log/media",
+    "https://raw.githubusercontent.com/leggedrobotics/rsl_rl/v5.0.1/rsl_rl/utils/logger.py"
+  ]
+}

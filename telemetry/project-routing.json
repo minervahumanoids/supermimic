@@ -1,0 +1,9 @@
+{
+  "entity": "minervahumanoids",
+  "supermimic_project": "Supermimic",
+  "categories": ["SM", "hSM"],
+  "includes": ["SuperMimic training", "SuperMimic PPO fine-tuning"],
+  "project_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic",
+  "preserve_run_identity_on_resume": true,
+  "smoke_telemetry": "local-only"
+}

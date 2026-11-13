@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "num_envs": 4096,
+  "wm_batch": 2048,
+  "policy_batch": 4096,
+  "original_parameters": true,
+  "runner_overrides": {},
+  "gpu_peak_bytes": 16085886976,
+  "wandb_initialized": false,
+  "reward_additivity_checked": true,
+  "dataset": {
+    "clips": 1,
+    "frames": 214,
+    "sha256": "6334b0fcc56c86427ad079572c50bac9f9214b3b5179fff2f66ff24610fc70b2",
+    "robot": "Unitree G1",
+    "path": "/home/mattia/workspace/supermimic-g1-walk-single-mnv1-20261112/data/clip_6659630b5d665786.npz",
+    "rate_hz": 50,
+    "provenance": {
+      "clips": 1,
+      "frames": 214,
+      "rate_hz": 50,
+      "clip_ids": [
+        "clip_6659630b5d665786"
+      ],
+      "mjlab_commit": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+      "parent_directory": "/home/mattia/workspace/supermimic-official-g1-mnv1-20261111/data",
+      "parent_selection_sha256": "fbaef9736b416f5aa9a1b09233ef98faccce8c6e2561ed7760b5904519763898",
+      "selection_sha256": "8206716ad190742e3f9e40d7e5579fd5503340adf826c9c5d8469ff1b38ff4a8",
+      "exclusion_sha256": "4a3c93ebd07616f5e24fbb60737a09a348456259cd732d2ff123b01460ac2fac",
+      "motion_sha256": "6334b0fcc56c86427ad079572c50bac9f9214b3b5179fff2f66ff24610fc70b2",
+      "archive": "gs://minerva-datasets/releases/bones-seed-g1/0.1.0/inputs/g1.tar.gz#1792535636281233",
+      "archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+      "conversion": "Parent G1 conversion. Native mjlab interpolation and derivatives. No new retargeting or filtering."
+    }
+  },
+  "source_commit": "abc124c1bd5976341034668af3d12c087f2f1f55"
+}

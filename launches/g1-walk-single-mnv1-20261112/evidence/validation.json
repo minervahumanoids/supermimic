@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "default_validation": {
+    "designated_clips": 21,
+    "priority_clips": 4,
+    "matched_trials": 63,
+    "priority_trials": 12,
+    "unchanged": true
+  },
+  "tests": {
+    "passed": 11
+  },
+  "viewer": {
+    "script": "experiments/ali-baseline-prototype-20261112/review.py",
+    "port": 8932,
+    "profile": "Requested G1 walking clip \u00b7 1",
+    "tabs": [
+      "Drift",
+      "Palm position",
+      "Palm orientation",
+      "Full body",
+      "Stability",
+      "Cohort summary"
+    ],
+    "original_human": true,
+    "native_materials": true,
+    "camera_follow_default": false,
+    "frame_controls_verified": 150,
+    "source_time_verified_s": 3.0,
+    "wrist_overlay_both_policies_verified": true,
+    "root_palm_metrics_unchanged": true,
+    "final_server_pid": 97731,
+    "playback_advanced_between_observations": [
+      159,
+      205
+    ],
+    "browser_verified": true,
+    "url": "http://127.0.0.1:8932/"
+  }
+}

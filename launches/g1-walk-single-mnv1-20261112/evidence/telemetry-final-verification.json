@@ -1,0 +1,55 @@
+{
+  "verified": true,
+  "runs": {
+    "45u76a15": {
+      "state": "killed",
+      "native_reward_rows": 1505,
+      "canonical_component_rows": 1505,
+      "verified_timing_rows": 1506,
+      "verified_episodic_rows": 1505,
+      "counter": 15051,
+      "launch_commit": "3796d8fe7c4f8cd42e253339ae77d9aa89eb96a5",
+      "source_commit": "abc124c1bd5976341034668af3d12c087f2f1f55"
+    },
+    "ga216ipt": {
+      "state": "killed",
+      "native_reward_rows": 40310,
+      "canonical_component_rows": 40310,
+      "verified_timing_rows": 40310,
+      "verified_episodic_rows": 40310,
+      "counter": 403091,
+      "launch_commit": "ad813ef33ed15201044b8d8c0bf0c808628ae64f",
+      "source_commit": "abc124c1bd5976341034668af3d12c087f2f1f55"
+    },
+    "zx0w9xq2": {
+      "state": "killed",
+      "native_reward_rows": 5794,
+      "canonical_component_rows": 5794,
+      "verified_timing_rows": 5794,
+      "verified_episodic_rows": 5794,
+      "counter": 57931,
+      "launch_commit": "2024413a3d6802313cad90c8eaf4df6a309e8eff",
+      "source_commit": "abc124c1bd5976341034668af3d12c087f2f1f55"
+    }
+  },
+  "workspace_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/workspace?nw=nwusermattia_mh",
+  "focused_run_ids": [
+    "45u76a15",
+    "ga216ipt",
+    "zx0w9xq2"
+  ],
+  "native_histories_preserved": true,
+  "reward_additivity_verified": true,
+  "source_timing_normalization_verified": true,
+  "sections": [
+    "Reward",
+    "Loss",
+    "Train",
+    "Metrics",
+    "Episode",
+    "Perf",
+    "System"
+  ],
+  "future_logger": "official_sm_logger.py",
+  "unrelated_running_jobs_modified": false
+}

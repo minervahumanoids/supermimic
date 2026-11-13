@@ -1,0 +1,52 @@
+{
+  "clip": "clip_6659630b5d665786",
+  "frames": 214,
+  "backend": "standalone CPU MuJoCo",
+  "mujoco_version": "3.15.0",
+  "torch_version": "2.15.0+cpu",
+  "same_model_sha256": "da23e209ca71e74fcd1d333378f3055d46ef9e8b8099ef0d550431e422e2126c",
+  "same_physical_contract_sha256": "7a7338d5a1c49d72ac468d80b86f0416e230e40aca00a8df2a6d01ac3828aceb",
+  "optimizer_steps": 0,
+  "policies": {
+    "g1-single15": {
+      "label": "G1 single clip \u00b7 15,000",
+      "run_id": "45u76a15",
+      "iteration": 15000,
+      "actor_sha256": "7db8a31f0075a4eef5fe5b5594cbf777389a60b0706d9bc899fb1006ced6d83f",
+      "complete": true,
+      "frames": 214,
+      "root_xy_mean_cm": 1.997484750045687,
+      "palm_position_mean_cm": 1.9165528057223684,
+      "palm_orientation_mean_deg": 4.127656452804998,
+      "joint_rmse_mean_deg": 3.2827926848909845,
+      "wrist_position_lr_cm": [
+        2.154461138428534,
+        1.7669429115153017
+      ],
+      "wrist_orientation_lr_deg": [
+        5.3689106749441,
+        2.886402230662817
+      ]
+    },
+    "g1-full25": {
+      "label": "G1 full dataset \u00b7 25,000",
+      "run_id": "ga216ipt",
+      "iteration": 25000,
+      "actor_sha256": "a0ce1eb1614c6380dc304a0781dc0dc16c9f79e9b05b33d1b0e3ccd06a3c013c",
+      "complete": true,
+      "frames": 214,
+      "root_xy_mean_cm": 5.716078038111212,
+      "palm_position_mean_cm": 2.540121362218943,
+      "palm_orientation_mean_deg": 5.3817010946413255,
+      "joint_rmse_mean_deg": 3.9531159139330914,
+      "wrist_position_lr_cm": [
+        2.27930694164711,
+        2.5801220651388554
+      ],
+      "wrist_orientation_lr_deg": [
+        4.6740085031503735,
+        6.089393686130297
+      ]
+    }
+  }
+}

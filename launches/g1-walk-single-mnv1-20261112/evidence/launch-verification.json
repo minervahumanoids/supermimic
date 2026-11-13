@@ -1,0 +1,107 @@
+{
+  "verified_at_unix_s": 1794532951.0327897,
+  "run_id": "45u76a15",
+  "wandb_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/45u76a15",
+  "workspace_url": "https://forge.coreweave.com/minervahumanoids/Supermimic?nw=iexx8035oj3",
+  "pr_url": "https://github.com/minervahumanoids/supermimic/pull/2",
+  "launch_commit": "3796d8fe7c4f8cd42e253339ae77d9aa89eb96a5",
+  "sources": {
+    "supermimic": {
+      "commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+      "tracked_changes": ""
+    },
+    "mjlab_research": {
+      "commit": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+      "tracked_changes": ""
+    }
+  },
+  "dataset": {
+    "clips": 1,
+    "frames": 214,
+    "sha256": "6334b0fcc56c86427ad079572c50bac9f9214b3b5179fff2f66ff24610fc70b2",
+    "robot": "Unitree G1",
+    "path": "/home/mattia/workspace/supermimic-g1-walk-single-mnv1-20261112/data/clip_6659630b5d665786.npz",
+    "rate_hz": 50,
+    "provenance": {
+      "clips": 1,
+      "frames": 214,
+      "rate_hz": 50,
+      "clip_ids": [
+        "clip_6659630b5d665786"
+      ],
+      "mjlab_commit": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+      "parent_directory": "/home/mattia/workspace/supermimic-official-g1-mnv1-20261111/data",
+      "parent_selection_sha256": "fbaef9736b416f5aa9a1b09233ef98faccce8c6e2561ed7760b5904519763898",
+      "selection_sha256": "8206716ad190742e3f9e40d7e5579fd5503340adf826c9c5d8469ff1b38ff4a8",
+      "exclusion_sha256": "4a3c93ebd07616f5e24fbb60737a09a348456259cd732d2ff123b01460ac2fac",
+      "motion_sha256": "6334b0fcc56c86427ad079572c50bac9f9214b3b5179fff2f66ff24610fc70b2",
+      "archive": "gs://minerva-datasets/releases/bones-seed-g1/0.1.0/inputs/g1.tar.gz#1792535636281233",
+      "archive_sha256": "52580ea8bced72ea9e2ff1e7b68f01c51c7f1099581e9a46b7c87e1dec106d8a",
+      "conversion": "Parent G1 conversion. Native mjlab interpolation and derivatives. No new retargeting or filtering."
+    }
+  },
+  "server_metrics": {
+    "Train/iter": 331,
+    "Train/steps": 1355776.0,
+    "Reward/total": 2.016161270825302,
+    "Reward/step": 0.044915824010968206,
+    "Episode/len_s": 0.8881411764705882,
+    "Episode/count": 850,
+    "Loss/wm": 0.033210743218660355,
+    "Loss/policy": -1.1458868980407715,
+    "Loss/value": 0.02694128267467022,
+    "Metrics/motion/root_xy_m": 0.26629201336948394,
+    "Perf/fps": 27363.49215740359,
+    "_timestamp": 1794532938.9463453
+  },
+  "layout": [
+    {
+      "section": "Reward",
+      "rows": 1,
+      "columns": 3,
+      "panels": 10
+    },
+    {
+      "section": "Loss",
+      "rows": 1,
+      "columns": 3,
+      "panels": 3
+    },
+    {
+      "section": "Train",
+      "rows": 1,
+      "columns": 3,
+      "panels": 4
+    },
+    {
+      "section": "Metrics",
+      "rows": 1,
+      "columns": 3,
+      "panels": 2
+    },
+    {
+      "section": "Episode",
+      "rows": 1,
+      "columns": 3,
+      "panels": 3
+    },
+    {
+      "section": "Perf",
+      "rows": 1,
+      "columns": 3,
+      "panels": 5
+    }
+  ],
+  "orion": {
+    "machine": "mnv1",
+    "owner": "Mattia",
+    "kind": "reservation",
+    "note": "PR2 G1 walk: batch 4096",
+    "end": 1794619274176.1824,
+    "version": "c851ff9a38ca43c0bc4c193c6895ea9f",
+    "wandb_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/45u76a15"
+  },
+  "service": "Restart=no\nRuntimeMaxUSec=infinity\nMainPID=3537348\nExecMainStatus=0\nExecStart={ path=/home/mattia/workspace/supermimic-g1-walk-single-mnv1-20261112/runtime/.venv/bin/python ; argv[]=/home/mattia/workspace/supermimic-g1-walk-single-mnv1-20261112/runtime/.venv/bin/python -u /home/mattia/workspace/supermimic-g1-walk-single-mnv1-20261112/launch.py --workspace /home/mattia/workspace/supermimic-g1-walk-single-mnv1-20261112 --motion-file /home/mattia/workspace/supermimic-g1-walk-single-mnv1-20261112/data/clip_6659630b5d665786.npz --mode train --pr-url https://github.com/minervahumanoids/supermimic/pull/2 --launch-commit 3796d8fe7c4f8cd42e253339ae77d9aa89eb96a5 ; ignore_errors=no ; start_time=[Thu 2026-11-12 20:20:45 EST] ; stop_time=[n/a] ; pid=3537348 ; code=(null) ; status=0/0 }\nMemoryMax=infinity\nActiveState=active\nSubState=running\n",
+  "wall_time_limit": null,
+  "native_max_iterations": 1000000
+}

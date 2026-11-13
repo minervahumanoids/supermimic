@@ -1,0 +1,9 @@
+{
+  "machine": "mnv1",
+  "owner": "Mattia",
+  "kind": "reservation",
+  "note": "PR2 G1 walk: batch 4096",
+  "end": 1794619274176.1824,
+  "version": "c851ff9a38ca43c0bc4c193c6895ea9f",
+  "wandb_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/45u76a15"
+}
