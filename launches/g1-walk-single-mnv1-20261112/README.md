@@ -56,3 +56,14 @@ Orion stores the PR number and the dedicated W&B link.
 The persistent service has no runtime deadline and no automatic restart.
 The native iteration count supplies the training stop condition.
 Training measurements describe fit to this clip. They do not measure generalization.
+
+## Active run
+
+[W&B training](https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/runs/45u76a15) · [PR #2](https://github.com/minervahumanoids/supermimic/pull/2)
+
+The launch uses commit `3796d8fe7c4f8cd42e253339ae77d9aa89eb96a5`.
+The full native smoke configuration passed five learner updates without W&B initialization.
+The online verification confirmed iteration 331 and 1,355,776 actual transitions.
+The verification confirmed finite losses, fresh server metrics, the saved workspace, and the Orion association.
+The source checkouts remain unchanged.
+The [launch evidence](evidence/launch-verification.json) preserves the service configuration and dataset hashes.
