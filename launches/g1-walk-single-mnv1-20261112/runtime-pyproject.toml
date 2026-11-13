@@ -1,0 +1,20 @@
+[project]
+name = "g1-original-runtime"
+version = "0.0.1"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "supermimic",
+  "mjlab",
+  "torch==2.14.1+cu130; sys_platform == 'linux'",
+  "mjviser==0.0.16",
+  "wandb==0.31.0",
+  "wandb-workspaces==0.4.13",
+]
+[tool.uv.sources]
+supermimic = { path = "../supermimic", editable = true }
+mjlab = { path = "../mjlab_research", editable = true }
+torch = { index = "pytorch-cu130", marker = "sys_platform == 'linux'" }
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
