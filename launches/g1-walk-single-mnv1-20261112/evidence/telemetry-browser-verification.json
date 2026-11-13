@@ -1,0 +1,14 @@
+{
+  "verified": true,
+  "workspace_url": "https://forge.coreweave.com/wandb/minervahumanoids/Supermimic/workspace?nw=nwusermattia_mh",
+  "selected_run_ids": [
+    "45u76a15",
+    "zx0w9xq2",
+    "ga216ipt"
+  ],
+  "custom_axis": "Training iterations",
+  "reward_pagination": "1-3 of 10",
+  "loss_pagination": "1-3 of 4",
+  "native_run_ids_preserved": true,
+  "screenshot": "logging-consistency.jpg"
+}

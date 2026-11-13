@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "wandb_initialized": false,
+  "completed_episode_values_verified": {
+    "Reward/total": 6.0,
+    "Reward/step": 2.375,
+    "Reward/terms/root_pos": 7.5,
+    "Reward/terms/action_rate": -1.5,
+    "Episode/count": 2,
+    "Episode/len_s": 0.05,
+    "Episode/fail_frac": 0.5,
+    "Episode/timeout_frac": 0.5,
+    "Metrics/robot/root_xy_m": 4.833333333333333,
+    "Train/iter": 4,
+    "Train/steps": 8,
+    "Train/routes/robot_frac": 1.0,
+    "Perf/time/collect_s": 2.0,
+    "Perf/time/learn_s": 3.0,
+    "Perf/time/wm_s": 2.0,
+    "Perf/time/policy_s": 1.0,
+    "Perf/fps": 0.8
+  },
+  "empty_interval_omits_episode_means": true,
+  "first_and_subsequent_timing_deltas_verified": true,
+  "partial_episodes_preserved": true
+}

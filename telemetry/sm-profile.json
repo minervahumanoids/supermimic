@@ -1,0 +1,2840 @@
+{
+  "name": "SM telemetry profile",
+  "version": "1.5",
+  "category": "SM",
+  "algorithm": "model_based",
+  "seed": 69,
+  "purpose": "Measured SuperMimic route performance, all active rewards, and useful environment diagnostics.",
+  "default_reduction": "Use route-specific tracking when route labels exist. Retain one mean or RMS per concept. Do not generate routine percentile or maximum variants.",
+  "tracking_frames": {
+    "hands": "Calibrated palm points and orientations in each pose full hip frame.",
+    "body": "Reference heading and XY alignment.",
+    "root": "Original world XY frame."
+  },
+  "default_panels": [
+    {
+      "section": "Reward",
+      "panels": [
+        {
+          "kind": "line",
+          "title": "Episode return",
+          "keys": [
+            "Reward/total"
+          ],
+          "unit": "Reward",
+          "labels": [
+            "Episode return"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Reward per transition",
+          "keys": [
+            "Reward/step"
+          ],
+          "unit": "Reward / transition",
+          "labels": [
+            "Reward per transition"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "action rate",
+          "keys": [
+            "Reward/terms/action_rate"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "action rate"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "ankle rom",
+          "keys": [
+            "Reward/terms/ankle_rom"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "ankle rom"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "hand speed",
+          "keys": [
+            "Reward/terms/hand_speed"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "hand speed"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "ankle acc",
+          "keys": [
+            "Reward/terms/ankle_acc"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "ankle acc"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "joint limit",
+          "keys": [
+            "Reward/terms/joint_limit"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "joint limit"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "snap",
+          "keys": [
+            "Reward/terms/snap"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "snap"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "palm ori",
+          "keys": [
+            "Reward/terms/palm_ori"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "palm ori"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "palm pos",
+          "keys": [
+            "Reward/terms/palm_pos"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "palm pos"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "root ori",
+          "keys": [
+            "Reward/terms/root_ori"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "root ori"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "root pos",
+          "keys": [
+            "Reward/terms/root_pos"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "root pos"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "body angvel",
+          "keys": [
+            "Reward/terms/body_angvel"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "body angvel"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "body linvel",
+          "keys": [
+            "Reward/terms/body_linvel"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "body linvel"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "joint pose",
+          "keys": [
+            "Reward/terms/joint_pose"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "joint pose"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "body ori",
+          "keys": [
+            "Reward/terms/body_ori"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "body ori"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "body pos",
+          "keys": [
+            "Reward/terms/body_pos"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "body pos"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "vr tracking",
+          "keys": [
+            "Reward/terms/vr_tracking"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "vr tracking"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "contacts",
+          "keys": [
+            "Reward/terms/contacts"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "contacts"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "feet pos",
+          "keys": [
+            "Reward/terms/feet_pos"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "feet pos"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "foot l ori",
+          "keys": [
+            "Reward/terms/foot_l_ori"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "foot l ori"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "foot r ori",
+          "keys": [
+            "Reward/terms/foot_r_ori"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "foot r ori"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "sole l height",
+          "keys": [
+            "Reward/terms/sole_l_height"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "sole l height"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "sole r height",
+          "keys": [
+            "Reward/terms/sole_r_height"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "sole r height"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "sole l motion",
+          "keys": [
+            "Reward/terms/sole_l_motion"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "sole l motion"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "sole r motion",
+          "keys": [
+            "Reward/terms/sole_r_motion"
+          ],
+          "unit": "Signed episode reward",
+          "labels": [
+            "sole r motion"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Robot episode return",
+          "keys": [
+            "Reward/robot/total"
+          ],
+          "unit": "Reward",
+          "labels": [
+            "Robot episode return"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Robot reward per transition",
+          "keys": [
+            "Reward/robot/step"
+          ],
+          "unit": "Reward / transition",
+          "labels": [
+            "Robot reward per transition"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "SMPL episode return",
+          "keys": [
+            "Reward/smpl/total"
+          ],
+          "unit": "Reward",
+          "labels": [
+            "SMPL episode return"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "SMPL reward per transition",
+          "keys": [
+            "Reward/smpl/step"
+          ],
+          "unit": "Reward / transition",
+          "labels": [
+            "SMPL reward per transition"
+          ],
+          "bounds": null,
+          "available_only": true
+        }
+      ]
+    },
+    {
+      "section": "Loss",
+      "panels": [
+        {
+          "kind": "line",
+          "title": "World model loss",
+          "keys": [
+            "Loss/wm"
+          ],
+          "unit": "Objective",
+          "labels": [
+            "World model loss"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Policy objective",
+          "keys": [
+            "Loss/policy"
+          ],
+          "unit": "Objective",
+          "labels": [
+            "Policy objective"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Value loss",
+          "keys": [
+            "Loss/value"
+          ],
+          "unit": "Objective",
+          "labels": [
+            "Value loss"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Reward model loss",
+          "keys": [
+            "Loss/reward_model"
+          ],
+          "unit": "Objective",
+          "labels": [
+            "Reward model loss"
+          ],
+          "bounds": null,
+          "available_only": true
+        }
+      ]
+    },
+    {
+      "section": "Train",
+      "panels": [
+        {
+          "kind": "line",
+          "title": "Robot encoder gradient",
+          "keys": [
+            "Train/grad/robot_enc"
+          ],
+          "unit": "Preclip L2 norm",
+          "labels": [
+            "Robot encoder gradient"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "SMPL encoder gradient",
+          "keys": [
+            "Train/grad/smpl_enc"
+          ],
+          "unit": "Preclip L2 norm",
+          "labels": [
+            "SMPL encoder gradient"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Shared decoder gradient",
+          "keys": [
+            "Train/grad/decoder"
+          ],
+          "unit": "Preclip L2 norm",
+          "labels": [
+            "Shared decoder gradient"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Policy gradient",
+          "keys": [
+            "Train/grad/policy"
+          ],
+          "unit": "Preclip L2 norm",
+          "labels": [
+            "Policy gradient"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "World model gradient",
+          "keys": [
+            "Train/grad/wm"
+          ],
+          "unit": "Preclip L2 norm",
+          "labels": [
+            "World model gradient"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Learning rate",
+          "keys": [
+            "Train/lr"
+          ],
+          "unit": "Learning rate",
+          "labels": [
+            "Learning rate"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Applied action RMS",
+          "keys": [
+            "Train/policy/action_rms"
+          ],
+          "unit": "Policy command",
+          "labels": [
+            "Applied action RMS"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Applied action change",
+          "keys": [
+            "Train/policy/action_rate"
+          ],
+          "unit": "Summed squared command change",
+          "labels": [
+            "Applied action change"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Action boundary fraction",
+          "keys": [
+            "Train/policy/clip_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "Action boundary fraction"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Imagined reward",
+          "keys": [
+            "Train/policy/imag_reward"
+          ],
+          "unit": "Normalized reward",
+          "labels": [
+            "Imagined reward"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Imagined survival",
+          "keys": [
+            "Train/policy/imag_survival"
+          ],
+          "unit": "Probability",
+          "labels": [
+            "Imagined survival"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Robot transition share",
+          "keys": [
+            "Train/routes/robot_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "Robot transition share"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "SMPL transition share",
+          "keys": [
+            "Train/routes/smpl_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "SMPL transition share"
+          ],
+          "bounds": null,
+          "available_only": true
+        }
+      ]
+    },
+    {
+      "section": "Metrics",
+      "panels": [
+        {
+          "kind": "line",
+          "title": "Robot root XY error",
+          "keys": [
+            "Metrics/robot/root_xy_m"
+          ],
+          "unit": "Meters",
+          "labels": [
+            "Robot root XY error"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "SMPL root XY error",
+          "keys": [
+            "Metrics/smpl/root_xy_m"
+          ],
+          "unit": "Meters",
+          "labels": [
+            "SMPL root XY error"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "WM eight-step training error",
+          "keys": [
+            "Metrics/wm/error8"
+          ],
+          "unit": "Normalized squared state error",
+          "labels": [
+            "WM eight-step training error"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Left foot orientation",
+          "keys": [
+            "Metrics/foot/l_ori_rad"
+          ],
+          "unit": "Radians",
+          "labels": [
+            "Left foot orientation"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Left support foot-link speed",
+          "keys": [
+            "Metrics/foot/l_support_speed_mps"
+          ],
+          "unit": "Meters / second",
+          "labels": [
+            "Left support foot-link speed"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Right foot orientation",
+          "keys": [
+            "Metrics/foot/r_ori_rad"
+          ],
+          "unit": "Radians",
+          "labels": [
+            "Right foot orientation"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Right support foot-link speed",
+          "keys": [
+            "Metrics/foot/r_support_speed_mps"
+          ],
+          "unit": "Meters / second",
+          "labels": [
+            "Right support foot-link speed"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Robot left palm position",
+          "keys": [
+            "Metrics/robot/palm_l_m"
+          ],
+          "unit": "Meters",
+          "labels": [
+            "Robot left palm position"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Robot left palm orientation",
+          "keys": [
+            "Metrics/robot/palm_l_ori_rad"
+          ],
+          "unit": "Radians",
+          "labels": [
+            "Robot left palm orientation"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Robot right palm position",
+          "keys": [
+            "Metrics/robot/palm_r_m"
+          ],
+          "unit": "Meters",
+          "labels": [
+            "Robot right palm position"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Robot right palm orientation",
+          "keys": [
+            "Metrics/robot/palm_r_ori_rad"
+          ],
+          "unit": "Radians",
+          "labels": [
+            "Robot right palm orientation"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "SMPL left palm position",
+          "keys": [
+            "Metrics/smpl/palm_l_m"
+          ],
+          "unit": "Meters",
+          "labels": [
+            "SMPL left palm position"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "SMPL left palm orientation",
+          "keys": [
+            "Metrics/smpl/palm_l_ori_rad"
+          ],
+          "unit": "Radians",
+          "labels": [
+            "SMPL left palm orientation"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "SMPL right palm position",
+          "keys": [
+            "Metrics/smpl/palm_r_m"
+          ],
+          "unit": "Meters",
+          "labels": [
+            "SMPL right palm position"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "SMPL right palm orientation",
+          "keys": [
+            "Metrics/smpl/palm_r_ori_rad"
+          ],
+          "unit": "Radians",
+          "labels": [
+            "SMPL right palm orientation"
+          ],
+          "bounds": null,
+          "available_only": true
+        }
+      ]
+    },
+    {
+      "section": "Episode",
+      "panels": [
+        {
+          "kind": "line",
+          "title": "Robot task failure fraction",
+          "keys": [
+            "Episode/robot/fail_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "Robot task failure fraction"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "SMPL task failure fraction",
+          "keys": [
+            "Episode/smpl/fail_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "SMPL task failure fraction"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Episode duration",
+          "keys": [
+            "Episode/len_s"
+          ],
+          "unit": "Seconds",
+          "labels": [
+            "Episode duration"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Task failure fraction",
+          "keys": [
+            "Episode/fail_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "Task failure fraction"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Clip/time-limit endings",
+          "keys": [
+            "Episode/timeout_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "Clip/time-limit endings"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Completed episodes",
+          "keys": [
+            "Episode/count"
+          ],
+          "unit": "Episodes",
+          "labels": [
+            "Completed episodes"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Robot episode duration",
+          "keys": [
+            "Episode/robot/len_s"
+          ],
+          "unit": "Seconds",
+          "labels": [
+            "Robot episode duration"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Robot clip/time-limit endings",
+          "keys": [
+            "Episode/robot/timeout_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "Robot clip/time-limit endings"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Robot completed episodes",
+          "keys": [
+            "Episode/robot/count"
+          ],
+          "unit": "Episodes",
+          "labels": [
+            "Robot completed episodes"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "SMPL episode duration",
+          "keys": [
+            "Episode/smpl/len_s"
+          ],
+          "unit": "Seconds",
+          "labels": [
+            "SMPL episode duration"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "SMPL clip/time-limit endings",
+          "keys": [
+            "Episode/smpl/timeout_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "SMPL clip/time-limit endings"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "SMPL completed episodes",
+          "keys": [
+            "Episode/smpl/count"
+          ],
+          "unit": "Episodes",
+          "labels": [
+            "SMPL completed episodes"
+          ],
+          "bounds": null,
+          "available_only": true
+        }
+      ]
+    },
+    {
+      "section": "Perf",
+      "panels": [
+        {
+          "kind": "line",
+          "title": "Full throughput",
+          "keys": [
+            "Perf/fps"
+          ],
+          "unit": "Transitions / second",
+          "labels": [
+            "Full throughput"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Collection time",
+          "keys": [
+            "Perf/time/collect_s"
+          ],
+          "unit": "Seconds / update",
+          "labels": [
+            "Collection time"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Learning time",
+          "keys": [
+            "Perf/time/learn_s"
+          ],
+          "unit": "Seconds / update",
+          "labels": [
+            "Learning time"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "World model update time",
+          "keys": [
+            "Perf/time/wm_s"
+          ],
+          "unit": "Seconds / update",
+          "labels": [
+            "World model update time"
+          ],
+          "bounds": null,
+          "available_only": true
+        }
+      ]
+    },
+    {
+      "section": "Env",
+      "panels": [
+        {
+          "kind": "line",
+          "title": "Left foot contact fraction",
+          "keys": [
+            "Env/foot/l_contact_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "Left foot contact fraction"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Right foot contact fraction",
+          "keys": [
+            "Env/foot/r_contact_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "Right foot contact fraction"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Invalid controller fraction",
+          "keys": [
+            "Env/controller/invalid_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "Invalid controller fraction"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Effective reset bins",
+          "keys": [
+            "Env/adp/effective_bins"
+          ],
+          "unit": "Effective bins / window",
+          "labels": [
+            "Effective reset bins"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Left active palm tolerance",
+          "keys": [
+            "Env/tolerance/palm_l_m"
+          ],
+          "unit": "Meters",
+          "labels": [
+            "Left active palm tolerance"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Left active palm angle tolerance",
+          "keys": [
+            "Env/tolerance/palm_l_rad"
+          ],
+          "unit": "Radians",
+          "labels": [
+            "Left active palm angle tolerance"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Left reference support coverage",
+          "keys": [
+            "Env/support/l_ref_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "Left reference support coverage"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Right active palm tolerance",
+          "keys": [
+            "Env/tolerance/palm_r_m"
+          ],
+          "unit": "Meters",
+          "labels": [
+            "Right active palm tolerance"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Right active palm angle tolerance",
+          "keys": [
+            "Env/tolerance/palm_r_rad"
+          ],
+          "unit": "Radians",
+          "labels": [
+            "Right active palm angle tolerance"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "Right reference support coverage",
+          "keys": [
+            "Env/support/r_ref_frac"
+          ],
+          "unit": "Fraction",
+          "labels": [
+            "Right reference support coverage"
+          ],
+          "bounds": null,
+          "available_only": true
+        }
+      ]
+    },
+    {
+      "section": "System",
+      "panels": [
+        {
+          "kind": "line",
+          "title": "GPU use",
+          "keys": [
+            "System/gpu/util_pct"
+          ],
+          "unit": "Percent",
+          "labels": [
+            "GPU use"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "GPU memory",
+          "keys": [
+            "System/gpu/mem_mib"
+          ],
+          "unit": "MiB",
+          "labels": [
+            "GPU memory"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "CPU use",
+          "keys": [
+            "System/cpu/util_pct"
+          ],
+          "unit": "Percent",
+          "labels": [
+            "CPU use"
+          ],
+          "bounds": null,
+          "available_only": true
+        },
+        {
+          "kind": "line",
+          "title": "RAM use",
+          "keys": [
+            "System/ram/used_gib"
+          ],
+          "unit": "GiB",
+          "labels": [
+            "RAM use"
+          ],
+          "bounds": null,
+          "available_only": true
+        }
+      ]
+    }
+  ],
+  "reward_components": [
+    {
+      "name": "action_rate",
+      "source": "action_rate_l2",
+      "weight": -0.2,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "ankle_rom",
+      "source": "ankle_rom_excess",
+      "weight": -10.0,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "hand_speed",
+      "source": "anti_shake_ang_vel",
+      "weight": -0.005,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "ankle_acc",
+      "source": "feet_acc",
+      "weight": -2.5e-06,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "joint_limit",
+      "source": "joint_limit",
+      "weight": -10.0,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "snap",
+      "source": "joint_snap",
+      "weight": -0.05,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "palm_ori",
+      "source": "targeted_hand_orientation",
+      "weight": 0.5,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "palm_pos",
+      "source": "targeted_hand_position",
+      "weight": 0.5,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "root_ori",
+      "source": "tracking_anchor_ori",
+      "weight": 0.5,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "root_pos",
+      "source": "tracking_anchor_pos",
+      "weight": 2.0,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "body_angvel",
+      "source": "tracking_body_angvel",
+      "weight": 1.0,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "body_linvel",
+      "source": "tracking_body_linvel",
+      "weight": 1.0,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "joint_pose",
+      "source": "tracking_joint_pose_huber",
+      "weight": -2.0,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "body_ori",
+      "source": "tracking_relative_body_ori",
+      "weight": 1.0,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "body_pos",
+      "source": "tracking_relative_body_pos",
+      "weight": 2.0,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "vr_tracking",
+      "source": "tracking_vr_5point_local",
+      "weight": 2.0,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "contacts",
+      "source": "undesired_contacts",
+      "weight": -0.1,
+      "conditional": false,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "feet_pos",
+      "source": "tracking_feet_position",
+      "weight": 2.0,
+      "conditional": true,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "foot_l_ori",
+      "source": "tracking_left_foot_orientation",
+      "weight": 0.5,
+      "conditional": true,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "foot_r_ori",
+      "source": "tracking_right_foot_orientation",
+      "weight": 0.5,
+      "conditional": true,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "sole_l_height",
+      "source": "support_left_sole_height",
+      "weight": -0.25,
+      "conditional": true,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "sole_r_height",
+      "source": "support_right_sole_height",
+      "weight": -0.25,
+      "conditional": true,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "sole_l_motion",
+      "source": "support_left_sole_motion",
+      "weight": -0.25,
+      "conditional": true,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    },
+    {
+      "name": "sole_r_motion",
+      "source": "support_right_sole_motion",
+      "weight": -0.25,
+      "conditional": true,
+      "weight_source": "Actual frozen training recipe overrides these A+C and foot-experiment reference coefficients."
+    }
+  ],
+  "reward_activation": "Render all and only active signed episodic components from the actual run. Omit disabled or unavailable components.",
+  "curriculum": "Omit this section for fixed H32. Active hand tolerances remain unchanged and can appear as measured scalars in Env. Show a Curriculum section only for an actual horizon curriculum.",
+  "media": "Hidden until actual policy videos exist. No information table substitutes for video.",
+  "algorithm_specific": "The SM actor is deterministic. Do not publish PPO entropy, KL, clip fraction, or fictitious encoder losses. Applied action boundary fraction remains a distinct controller-domain diagnostic.",
+  "diagnostics": "Route curves describe actual training populations, not matched fixed-cohort encoder comparisons. Keep necessary detailed evidence in files.",
+  "configuration": {
+    "Category": "SM",
+    "Algorithm": "World model and deterministic dual-route actor",
+    "Seed": 69,
+    "Specifications": "Read actual architecture, batch sizes, histories, data, source, horizon and budgets from the frozen run configuration.",
+    "Entropy": "Unavailable for the deterministic actor. Fixed collector exploration noise is not learned policy entropy.",
+    "Stop condition": "Preserve the user-authorized run target. This profile never imposes an elapsed-time limit.",
+    "Media": "Disabled until actual videos are recorded.",
+    "Tables": "Store specifications in configuration, not information panels."
+  },
+  "workspace": {
+    "rows_per_section": 1,
+    "columns_per_section": 3,
+    "pagination": true,
+    "default_page": 1,
+    "panel_size": {
+      "width": 8,
+      "height": 6
+    },
+    "bilateral_measurements": "Separate left and right plots. Separate SMPL and robot route curves.",
+    "sections": [
+      "Reward",
+      "Loss",
+      "Train",
+      "Metrics",
+      "Episode",
+      "Perf",
+      "Env",
+      "System"
+    ],
+    "tables": false,
+    "media_visible": false,
+    "fixed_horizon_curriculum_visible": false,
+    "x_axis": "Train/iter",
+    "x_axis_title": "Training iterations"
+  },
+  "route_definitions": {
+    "assignment": "Collector human_route boolean captured before env.step. True selects SMPL, false selects robot.",
+    "returns": "Mean undiscounted completed episodic return. Components use the identical completed episodes.",
+    "episode_lengths": "Mean completed episode length, including failures and nonfailure clip/time endings.",
+    "failure": "Imitation or controller failure among completed episodes.",
+    "timeout": "Clip-end or episode-time-cap ending without failure among completed episodes.",
+    "tracking": "Pooled means on the rotating deterministic nonterminal subset. Separate left and right calibrated palms.",
+    "palm_frame": "Each pose full hip frame, meters and rotation-angle radians.",
+    "root_frame": "World XY meters against the original clean retargeted reference.",
+    "exposure": "Actual route-selected simulator transitions within the recorded window.",
+    "samples": "Measured nonterminal tracking samples within the recorded window.",
+    "gradients": "Mean parameter L2 gradient norm before ordinary clipping across actual policy updates.",
+    "action_rms": "RMS of actual applied commands including collector exploration, across all components and transitions.",
+    "action_rate": "Mean squared command difference summed across action dimensions per actual transition.",
+    "clipping": "Fraction of applied command components at the action-domain boundary.",
+    "reset_coverage": "Observed episode starts only. Effective bins equals one divided by the squared empirical bin-probability sum.",
+    "hand_tolerance": "Current sqrt squared tolerances on the measured nonterminal clip sample. This is not a fixed evaluation threshold.",
+    "support_gate": "Fraction of actual transitions selected by the clean-reference foot support classifier.",
+    "sampling_window": "Recorded 25-update windows, with physical and learner clocks preserved.",
+    "comparison_limit": "SMPL and robot training populations can differ in clips, lengths and difficulty. These are diagnostics, not matched encoder rankings.",
+    "entropy": "Unavailable. The actor is deterministic. Fixed collector Gaussian noise does not define a learned policy entropy."
+  },
+  "metric_registry": {
+    "Env/adp/effective_bins": {
+      "unit": "bins or clips",
+      "frame": "Not spatial",
+      "reduction": "Count; effective bins is inverse squared empirical bin-probability sum",
+      "denominator": "Observed episode starts",
+      "population": "Actual collected episode starts",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Env/adp/reset_count": {
+      "unit": "episodes",
+      "frame": "Not spatial",
+      "reduction": "Count; effective bins is inverse squared empirical bin-probability sum",
+      "denominator": "Observed episode starts",
+      "population": "Actual collected episode starts",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Env/adp/started_clips": {
+      "unit": "bins or clips",
+      "frame": "Not spatial",
+      "reduction": "Count; effective bins is inverse squared empirical bin-probability sum",
+      "denominator": "Observed episode starts",
+      "population": "Actual collected episode starts",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Env/adp/visited_bins": {
+      "unit": "bins or clips",
+      "frame": "Not spatial",
+      "reduction": "Count; effective bins is inverse squared empirical bin-probability sum",
+      "denominator": "Observed episode starts",
+      "population": "Actual collected episode starts",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Env/controller/invalid_frac": {
+      "unit": "fraction",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Recorded contributing samples",
+      "population": "Actual training observations",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Env/foot/l_contact_frac": {
+      "unit": "fraction",
+      "frame": "World net foot-force norm",
+      "reduction": "Mean binary net-foot-force indicator above 10 N. Force is not terrain-filtered.",
+      "denominator": "Native foot samples",
+      "population": "Native foot observer rotating world subset, including terminal successors",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Env/foot/r_contact_frac": {
+      "unit": "fraction",
+      "frame": "World net foot-force norm",
+      "reduction": "Mean binary net-foot-force indicator above 10 N. Force is not terrain-filtered.",
+      "denominator": "Native foot samples",
+      "population": "Native foot observer rotating world subset, including terminal successors",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Env/support/l_ref_frac": {
+      "unit": "fraction",
+      "frame": "Clean reference sole and world floor",
+      "reduction": "Mean binary conservative reference-support label",
+      "denominator": "Actual collected transitions",
+      "population": "All collected transitions",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Env/support/r_ref_frac": {
+      "unit": "fraction",
+      "frame": "Clean reference sole and world floor",
+      "reduction": "Mean binary conservative reference-support label",
+      "denominator": "Actual collected transitions",
+      "population": "All collected transitions",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Env/tolerance/palm_l_m": {
+      "unit": "meters",
+      "frame": "Full hip hand target frame",
+      "reduction": "Mean square-root per-clip tolerance",
+      "denominator": "Measured clip samples",
+      "population": "Selected nonterminal tracking clip sample",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Env/tolerance/palm_l_rad": {
+      "unit": "radians",
+      "frame": "Full hip hand target frame",
+      "reduction": "Mean square-root per-clip tolerance",
+      "denominator": "Measured clip samples",
+      "population": "Selected nonterminal tracking clip sample",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Env/tolerance/palm_r_m": {
+      "unit": "meters",
+      "frame": "Full hip hand target frame",
+      "reduction": "Mean square-root per-clip tolerance",
+      "denominator": "Measured clip samples",
+      "population": "Selected nonterminal tracking clip sample",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Env/tolerance/palm_r_rad": {
+      "unit": "radians",
+      "frame": "Full hip hand target frame",
+      "reduction": "Mean square-root per-clip tolerance",
+      "denominator": "Measured clip samples",
+      "population": "Selected nonterminal tracking clip sample",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/count": {
+      "unit": "episodes",
+      "frame": "Not spatial",
+      "reduction": "Count",
+      "denominator": "None",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/fail_frac": {
+      "unit": "dimensionless",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Completed episodes",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/len_s": {
+      "unit": "seconds",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Completed episodes",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/len_steps": {
+      "unit": "control steps",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Completed episodes",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/robot/count": {
+      "unit": "episodes",
+      "frame": "Not spatial",
+      "reduction": "Count",
+      "denominator": "None",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings; robot route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/robot/fail_frac": {
+      "unit": "dimensionless",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Completed episodes",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings; robot route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/robot/len_s": {
+      "unit": "seconds",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Completed episodes",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings; robot route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/robot/len_steps": {
+      "unit": "control steps",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Completed episodes",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings; robot route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/robot/timeout_frac": {
+      "unit": "dimensionless",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Completed episodes",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings; robot route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/smpl/count": {
+      "unit": "episodes",
+      "frame": "Not spatial",
+      "reduction": "Count",
+      "denominator": "None",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings; smpl route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/smpl/fail_frac": {
+      "unit": "dimensionless",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Completed episodes",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings; smpl route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/smpl/len_s": {
+      "unit": "seconds",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Completed episodes",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings; smpl route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/smpl/len_steps": {
+      "unit": "control steps",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Completed episodes",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings; smpl route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/smpl/timeout_frac": {
+      "unit": "dimensionless",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Completed episodes",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings; smpl route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Episode/timeout_frac": {
+      "unit": "dimensionless",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Completed episodes",
+      "population": "Completed episodes, including failures and nonfailure clip/time endings",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Loss/policy": {
+      "unit": "Trainer objective",
+      "frame": "Not spatial",
+      "reduction": "Original trainer reduction, preserved without reinterpretation",
+      "denominator": "Logged learner updates",
+      "population": "Actual optimization minibatches",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Loss/reward_model": {
+      "unit": "Trainer objective",
+      "frame": "Not spatial",
+      "reduction": "Original trainer reduction, preserved without reinterpretation",
+      "denominator": "Logged learner updates",
+      "population": "Actual optimization minibatches",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Loss/value": {
+      "unit": "Trainer objective",
+      "frame": "Not spatial",
+      "reduction": "Original trainer reduction, preserved without reinterpretation",
+      "denominator": "Logged learner updates",
+      "population": "Actual optimization minibatches",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Loss/wm": {
+      "unit": "Trainer objective",
+      "frame": "Not spatial",
+      "reduction": "Original trainer reduction, preserved without reinterpretation",
+      "denominator": "Logged learner updates",
+      "population": "Actual optimization minibatches",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/body/palm_l_m": {
+      "unit": "meters",
+      "frame": "Full hip frame for palms; link orientation for feet",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/body/palm_ori_l_rad": {
+      "unit": "radians",
+      "frame": "Full hip frame for palms; link orientation for feet",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/body/palm_ori_r_rad": {
+      "unit": "radians",
+      "frame": "Full hip frame for palms; link orientation for feet",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/body/palm_r_m": {
+      "unit": "meters",
+      "frame": "Full hip frame for palms; link orientation for feet",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/foot/l_ori_rad": {
+      "unit": "radians",
+      "frame": "World foot link against the aligned reference",
+      "reduction": "Pooled mean from the native foot accumulator",
+      "denominator": "Finite native foot samples with the metric-specific support/contact mask",
+      "population": "Native foot observer rotating world subset, including terminal successors",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/foot/l_support_speed_mps": {
+      "unit": "meters per second",
+      "frame": "World foot link against the aligned reference",
+      "reduction": "Pooled mean from the native foot accumulator",
+      "denominator": "Finite native foot samples with the metric-specific support/contact mask",
+      "population": "Native foot observer rotating world subset, including terminal successors",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/foot/r_ori_rad": {
+      "unit": "radians",
+      "frame": "World foot link against the aligned reference",
+      "reduction": "Pooled mean from the native foot accumulator",
+      "denominator": "Finite native foot samples with the metric-specific support/contact mask",
+      "population": "Native foot observer rotating world subset, including terminal successors",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/foot/r_support_speed_mps": {
+      "unit": "meters per second",
+      "frame": "World foot link against the aligned reference",
+      "reduction": "Pooled mean from the native foot accumulator",
+      "denominator": "Finite native foot samples with the metric-specific support/contact mask",
+      "population": "Native foot observer rotating world subset, including terminal successors",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/joint/mae_rad": {
+      "unit": "radians",
+      "frame": "Joint coordinates",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/joint/vel_mae_radps": {
+      "unit": "radians per second",
+      "frame": "Joint coordinates",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/robot/palm_l_m": {
+      "unit": "meters",
+      "frame": "Full hip frame for palms; link orientation for feet",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/robot/palm_l_ori_rad": {
+      "unit": "radians",
+      "frame": "Full hip frame for palms; link orientation for feet",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/robot/palm_r_m": {
+      "unit": "meters",
+      "frame": "Full hip frame for palms; link orientation for feet",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/robot/palm_r_ori_rad": {
+      "unit": "radians",
+      "frame": "Full hip frame for palms; link orientation for feet",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/robot/root_xy_m": {
+      "unit": "meters",
+      "frame": "World frame",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/root/ori_rad": {
+      "unit": "radians",
+      "frame": "World frame",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/root/xy_m": {
+      "unit": "meters",
+      "frame": "World frame",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/smpl/palm_l_m": {
+      "unit": "meters",
+      "frame": "Full hip frame for palms; link orientation for feet",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/smpl/palm_l_ori_rad": {
+      "unit": "radians",
+      "frame": "Full hip frame for palms; link orientation for feet",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/smpl/palm_r_m": {
+      "unit": "meters",
+      "frame": "Full hip frame for palms; link orientation for feet",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/smpl/palm_r_ori_rad": {
+      "unit": "radians",
+      "frame": "Full hip frame for palms; link orientation for feet",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/smpl/root_xy_m": {
+      "unit": "meters",
+      "frame": "World frame",
+      "reduction": "Pooled arithmetic mean",
+      "denominator": "Finite sampled world transitions",
+      "population": "Deterministic rotating nonterminal world subset; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Metrics/wm/error8": {
+      "unit": "normalized squared state error",
+      "frame": "Normalized WM state",
+      "reduction": "Mean eight-step terminal error per final minibatch, then mean across learner updates",
+      "denominator": "Valid terminal-step masks, clamped to one",
+      "population": "Final replay minibatch from each learner update",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Perf/collect_fps": {
+      "unit": "transitions per second",
+      "frame": "Host wall clock",
+      "reduction": "Recorded window mean",
+      "denominator": "Full window wall time for FPS; actual learner updates for update times",
+      "population": "Actual recorded operations",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Perf/fps": {
+      "unit": "transitions per second",
+      "frame": "Host wall clock",
+      "reduction": "Recorded window mean",
+      "denominator": "Full window wall time for FPS; actual learner updates for update times",
+      "population": "Actual recorded operations",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Perf/time/collect_s": {
+      "unit": "seconds per learner update",
+      "frame": "Host wall clock",
+      "reduction": "Recorded window mean",
+      "denominator": "Full window wall time for FPS; actual learner updates for update times",
+      "population": "Actual recorded operations",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Perf/time/iter_s": {
+      "unit": "seconds per learner update",
+      "frame": "Host wall clock",
+      "reduction": "Recorded window mean",
+      "denominator": "Full window wall time for FPS; actual learner updates for update times",
+      "population": "Actual recorded operations",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Perf/time/learn_s": {
+      "unit": "seconds per learner update",
+      "frame": "Host wall clock",
+      "reduction": "Recorded window mean",
+      "denominator": "Full window wall time for FPS; actual learner updates for update times",
+      "population": "Actual recorded operations",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Perf/time/policy_s": {
+      "unit": "seconds per learner update",
+      "frame": "Host wall clock",
+      "reduction": "Recorded window mean",
+      "denominator": "Full window wall time for FPS; actual learner updates for update times",
+      "population": "Actual recorded operations",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Perf/time/wm_s": {
+      "unit": "seconds per learner update",
+      "frame": "Host wall clock",
+      "reduction": "Recorded window mean",
+      "denominator": "Full window wall time for FPS; actual learner updates for update times",
+      "population": "Actual recorded operations",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/action_rate": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/ankle_acc": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/ankle_rom": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/body_angvel": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/body_linvel": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/body_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/body_pos": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/contacts": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/feet_pos": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/foot_l_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/foot_r_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/hand_speed": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/joint_limit": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/joint_pose": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/palm_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/palm_pos": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/root_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/root_pos": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/snap": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/sole_l_height": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/sole_l_motion": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/sole_r_height": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/sole_r_motion": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/step": {
+      "unit": "reward per transition",
+      "frame": "Not spatial",
+      "reduction": "Mean applied reward",
+      "denominator": "Actual simulator transitions",
+      "population": "All applied simulator transitions; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/total": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/robot/vr_tracking": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; robot encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/action_rate": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/ankle_acc": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/ankle_rom": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/body_angvel": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/body_linvel": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/body_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/body_pos": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/contacts": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/feet_pos": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/foot_l_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/foot_r_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/hand_speed": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/joint_limit": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/joint_pose": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/palm_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/palm_pos": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/root_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/root_pos": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/snap": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/sole_l_height": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/sole_l_motion": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/sole_r_height": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/sole_r_motion": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/step": {
+      "unit": "reward per transition",
+      "frame": "Not spatial",
+      "reduction": "Mean applied reward",
+      "denominator": "Actual simulator transitions",
+      "population": "All applied simulator transitions; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/total": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/smpl/vr_tracking": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures; smpl encoder route only",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/step": {
+      "unit": "reward per transition",
+      "frame": "Not spatial",
+      "reduction": "Mean applied reward",
+      "denominator": "Actual simulator transitions",
+      "population": "All applied simulator transitions",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/action_rate": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/ankle_acc": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/ankle_rom": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/body_angvel": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/body_linvel": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/body_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/body_pos": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/contacts": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/feet_pos": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/foot_l_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/foot_r_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/hand_speed": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/joint_limit": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/joint_pose": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/palm_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/palm_pos": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/root_ori": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/root_pos": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/snap": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/sole_l_height": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/sole_l_motion": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/sole_r_height": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/sole_r_motion": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/terms/vr_tracking": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Reward/total": {
+      "unit": "reward",
+      "frame": "Not spatial",
+      "reduction": "Mean completed episodic sum",
+      "denominator": "Completed episodes",
+      "population": "All completed episodes, including failures",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "System/cpu/util_pct": {
+      "unit": "Percent",
+      "frame": "Not spatial",
+      "reduction": "Publication-time device sample",
+      "denominator": "None",
+      "population": "Training host",
+      "sampling_window": "Publication-time sample"
+    },
+    "System/gpu/mem_mib": {
+      "unit": "MiB",
+      "frame": "Not spatial",
+      "reduction": "Publication-time device sample",
+      "denominator": "None",
+      "population": "Training host",
+      "sampling_window": "Publication-time sample"
+    },
+    "System/gpu/util_pct": {
+      "unit": "Percent",
+      "frame": "Not spatial",
+      "reduction": "Publication-time device sample",
+      "denominator": "None",
+      "population": "Training host",
+      "sampling_window": "Publication-time sample"
+    },
+    "System/ram/used_gib": {
+      "unit": "GiB",
+      "frame": "Not spatial",
+      "reduction": "Publication-time device sample",
+      "denominator": "None",
+      "population": "Training host",
+      "sampling_window": "Publication-time sample"
+    },
+    "System/sample_time_s": {
+      "unit": "Unix seconds",
+      "frame": "Not spatial",
+      "reduction": "Publication-time device sample",
+      "denominator": "None",
+      "population": "Training host",
+      "sampling_window": "Publication-time sample"
+    },
+    "Train/grad/decoder": {
+      "unit": "gradient L2 norm",
+      "frame": "Named model parameters",
+      "reduction": "Arithmetic mean of global parameter norms before clipping",
+      "denominator": "Optimizer calls",
+      "population": "Actual optimizer clipping calls",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/grad/policy": {
+      "unit": "gradient L2 norm",
+      "frame": "Named model parameters",
+      "reduction": "Arithmetic mean of global parameter norms before clipping",
+      "denominator": "Optimizer calls",
+      "population": "Actual optimizer clipping calls",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/grad/reward_model": {
+      "unit": "gradient L2 norm",
+      "frame": "Named model parameters",
+      "reduction": "Arithmetic mean of global parameter norms before clipping",
+      "denominator": "Optimizer calls",
+      "population": "Actual optimizer clipping calls",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/grad/robot_enc": {
+      "unit": "gradient L2 norm",
+      "frame": "Named model parameters",
+      "reduction": "Arithmetic mean of global parameter norms before clipping",
+      "denominator": "Optimizer calls",
+      "population": "Actual optimizer clipping calls",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/grad/smpl_enc": {
+      "unit": "gradient L2 norm",
+      "frame": "Named model parameters",
+      "reduction": "Arithmetic mean of global parameter norms before clipping",
+      "denominator": "Optimizer calls",
+      "population": "Actual optimizer clipping calls",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/grad/value": {
+      "unit": "gradient L2 norm",
+      "frame": "Named model parameters",
+      "reduction": "Arithmetic mean of global parameter norms before clipping",
+      "denominator": "Optimizer calls",
+      "population": "Actual optimizer clipping calls",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/grad/wm": {
+      "unit": "gradient L2 norm",
+      "frame": "Named model parameters",
+      "reduction": "Arithmetic mean of global parameter norms before clipping",
+      "denominator": "Optimizer calls",
+      "population": "Actual optimizer clipping calls",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/iter": {
+      "unit": "learner updates",
+      "frame": "Not spatial",
+      "reduction": "Recorded learner value",
+      "denominator": "None",
+      "population": "Actual training observations",
+      "sampling_window": "Learner logging boundary"
+    },
+    "Train/lr": {
+      "unit": "optimizer learning rate",
+      "frame": "Not spatial",
+      "reduction": "Recorded learner value",
+      "denominator": "None",
+      "population": "Actual training observations",
+      "sampling_window": "Learner logging boundary"
+    },
+    "Train/policy/action_abs": {
+      "unit": "policy command",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "All action components and actual transitions",
+      "population": "Applied collector commands including exploration",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/policy/action_rate": {
+      "unit": "command squared",
+      "frame": "Not spatial",
+      "reduction": "Mean summed squared consecutive command differences",
+      "denominator": "Actual transitions",
+      "population": "Applied collector commands including exploration",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/policy/action_rms": {
+      "unit": "policy command",
+      "frame": "Not spatial",
+      "reduction": "Square root of pooled mean squared command components",
+      "denominator": "All action components and actual transitions",
+      "population": "Applied collector commands including exploration",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/policy/clip_frac": {
+      "unit": "fraction",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "All action components and actual transitions",
+      "population": "Applied collector commands including exploration",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/policy/imag_reward": {
+      "unit": "normalized reward",
+      "frame": "Predicted world state",
+      "reduction": "Recorded window mean",
+      "denominator": "Imagined policy minibatches",
+      "population": "Policy optimization imagined sequences",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/policy/imag_survival": {
+      "unit": "probability",
+      "frame": "Predicted world state",
+      "reduction": "Recorded window mean",
+      "denominator": "Imagined policy minibatches",
+      "population": "Policy optimization imagined sequences",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/routes/robot_frac": {
+      "unit": "dimensionless",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Actual world transitions",
+      "population": "Actual route-selected simulator transitions",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/routes/robot_samples": {
+      "unit": "sampled transitions",
+      "frame": "Not spatial",
+      "reduction": "Count",
+      "denominator": "None",
+      "population": "Deterministic rotating nonterminal world subset",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/routes/robot_steps": {
+      "unit": "transitions",
+      "frame": "Not spatial",
+      "reduction": "Count",
+      "denominator": "None",
+      "population": "Actual route-selected simulator transitions",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/routes/smpl_frac": {
+      "unit": "dimensionless",
+      "frame": "Not spatial",
+      "reduction": "Recorded window mean",
+      "denominator": "Actual world transitions",
+      "population": "Actual route-selected simulator transitions",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/routes/smpl_samples": {
+      "unit": "sampled transitions",
+      "frame": "Not spatial",
+      "reduction": "Count",
+      "denominator": "None",
+      "population": "Deterministic rotating nonterminal world subset",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/routes/smpl_steps": {
+      "unit": "transitions",
+      "frame": "Not spatial",
+      "reduction": "Count",
+      "denominator": "None",
+      "population": "Actual route-selected simulator transitions",
+      "sampling_window": "Source-bound 25-learner-update observer window"
+    },
+    "Train/steps": {
+      "unit": "transitions",
+      "frame": "Not spatial",
+      "reduction": "Recorded learner value",
+      "denominator": "None",
+      "population": "Actual training observations",
+      "sampling_window": "Learner logging boundary"
+    },
+    "Train/time_s": {
+      "unit": "seconds",
+      "frame": "Not spatial",
+      "reduction": "Recorded learner value",
+      "denominator": "None",
+      "population": "Actual training observations",
+      "sampling_window": "Learner logging boundary"
+    },
+    "Train/wm_warmup": {
+      "unit": "boolean",
+      "frame": "Not spatial",
+      "reduction": "Recorded learner value",
+      "denominator": "None",
+      "population": "Actual training observations",
+      "sampling_window": "Learner logging boundary"
+    }
+  },
+  "profile_builder_source": "experiments/foot-training-telemetry-20261105/workspace.py"
+}
